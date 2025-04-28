@@ -1,0 +1,421 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <!-- <meta name="description" content="Sufee Admin - HTML5 Admin Template"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    function navigatePage() {
+        var selectElement = document.getElementById("pageSelect");
+        var selectedValue = selectElement.value;
+
+        const pages = {
+            "1a-CP": "tabelnomor1.html",
+            "1b-N": "tabelnomor2.html",
+            "2a-N": "tabelnomor3.html",
+            "2b-N": "tabelnomor4.html",
+            "3a-CP": "tabelnomor5.html",
+            "3b-N": "tabelnomor6.html",
+            "4a-CP": "tabelnomor7.html",
+            "4b-N": "tabelnomor8.html",
+            "5a-N": "tabelnomor9.html",
+            "6a-N": "tabelnomor10.html",
+            "6b-N": "tabelnomor11.html",
+            "6c-N": "tabelnomor12.html",
+            "7a-CP": "tabelnomor13.html",
+            "7b-N": "tabelnomor14.html",
+            "7c-N": "tabelnomor15.html"
+           
+        };
+        if (selectedValue in pages) {
+            window.location.href = pages[selectedValue];
+        }
+    }
+</script>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="tabelnomor7.html"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="tabelnomor7.html"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="dashboard.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+
+                    <li class="menu-item-has-children active dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="tables-basic.html">New Data</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-data.html">Raw Data</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">RAW DATA IKU KEMENKEU</strong>
+                                <!-- <label for="pageSelect">Pilih kategori:</label> -->
+                                <select id="pageSelect" onchange="navigatePage()">
+                                    <option value="" disabled selected>-- Pilih --</option>
+                                    <option value="1a-CP">Indeks Kualitas Nilai IKPA K/L</option>
+                                    <option value="1b-N">Indeks Kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="2a-N">Indeks kepuasan terhadap layanan KPPN</option>
+                                    <option value="2b-N">Tingkat implementasi penajaman tugas Financial Advisory
+                                    </option>
+                                    <option value="3a-CP">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN
+                                    </option>
+                                    <option value="3b-N">Indeks Digitalisasi Pengelolaan Keuangan</option>
+                                    <option value="4a-CP">Persentase akurasi perencanaan kas</option>
+                                    <option value="4b-N">Indeks kualitas penyelesaian SP2D </option>
+                                    <option value="5a-N">Indeks Kualitas LPJ Bendahara Satker K/L</option>
+                                    <option value="6a-N">Tingkat kualitas kinerja organisasi</option>
+                                    <option value="6b-N">Nilai kualitas pengelolaan SDM</option>
+                                    <option value="6c-N">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</option>
+                                    <option value="7a-CP">Indeks kualitas pengelolaan keuangan KPPN</option>
+                                    <option value="7b-N">Persentase Kualitas Pengelolaan BMN dan Pengadaan</option>
+                                    <option value="7c-N">Nilai Kinerja TIK KPPN</option>
+                                </select>
+
+                                <body>
+
+                                    <div id="4a-CP" class="content">
+                                        <br>
+                                        <h3><b>Persentase akurasi perencanaan kas </b></h3>
+                                        <label>Pilih Periode:
+                                            <select id="periode7" onchange="tampilkanInput7()">
+                                                <option value="bulan7">Bulanan</option>
+                                                <option value="triwulan7">Triwulanan</option>
+                                            </select>
+                                        </label>
+                                        <div id="inputsContainer7"></div>
+
+                                        <label for="formula7">Masukkan Formula:</label>
+                                        <textarea id="inputFormula7" class="form-control" rows="3"
+                                            placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                            oninput="updateFormula7()"></textarea>
+
+                                        <label for="keterangan7">Masukkan Keterangan:</label>
+                                        <textarea id="inputArea7" class="form-control" rows="3"
+                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                            oninput="updateKeterangan7()"></textarea>
+
+                                            <script>
+                                                function updateFormula7() {
+                                                    let inputFormula7 = document.getElementById("inputFormula7").value;
+                                                    document.getElementById("formula7").innerHTML = inputFormula7.replace(/\n/g, "<br>");
+    
+                                                }
+                                            </script>
+                                        <script>
+                                            function updateKeterangan7() {
+                                                let inputText7 = document.getElementById("inputArea7").value;
+                                                document.getElementById("keterangan7").innerHTML = inputText7.replace(/\n/g, "<br>");
+
+                                            }
+                                        </script>
+
+
+                                        <div style="text-align: right; margin-bottom: 10px;">
+                                            <button onclick="submitData7()" class="btn-simpan">
+                                                <img src="savedata.png" alt="save"> Simpan </button>
+                                        </div>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="1" class="hal2">No</th>
+                                                    <th colspan="2" class="hal2">Uraian IKU</th>
+                                                    <th rowspan="1" width="200px" class="hal2">DATA YANG DIPERLUKAN</th>
+                                                    <th colspan="3" class="hal2">DATA</th>
+                                                    <th rowspan="1" class="hal2">FORMULA</th>
+                                                    <th rowspan="1" class="hal2">KETERANGAN</th>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="5" valign="top">7</td>
+                                                    <td rowspan="5" valign="top">4a-CP</td>
+                                                    <td rowspan="5" valign="top" class="left-align">Persentase akurasi perencanaan kas</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Bobot</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Rata - Rata Deviasi Unit
+                                                        RPD harian KPPN per
+                                                        periode </td>
+                                                    <td>20%</td>
+                                                    <td  id="nilaiDeviasiUnit7">0</td>
+                                                    <td id="valueDeviasiUnit7">0</td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="formula7">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="keterangan7">
+                                                        (100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per
+                                                        periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN
+                                                        per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per
+                                                        periode))
+
+                                                        Keterangan :Tolong selalu enter agar tidak terlalu panjang </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Rata - Rata Deviasi Nilai
+                                                        RPD harian KPPN per
+                                                        periode </td>
+                                                    <td>80%</td>
+                                                    <td id="nilaiDeviasiNilai7">0</td>
+                                                    <td id="valueDeviasiNilai7">0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Rasio Dispensasi RPD
+                                                        harian KPPN per periode </td>
+                                                    <td></td>
+                                                    <td id="nilaiDispensasi7">0</td>
+                                                    <td id="valueDispensasiNilai7">0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Nilai Capaian</b></td>
+                                                    <td colspan="3" id="hasil7">0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <script>
+                                            function tampilkanInput7() {
+                                                let periode7 = document.getElementById('periode7').value;
+                                                let container7 = document.getElementById('inputsContainer7');
+                                                container7.innerHTML = ''; // Memastikan container dikosongkan sebelum ditampilkan ulang
+                                                let jumlahInput = periode7 === 'triwulan7' ? 3 : 1;
+
+                                                ["deviasiUnit7", "deviasiNilai7", "dispensasi7"].forEach((komponen) => {
+                                                    let labelText = komponen === "deviasiUnit7" ? "Rata - Rata Deviasi Unit" :
+                                                        komponen === "deviasiNilai7" ? "Rata - Rata Deviasi Nilai" :
+                                                            "Rasio Dispensasi RPD Harian";
+
+                                                    let div = document.createElement("div");
+                                                    div.innerHTML = `<label>${labelText}:
+                                                    ${Array.from({ length: jumlahInput }).map((_, i) =>
+                                                        `<input type="number" class="${komponen}" step="0.01" oninput="hitungAkurasi7()">`)
+                                                            .join('')}
+                                                </label>`;
+                                                    container7.appendChild(div);
+                                                });
+                                            }
+
+                                            function hitungAkurasi7() {
+                                                let periode7 = document.getElementById('periode7').value;
+                                                let jumlahInput = periode7 === 'triwulan7' ? 3 : 1;
+
+                                                function getAverage(className, bobot) {
+                                                    let values = [...document.getElementsByClassName(className)].map(input => parseFloat(input.value) || 0);
+                                                    let sum = values.reduce((acc, val) => acc + val, 0);
+                                                    return (sum / jumlahInput) * bobot;
+                                                }
+
+                                                let nilaiDeviasiUnit7 = getAverage("deviasiUnit7", 0.2).toFixed(2);
+                                                let nilaiDeviasiNilai7 = getAverage("deviasiNilai7", 0.8).toFixed(2);
+                                                let nilaiDispensasi7 = getAverage("dispensasi7", 1).toFixed(2);
+
+                                                let valueDeviasiUnit7 = ((nilaiDeviasiUnit7 * 0.2).toFixed(3)) ;
+                                                let valueDeviasiNilai7 = ((nilaiDeviasiNilai7 * 0.8 ).toFixed(3));
+                                                let valueDispensasiNilai7 = nilaiDispensasi7;
+
+                                                let hasil7 = (100 - valueDeviasiUnit7 - valueDeviasiNilai7 - valueDispensasiNilai7).toFixed(2);
+
+
+                                                document.getElementById("nilaiDeviasiUnit7").innerText = nilaiDeviasiUnit7;
+                                                document.getElementById("nilaiDeviasiNilai7").innerText = nilaiDeviasiNilai7;
+                                                document.getElementById("nilaiDispensasi7").innerText = nilaiDispensasi7;
+                                                document.getElementById("valueDeviasiUnit7").innerText = valueDeviasiUnit7;
+                                                document.getElementById("valueDeviasiNilai7").innerText = valueDeviasiNilai7;
+                                                document.getElementById("valueDispensasiNilai7").innerText = valueDispensasiNilai7;
+                                                document.getElementById("hasil7").innerText = hasil7;
+                                            }
+                                            window.onload = tampilkanInput7;
+                                        </script>
+                                        <script>
+                                            function submitData7() {
+                                                let nilaiDeviasiUnit7 = document.getElementById("nilaiDeviasiUnit7").innerText;
+                                                let nilaiDeviasiNilai7 = document.getElementById("nilaiDeviasiNilai7").innerText;
+                                                let nilaiDispensasi7 = document.getElementById("nilaiDispensasi7").innerText;
+                                                let valueDeviasiUnit7 = document.getElementById("valueDeviasiUnit7").innerText;
+                                                let valueDeviasiNilai7 = document.getElementById("valueDeviasiNilai7").innerText;
+                                                let valueDispensasiNilai7 = document.getElementById("valueDispensasiNilai7").innerText;
+                                                let hasil7 = document.getElementById("hasil7").innerText;
+                                                let keterangan7hasil = document.getElementById("keterangan7").innerText;
+                                                let formula7hasil = document.getElementById("formula7").innerText;
+
+                                                // Cek apakah ada data lama di localStorage
+                                                let storedData = localStorage.getItem("indeks_data");
+                                                let data = storedData ? JSON.parse(storedData) : {};
+
+                                                // Update hanya bagian halaman 7
+                                                data.nilaiDeviasiUnit7 = nilaiDeviasiUnit7;
+                                                data.nilaiDeviasiNilai7 = nilaiDeviasiNilai7;
+                                                data.nilaiDispensasi7 = nilaiDispensasi7;
+                                                data.valueDeviasiUnit7 = valueDeviasiUnit7;
+                                                data.valueDeviasiNilai7 = valueDeviasiNilai7;
+                                                data.valueDispensasiNilai7 = valueDispensasiNilai7;
+                                                data.hasil7 = hasil7;
+                                                data.keterangan7 = keterangan7hasil;
+                                                data.formula7 = formula7hasil;
+
+                                                // Simpan kembali ke localStorage
+                                                localStorage.setItem("indeks_data", JSON.stringify(data));
+
+                                                alert("Data dari Persentase akurasi perencanaan kas berhasil disimpan!");
+                                            }
+                                        </script>
+                                        <!-- <button onclick="submitData7()">Simpan Data Halaman 7</button> -->
+                                    </div>
+
+                                </body>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>
