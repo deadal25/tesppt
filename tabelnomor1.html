@@ -491,42 +491,6 @@
                                             }
                                         </script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let data = localStorage.getItem("indeks_data");
-
-        if (data) {
-            let parsedData = JSON.parse(data);
-        
-            document.getElementById("rdScore").innerText= parsedData.rdScore || "-";
-            document.getElementById("dhScore").innerText= parsedData.dhScore || "-";
-            document.getElementById("paScore").innerText= parsedData.paScore || "-";
-            document.getElementById("bkScore").innerText= parsedData.bkScore || "-";
-            document.getElementById("ptScore").innerText= parsedData.ptScore || "-";
-            document.getElementById("putScore").innerText= parsedData.putScore || "-";
-            document.getElementById("coScore").innerText= parsedData.coScore || "-";
-            document.getElementById("dsScore").innerText= parsedData.dsScore || "-";
-            document.getElementById("jumlahsatker1Value").innerText= parsedData.jumlahsatker1Value || "-";
-            document.getElementById("jumlahsatker1Score").innerText= parsedData.jumlahsatker1Score || "-";
-            document.getElementById("totalCapaian1").innerText= parsedData.totalCapaian1 || "-";
-            document.getElementById("totalCapaian1all").innerText= parsedData.totalCapaian1all || "-";
-            document.getElementById("totalNilaiSpan1").innerText= parsedData.totalNilaiSpan1 || "-";
-            document.getElementById("nilaiIkpa1Score").innerText= parsedData.nilaiIkpa1Score || "-";
-            document.getElementById("indeksIKI1").innerText= parsedData.indeksIKI1 || "-";
-            document.getElementById("formula1").innerText = parsedData.formula1 || "-";
-            document.getElementById("keterangan1").innerText = parsedData.keterangan1 || "-";
-
-            
-
-            
-            
-
-
-        } else {
-            alert("Tidak ada data tersimpan!");
-        }
-    });
-</script>
 
                                         <!-- <button class="btn-simpan" align-items="center" onclick="submitData1()">
                                             <img src="C:\Users\USER\Videos\login-project\images\savedata.png" alt="Save Icon">Simpan Data Halaman 1</button> -->

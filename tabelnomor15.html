@@ -313,15 +313,15 @@
                                                 let total16 = nilaiskoki + nilaisosialisasi + nilaipublikasi + nilaipkpt;
                                                 // let indeksCapaian16 = (total16 > 100) ? 120 : total16.toFixed(2);
 
-                                                document.getElementById("valuehasil-skoki").innerText = skoki.toFixed(2);
-                                                document.getElementById("valuehasil-sosialisasi").innerText = sosialisasi.toFixed(2);
-                                                document.getElementById("valuehasil-publikasi").innerText = publikasi.toFixed(2);
-                                                document.getElementById("valuehasil-pkpt").innerText = pkpt.toFixed(2);
+                                                document.getElementById("valuehasil-skoki").innerText = skoki.toFixed(0);
+                                                document.getElementById("valuehasil-sosialisasi").innerText = sosialisasi.toFixed(0);
+                                                document.getElementById("valuehasil-publikasi").innerText = publikasi.toFixed(0);
+                                                document.getElementById("valuehasil-pkpt").innerText = pkpt.toFixed(0);
                                                 document.getElementById("hasil-skoki").innerText = nilaiskoki.toFixed(2);
                                                 document.getElementById("hasil-sosialisasi").innerText = nilaisosialisasi.toFixed(2);
                                                 document.getElementById("hasil-publikasi").innerText = nilaipublikasi.toFixed(2);
                                                 document.getElementById("hasil-pkpt").innerText = nilaipkpt.toFixed(2);
-                                                document.getElementById("totalnilai16").innerText = total16;
+                                                document.getElementById("totalnilai16").innerText = total16.toFixed(0);
                                             }
 
                                             hitung16();

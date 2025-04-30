@@ -382,32 +382,7 @@
                                                 alert("Data dari Indeks Kualitas LK Kuasa BUN KPPN berhasil disimpan!");
                                             }
                                         </script>
-                                        <script>
-                                            document.addEventListener("DOMContentLoaded", function () {
-                                                let data = localStorage.getItem("indeks_data");
-    
-                                                if (data) {
-                                                    let parsedData = JSON.parse(data);
-                                                
-                                   
-                                                    document.getElementById("PersentaseAValue").innerText= parsedData.PersentaseAValue || "-";
-                                                    document.getElementById("PersentaseBValue").innerText= parsedData.PersentaseBValue || "-";
-                                                    document.getElementById("PersentaseCValue").innerText= parsedData.PersentaseCValue || "-";
-                                                    document.getElementById("PersentaseDValue").innerText= parsedData.PersentaseDValue || "-";
-                                                    
-                                                    document.getElementById("PersentaseBhasil").innerText= parsedData.PersentaseBhasil || "-";
-                                                    document.getElementById("PersentaseChasil").innerText= parsedData.PersentaseChasil || "-";
-                                                    document.getElementById("PersentaseDhasil").innerText= parsedData.PersentaseDhasil || "-";
-                                                    document.getElementById("totalPersentase2").innerText= parsedData.totalPersentase2 || "-";
-                                                    document.getElementById("keterangan2").innerText = parsedData.keterangan2 || "-";
-                                                    document.getElementById("formula2").innerText = parsedData.formula2 || "-";
-    
-                                                 
-                                                } else {
-                                                    alert("Tidak ada data tersimpan!");
-                                                }
-                                            });
-                                        </script>
+                                        
                                         
                                         <!-- <button onclick="submitData2()">Simpan Data Halaman 2</button> -->
                                     </div>

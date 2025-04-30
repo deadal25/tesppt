@@ -1,112 +1,38 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rekomendasi Rencana Aksi</title>
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12px;
-    }
-    th, td {
-      border: 1px solid black;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #3b6ea5;
-      color: white;
-    }
-    .input-group {
-      margin-bottom: 10px;
-    }
-    .input-group label {
-      display: inline-block;
-      width: 100px;
-    }
-    .input-group input {
-      width: 300px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PPT with Image</title>
+    <!-- Memuat pustaka PptxGenJS -->
+    <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.14.0/dist/pptxgen.min.js"></script>
 </head>
 <body>
 
-  <h2>Rekomendasi Rencana Aksi</h2>
+    <h2>Download PPT with Image</h2>
+    <button id="downloadPPT11" onclick="downloadPPT11()">Download PPT</button>
 
-  <div class="input-group">
-    <label for="aksiInput">Aksi:</label>
-    <input type="text" id="aksiInput" placeholder="Masukkan deskripsi aksi">
-  </div>
+    <script>
+        function downloadPPT11() {
+            // Membuat objek PPTX
+            let pptx = new PptxGenJS();
 
-  <div class="input-group">
-    <label for="periodeInput">Periode:</label>
-    <input type="text" id="periodeInput" placeholder="Masukkan periode">
-  </div>
+            // Menambahkan slide baru
+            let slide = pptx.addSlide();
 
-  <button onclick="tambahEntri()">Tambah Entri</button>
+            // Menambahkan gambar ke slide (gunakan URL atau path file lokal)
+            slide.addImage({
+                path: 'assets/1.png', // Ganti dengan path gambar yang sesuai
+                x: 1, // Posisi X (dalam inci)
+                y: 1, // Posisi Y (dalam inci)
+                w: 6, // Lebar gambar (dalam inci)
+                h: 4  // Tinggi gambar (dalam inci)
+            });
 
-  <table id="tabelRekomendasi">
-    <thead>
-      <tr>
-        <th style="width: 50%;">Rekomendasi Rencana Aksi</th>
-        <th style="width: 15%;">Penanggung Jawab</th>
-        <th style="width: 35%;">Periode</th>
-      </tr>
-    </thead>
-    <tbody id="tbodyRekomendasi">
-      <!-- Entri akan ditambahkan di sini -->
-    </tbody>
-  </table>
-
-  <script>
-    let nomorEntri = 1;
-    let rowspanCount = 0;
-    let lastPenanggungCell = null;
-
-    function tambahEntri() {
-      const aksiInput = document.getElementById('aksiInput');
-      const periodeInput = document.getElementById('periodeInput');
-
-      const deskripsi = aksiInput.value.trim();
-      const periode = periodeInput.value.trim();
-
-      if (deskripsi === '' || periode === '') {
-        alert('Silakan masukkan deskripsi aksi dan periode.');
-        return;
-      }
-
-      const tbody = document.getElementById('tbodyRekomendasi');
-      const tr = document.createElement('tr');
-
-      const tdAksi = document.createElement('td');
-      tdAksi.textContent = `${nomorEntri}. ${deskripsi}`;
-
-      const tdPeriode = document.createElement('td');
-      tdPeriode.textContent = periode;
-
-      tr.appendChild(tdAksi);
-
-      if (rowspanCount === 0) {
-        const tdPenanggungJawab = document.createElement('td');
-        tdPenanggungJawab.textContent = 'Seksi PDMS';
-        tdPenanggungJawab.rowSpan = 1;
-        tr.appendChild(tdPenanggungJawab);
-        lastPenanggungCell = tdPenanggungJawab;
-        rowspanCount = 1;
-      } else {
-        rowspanCount++;
-        lastPenanggungCell.rowSpan = rowspanCount;
-      }
-
-      tr.appendChild(tdPeriode);
-      tbody.appendChild(tr);
-
-      aksiInput.value = '';
-      periodeInput.value = '';
-      nomorEntri++;
-    }
-  </script>
+            // Menyimpan dan mengunduh PPT
+            pptx.save('Presentation_with_Image');
+        }
+    </script>
 
 </body>
 </html>
