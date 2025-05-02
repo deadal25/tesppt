@@ -319,14 +319,14 @@
                                                 let valuenilaiNKA = (ikpa > 98) ? 120 : ikpa.toFixed(2);
                                                 let nilaiIkpa = (0.6 * valuenilaiNKA).toFixed(2);
                                                 let nilaiLKfix = (0.4 * lk).toFixed(2);
-                                                let totalNilai13 = (parseFloat(nilaiIkpa) + parseFloat(nilaiLKfix)).toFixed(2);
+                                                let totalNilai13 = (parseFloat(nilaiIkpa) + parseFloat(nilaiLKfix));
 
                                                 // Update tampilan
                                                 document.getElementById('valuenilaiNKA').innerText = valuenilaiNKA;
                                                 document.getElementById('nilaiNKA').innerText = nilaiIkpa;
                                                 document.getElementById('valuenilaiLK').innerText = lk.toFixed(0);
                                                 document.getElementById('nilaiLK').innerText = nilaiLKfix;
-                                                document.getElementById('totalNilai13').innerText = totalNilai13;
+                                                document.getElementById('totalNilai13').innerText = totalNilai13.toFixed(0);
                                             }
                                         </script>
 

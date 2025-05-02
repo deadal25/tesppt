@@ -1,0 +1,1550 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <!-- <meta name="description" content="Sufee Admin - HTML5 Admin Template"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    function navigatePage() {
+        var selectElement = document.getElementById("pageSelect");
+        var selectedValue = selectElement.value;
+
+        const pages = {
+            "slide1": "slide1.html",
+            "slide2": "slide2.html",
+            "slide3": "slide3.html",
+            "slide4": "slide4.html",
+            "slide5": "slide5.html",
+            "slide6": "slide6.html",
+            "slide7": "slide7.html",
+            "slide8": "slide8.html",
+            "slide9": "slide9.html",
+            "slide10": "slide10.html",
+            "slide11": "slide11.html",
+            "slide12": "slide12.html",
+            "slide12": "slide12.html",
+            "slide14": "slide14.html",
+            "slide14": "slide14.html",
+            "slide16": "slide16.html"
+        };
+
+        if (selectedValue in pages) {
+            window.location.href = pages[selectedValue];
+        }
+    }
+</script>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="dashboard.html"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="dashboard.html"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="w-full">
+                <script src="https://cdn.tailwindcss.com"></script>
+                <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-dashboard mr-2"></i>Dashboard
+                        </a>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none">
+                            <i class="fa fa-table mr-2"></i>Tables
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400"
+                                viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <ul
+                            class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10">
+                            <li>
+                                <a href="tables-basic.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-basic.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New PPT Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-data.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="refresh" onclick="resetData()"><i class="fa fa-refresh"></i>
+                                Refresh</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                        <script>
+                            // Tombol untuk menghapus data localStorage dan sessionStorage
+                            function resetData() {
+                                if (confirm("Apakah Anda yakin ingin menghapus semua data?")) {
+                                    localStorage.removeItem("indeks_data");
+                                    sessionStorage.clear();
+                                    alert("Data berhasil dihapus!");
+                                    location.reload(); // Reload halaman untuk refresh tampilan
+                                }
+                            }
+                        </script>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">PPT DATA IKU KEMENKEU</strong>
+                                <!-- <label for="pageSelect">Pilih kategori:</label> -->
+                                <select id="pageSelect" onchange="navigatePage()">
+                                    <option value="" disabled selected>-- Pilih --</option>
+                                    <option value="slide1">Nilai Kinerja Pelaksanaan Anggaran K/L</option>
+                                    <option value="slide2">Indeks Kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="slide3">Indeks Kepuasan Satker terhadap Layanan KPPN</option>
+                                    <option value="slide4">Indeks Implementasi Standardisasi Kompetensi Pejabat
+                                        Perbendaharaan pada satker lingkup KPPN </option>
+                                    <option value="slide5">Tingkat Efektivitas Edukasi di Bidang Pengelolaan
+                                        Perbendaharaan</option>
+                                    <option value="slide6">Persentase Akurasi perencanaan Kas</option>
+                                    <option value="slide7">Tingkat Kualitas penyelesaian SP2D</option>
+                                    <option value="slide8">Nilai Kinerja Penyaluran Dana Transfer ke Daerah</option>
+                                    <option value="slide9">Indeks Digitalisasi Pengelolaan Keuangan KPPN</option>
+                                    <option value="slide10">Indeks kualitas Laporan Pertanggungjawaban Bendahara K/L
+                                    </option>
+                                    <option value="slide11">Tingkat implementasi penajaman tugas Financial Advisory
+                                    </option>
+                                    <option value="slide12">Tingkat Kualitas Pengelolaan Kinerja Organisasi</option>
+                                    <option value="slide12">Nilai kualitas pengelolaan SDM </option>
+                                    <option value="slide14">Nilai hasil evaluasi pelaksanaan tugas kepatuhan internal
+                                    </option>
+                                    <option value="slide14">Persentase Kualitas Pelaksanaan anggaran KPPN</option>
+                                    <option value="slide16">Persentase Kualitas pengelolaan BMN dan Pengadaan</option>
+                                </select>
+
+                                <body>
+
+                                    <div id="slide12" class="content">
+                                        <br>
+                                        <h3><b>7. Pengelolaan keuangan yang akuntabel</b></h3>
+
+                                        <label for="judul12">Masukkan Judul: </label>
+                                        <textarea id="inputjudul12" class="form-control" rows="1"
+                                            placeholder="Masukkan Judul..." oninput="updatejudul12()"></textarea>
+
+                                        <script>
+                                            function updatejudul12() {
+                                                let inputText = document.getElementById("inputjudul12").value;
+                                                let judul12 = document.getElementById("judul12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                judul12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="subjudul12">Masukkan subJudul: </label>
+                                        <textarea id="inputsubjudul12" class="form-control" rows="1"
+                                            placeholder="Masukkan subJudul..." oninput="updatesubjudul12()"></textarea>
+
+                                        <script>
+                                            function updatesubjudul12() {
+                                                let inputText = document.getElementById("inputsubjudul12").value;
+                                                let subjudul12 = document.getElementById("subjudul12");
+                                                let subjudul12a = document.getElementById("subjudul12a");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                subjudul12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                                subjudul12a.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <label for="kode12">Masukkan kode: </label>
+                                        <textarea id="inputkode12" class="form-control" rows="1"
+                                            placeholder="Masukkan kode..." oninput="updatekode12()"></textarea>
+
+
+                                        <script>
+                                            function updatekode12() {
+                                                let inputText = document.getElementById("inputkode12").value;
+                                                let kode12 = document.getElementById("kode12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                kode12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="isuutama12">Masukkan Isu Utama: </label>
+                                        <textarea id="inputisuutama12" class="form-control" rows="3"
+                                            placeholder="Masukkan Isu Utama..." oninput="updateisuutama12()"></textarea>
+
+
+                                        <script>
+                                            function updateisuutama12() {
+                                                let inputText = document.getElementById("inputisuutama12").value;
+                                                let isuutama12 = document.getElementById("isuutama12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                isuutama12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="implikasi12">Masukkan Implikasi: </label>
+                                        <textarea id="inputimplikasi12" class="form-control" rows="3"
+                                            placeholder="Masukkan Implikasi..."
+                                            oninput="updateimplikasi12()"></textarea>
+
+
+                                        <script>
+                                            function updateimplikasi12() {
+                                                let inputText = document.getElementById("inputimplikasi12").value;
+                                                let implikasi12 = document.getElementById("implikasi12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                implikasi12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="penjelasanc12">Masukkan Penjelasan Capaian: </label>
+                                        <textarea id="inputpenjelasanc12" class="form-control" rows="3"
+                                            placeholder="Masukkan Penjelasan Capaian..."
+                                            oninput="updatepenjelasanc12()"></textarea>
+
+
+                                        <script>
+                                            function updatepenjelasanc12() {
+                                                let inputText = document.getElementById("inputpenjelasanc12").value;
+                                                let penjelasanc12 = document.getElementById("penjelasanc12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                penjelasanc12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="tindakan12">Masukkan Tindakan: </label>
+                                        <textarea id="inputtindakan12" class="form-control" rows="8"
+                                            placeholder="Masukkan Tindakan..." oninput="updatetindakan12()"></textarea>
+
+
+                                        <script>
+                                            function updatetindakan12() {
+                                                let inputText = document.getElementById("inputtindakan12").value;
+                                                let tindakan12 = document.getElementById("tindakan12");
+                                                let tindakan12a = document.getElementById("tindakan12a");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                tindakan12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                                tindakan12a.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="sumberdata12">Masukkan Sumber Data: </label>
+                                        <textarea id="inputsumberdata12" class="form-control" rows="3"
+                                            placeholder="Masukkan Sumber Data..."
+                                            oninput="updatesumberdata12()"></textarea>
+
+
+                                        <script>
+                                            function updatesumberdata12() {
+                                                let inputText = document.getElementById("inputsumberdata12").value;
+                                                let sumberdata12 = document.getElementById("sumberdata12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                sumberdata12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="akarmasalah12">Masukkan Akar Masalah: </label>
+                                        <textarea id="inputakarmasalah12" class="form-control" rows="4"
+                                            placeholder="Masukkan Akar Masalah..."
+                                            oninput="updateakarmasalah12()"></textarea>
+
+
+                                        <script>
+                                            function updateakarmasalah12() {
+                                                let inputText = document.getElementById("inputakarmasalah12").value;
+                                                let akarmasalah12 = document.getElementById("akarmasalah12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                akarmasalah12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+
+
+
+
+                                        <!-- <div class="input-group"> -->
+                                        <label for="aksi12Input">Aksi12:</label>
+                                        <textarea class="form-control" type="text" id="aksi12Input"
+                                            placeholder="Masukkan deskripsi aksi12" rows="5"></textarea>
+
+                                        <!-- </div> -->
+
+                                        <!-- <div class="input-group"> -->
+                                        <label for="periode12Input">Periode12:</label>
+                                        <textarea class="form-control" type="text" id="periode12Input"
+                                            placeholder="Masukkan Periode" rows="3"></textarea>
+                                        <!-- </div> -->
+
+                                        <button
+                                            class="px-3 py-2 bg-[#f1dfdb] text-black font-semibold rounded hover:bg-[#e6cbc5]"
+                                            onclick="tambahEntri12()">Tambah Entri</button>
+
+                                        <br>
+
+                                        <label for="totalrealisasi12a">Masukkan Realisasi 1: </label>
+<input type="number" id="inputrealisasi12a" class="form-control"
+    placeholder="Masukkan Realisasi 1..." oninput="hitungNilaislide12()">
+
+<label for="totalrealisasi12b">Masukkan Realisasi 2: </label>
+<input type="number" id="inputrealisasi12b" class="form-control"
+    placeholder="Masukkan Realisasi 2..." oninput="hitungNilaislide12()">
+
+<label for="totalrealisasi12c">Masukkan Realisasi 3: </label>
+<input type="number" id="inputrealisasi12c" class="form-control"
+    placeholder="Masukkan Realisasi 3..." oninput="hitungNilaislide12()">
+
+    <script>
+    function hitungNilaislide12() {
+        let a = parseFloat(document.getElementById('inputrealisasi12a').value) || 0;
+        let b = parseFloat(document.getElementById('inputrealisasi12b').value) || 0;
+        let c = parseFloat(document.getElementById('inputrealisasi12c').value) || 0;
+
+        document.getElementById('totalrealisasi12a').innerText = a;
+        document.getElementById('totalrealisasi12b').innerText = b;
+        document.getElementById('totalrealisasi12c').innerText = c;
+        let total = a + b + c;
+
+        document.getElementById('totalrealisasi12d').innerText = total.toFixed(2);
+    }
+</script>
+                                        <!-- <label for="totalrealisasi12d">Masukkan Nilai Akhir Realisasi: </label>
+                                        <input type="number" id="inputrealisasi12d" class="form-control" rows="2"
+                                            placeholder="Masukkan Nilai Akhir Realisasi ..."
+                                            oninput="updaterealisasi12d()"></input type="number">
+
+                                        <script>
+                                            function updaterealisasi12d() {
+                                                let inputText = document.getElementById("inputrealisasi12d").value;
+                                                let totalrealisasi12d = document.getElementById("totalrealisasi12d");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                totalrealisasi12d.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script> -->
+
+
+
+
+                                        <label for="subutama12">Masukkan Sub Utama: </label>
+                                        <textarea id="inputsubutama12" class="form-control" rows="4"
+                                            placeholder="Masukkan Sub Utama..." oninput="updatesubutama12()"></textarea>
+
+
+                                        <script>
+                                            function updatesubutama12() {
+                                                let inputText = document.getElementById("inputsubutama12").value;
+                                                let subutama12 = document.getElementById("subutama12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                subutama12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="critical12">Masukkan Critical Point: </label>
+                                        <textarea id="inputcritical12" class="form-control" rows="4"
+                                            placeholder="Masukkan Critical Point..."
+                                            oninput="updatecritical12()"></textarea>
+
+
+                                        <script>
+                                            function updatecritical12() {
+                                                let inputText = document.getElementById("inputcritical12").value;
+                                                let critical12 = document.getElementById("critical12");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                critical12.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <!-- <label for="uploadGambar">Upload Gambar:</label>
+                                        <input type="file" id="uploadGambar" accept="image/*">
+                                        <button onclick="tambahGambar()">Tambah Gambar</button> -->
+                                        <div class="max-w-[1200px] mx-auto mt-2 p-4 bg-white border border-[#ffffff]">
+                                            <!-- Gambar 1 -->
+                                            <div class="flex items-center gap-4">
+                                                <label for="uploadGambar23"
+                                                    class="text-sm font-medium text-gray-700 w-32">Upload Gambar
+                                                    1:</label>
+                                                <input type="file" id="uploadGambar23" accept="image/*"
+                                                    class="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:font-semibold file:bg-[#f1dfdb] file:text-black hover:file:bg-[#e6cbc5] rounded w-full">
+                                                <button onclick="tambahGambar(23)"
+                                                    class="px-4 py-2 bg-[#f1dfdb] text-black font-semibold rounded hover:bg-[#e6cbc5]">Tambah</button>
+                                            </div>
+
+                                            <!-- Gambar 2 -->
+                                            <div class="flex items-center gap-4">
+                                                <label for="uploadGambar24"
+                                                    class="text-sm font-medium text-gray-700 w-32">Upload Gambar
+                                                    2:</label>
+                                                <input type="file" id="uploadGambar24" accept="image/*"
+                                                    class="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:font-semibold file:bg-[#f1dfdb] file:text-black hover:file:bg-[#e6cbc5] rounded w-full">
+                                                <button onclick="tambahGambar(24)"
+                                                    class="px-4 py-2 bg-[#f1dfdb] text-black font-semibold rounded hover:bg-[#e6cbc5]">Tambah</button>
+                                            </div>
+                                        </div>
+
+
+                                        <script>
+                                            let gambarBase641 = "";
+                                            let gambarBase642 = "";
+
+                                            function tambahGambar(nomor) {
+                                                let fileInput = document.getElementById("uploadGambar" + nomor);
+                                                let file = fileInput.files[0];
+
+                                                if (!file) {
+                                                    alert("Pilih gambar terlebih dahulu.");
+                                                    return;
+                                                }
+
+                                                let reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    if (nomor === 23) {
+                                                        gambarBase641 = e.target.result;
+                                                        sessionStorage.setItem("gambar23", gambarBase641);
+                                                        tampilkanPreview("hasilGambar23", gambarBase641);
+                                                    } else if (nomor === 24) {
+                                                        gambarBase642 = e.target.result;
+                                                        sessionStorage.setItem("gambar24", gambarBase642);
+                                                        tampilkanPreview("hasilGambar24", gambarBase642);
+                                                    }
+                                                };
+
+                                                reader.readAsDataURL(file);
+                                            }
+
+                                            function tampilkanPreview(divId, base64data) {
+                                                let container = document.createElement("div");
+                                                container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                let img = document.createElement("img");
+                                                img.src = base64data;
+                                                img.className = "w-full h-auto";
+                                                img.width = 280;
+                                                img.height = 280;
+
+                                                container.appendChild(img);
+                                                document.getElementById(divId).innerHTML = ""; // clear gambar lama
+                                                document.getElementById(divId).appendChild(container);
+                                            }    
+                                        </script>
+
+
+                                        <!-- <script>
+                                            let gambarBase64 = "";  // Buat variabel global
+
+                                        function tambahGambar() {
+                                            let fileInput = document.getElementById("uploadGambar");
+                                            let file = fileInput.files[0];
+
+                                            if (!file) {
+                                                alert("Pilih gambar terlebih dahulu.");
+                                                return;
+                                            }
+
+                                            let reader = new FileReader();
+
+                                            reader.onload = function (e) {
+                                                // Simpan base64 ke variabel global
+                                                gambarBase64 = e.target.result;
+
+                                                // Tampilkan gambar ke div hasilGambar
+                                                let container = document.createElement("div");
+                                                container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                let img = document.createElement("img");
+                                                img.src = gambarBase64;
+                                                img.className = "w-full h-auto";
+                                                img.width = 280;
+                                                img.height = 280;
+
+                                                container.appendChild(img);
+                                                document.getElementById("hasilGambar").innerHTML = "";  // Clear gambar lama
+                                                document.getElementById("hasilGambar").appendChild(container);
+                                            }
+
+                                            reader.readAsDataURL(file);
+                                        }
+
+                                        </script> -->
+
+
+
+
+
+                                        <br>
+                                        <div style="text-align: right; ">
+                                            <button
+                                                class="btn-simpan flex items-center gap-2 px-3 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 transition-all"
+                                                onclick="submitPPT12()"
+                                                style="display: inline-flex; align-items: center;">
+                                                <img src="savedata.png" alt="save" style="width: 35px; height: 35px;">
+                                                <span>Simpan</span>
+                                            </button>
+                                            <!-- <div style="text-align: right; margin-bottom: 10px;">
+                                            <button onclick="submitPPT12()" class="btn-simpan">
+                                                <img src="savedata.png" alt="save"> Simpan </button> -->
+                                        </div><br>
+                                        <div class="max-w-[1200px] mx-auto mt-1 p-4 bg-white border border-[#ffffff]">
+
+                                            <table
+                                                class="w-full border border-black border-collapse text-[10px] md:text-xs">
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2"
+                                                            class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left"
+                                                            style="width: 10%">
+                                                            KPPN Majene
+                                                        </th>
+                                                        <th id="judul12" colspan="9"
+                                                            class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                                            12. Perbendaharaan Negara yang optimal
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th colspan="9"
+                                                            class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                                            <span id="kode12">7a-CP</span>
+                                                            <span id="subjudul12"> Nilai kinerja pelaksanaan anggaran
+                                                                K/L</span>
+                                                        </th>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            T/R
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q1
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q2
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Sm.I
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q3
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            s.d. Q3
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q4
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Y
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 10%">
+                                                            Pol/ K P
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bg-[#f4d9d7] border border-black">
+                                                        <td class="border border-black px-2 py-1">Target</td>
+                                                        <td class="border border-black px-2 py-1 text-center">80</td>
+                                                        <td class="border border-black px-2 py-1 text-center">80</ td>
+                                                        <td class="border border-black px-2 py-1 text-center">80</td>
+                                                        <td class="border border-black px-2 py-1 text-center">80</td>
+                                                        <td class="border border-black px-2 py-1 text-center">80</td>
+                                                        <td class="border border-black px-2 py-1 text-center">80</td>
+                                                        <td class="border border-black px-2 py-1 text-center">80</td>
+                                                        <td class="border border-black px-2 py-1 text-center align-middle"
+                                                            rowspan="3">
+                                                            Max/TLK
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="bg-[#f4d9d7] border border-black">
+                                                        <td class="border border-black px-2 py-1">
+                                                            Realisasi</td>
+                                                        <td id="Nilaislide12a"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide12b"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide12c"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide12d"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide12e"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td class="border border-black px-2 py-1 text-center"
+                                                            id="Nilaislide12f">-</td>
+                                                        <td class="border border-black px-2 py-1 text-center"
+                                                            id="Nilaislide12g">-</td>
+
+                                                    </tr>
+                                                    <tr class="bg-[#f4d9d7] border border-black font-bold">
+                                                        <td class="border border-black px-2 py-1 font-bold">Capaian</td>
+                                                        <td id="nilaitotalslide12"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide12a"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide12b"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide12c"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide12d"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide12e"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide12f"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+                                                <div class="flex-1 flex flex-col space-y-2">
+                                                    <div
+                                                        class="bg-[#f79443] text-white font-bold px-2 py-1 text-[11px] md:text-sm">
+                                                        Isu Utama dan Implikasi <span class="italic font-normal">(Apa
+                                                            yang
+                                                            Terjadi dan Implikasinya?)</span>
+                                                    </div>
+                                                    <div class="bg-[#fce9d0] p-2 text-[10px] md:text-xs leading-tight">
+                                                        <p class="font-bold mb-1">Isu Utama</p>
+                                                        <p id="isuutama12" class="mb-2">
+                                                            Nilai 3 indikator kinerja pelaksanaan anggaran belum optimal
+                                                            yaitu
+                                                            Deviasi Halaman III DIPA,
+                                                            Penyerapan anggaran, &amp; Capaian Output.
+                                                        </p>
+                                                        <p class="font-bold mb-1">Implikasi</p>
+                                                        <p id="implikasi12" class="mb-2">Nilai IKPA TW IV 2024 belum
+                                                            maksi12mal</p>
+                                                        <p class="font-bold mb-1">Penjelasan capaian:</p>
+                                                        <p id="penjelasanc12" class="mb-2"> IKPA TW IV 2024
+                                                            belum maksi12mal</p>
+                                                        <table
+                                                            class="w-full border border-black border-collapse text-[15px] md:text-[15px] bg-[#e6f0f6]">
+                                                            <colgroup>
+                                                                <col style="width: 20%">
+                                                                <col style="width: 20%">
+                                                                <col style="width: 20%">
+                                                                <col style="width: 20%">
+                                                                <col style="width: 20%">
+
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Unit Kerja
+                                                                        </div>
+                                                                    </th>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Penerapan MR
+                                                                        </div>
+                                                                    </th>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Pelaksanaan PPINE</div>
+                                                                    </th>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Pengelolaan Pengaduan</div>
+                                                                    </th>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Nilai</div>
+                                                                    </th>
+
+                                                                    <!-- <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Indeks Capaian IKU
+                                                                        </div>
+                                                                    </th> -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-left">Target</h5>
+                                                                        <!-- <h5 class="text-center" id="fslide12">Realisasi
+                                                                        </h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah terbit SK OKI Kanwil DJPb Prov. Sulbar  nomor KEP-10/WPB.26/2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" >35</h5>
+                                                                        <!-- <h5 class="text-center" id="fslide12a">
+                                                                            Penyampaian</h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan sosialisasi security awareness tanggal 21 Maret 2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" >55</h5>
+                                                                        <!-- <h5 class="text-center" id="fslide12a">
+                                                                            Penyampaian</h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan sosialisasi security awareness tanggal 21 Maret 2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" >10</h5>
+                                                                        <!-- <h5 class="text-center" id="fslide12a">
+                                                                            Penyampaian</h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan sosialisasi security awareness tanggal 21 Maret 2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" >80</h5>
+                                                                        <!-- <h5 class="text-center" id="fslide12a">
+                                                                            Penyampaian</h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan sosialisasi security awareness tanggal 21 Maret 2025)</h5> -->
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-left" >Hasil Penilaian Triwulan IV
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center" id="totalslide12">0</h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah terbit SK OKI Kanwil DJPb Prov. Sulbar  nomor KEP-10/WPB.26/2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi12a">30
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center" id="totalslide12a">0
+                                                                        </h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan sosialisasi security awareness tanggal 21 Maret 2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi12b">30
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center" id="totalslide12b">0
+                                                                        </h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan tiga publikasi mengenai keamanan informasi pada Instagram KPPN Majene)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi12c">3
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center" id="totalslide12b">0
+                                                                        </h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan tiga publikasi mengenai keamanan informasi pada Instagram KPPN Majene)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi12d">30
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center" id="totalslide12b">0
+                                                                        </h5> -->
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan tiga publikasi mengenai keamanan informasi pada Instagram KPPN Majene)</h5> -->
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div
+                                                            class="w-[360px]  p-2 bg-[#fce9d0] flex flex-col justify-center">
+                                                            <p class="font-bold italic mb-[2px]">Sumber Data:</p>
+                                                            <p id="sumberdata12">
+
+                                                            </p>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div>
+                                                        <table
+                                                            class="w-full border border-black border-collapse text-[10px] md:text-xs bg-[#d9d9e6]">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="1"
+                                                                        class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                                                        Akar Masalah (Mengapa hal tersebut terjadi?)
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        class="border border-black px-2 py-1 text-[10px] md:text-xs leading-tight text-left">
+                                                                        <p id="akarmasalah12" class="font-bold mb-1">
+
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-1 flex flex-col space-y-2">
+                                                    <div
+                                                        class="bg-[#fbbd7a] text-white font-bold px-2 py-1 text-[11px] md:text-sm">
+                                                        Tindakan yang Telah Dilaksanakan
+                                                    </div>
+                                                    <div id="tindakan12"
+                                                        class="bg-[#fce9d0] p-2 text-[10px] md:text-xs leading-tight">
+
+                                                    </div>
+
+                                                    <table id="tabelRekomendasi12"
+                                                        class=" w-full border border-black border-collapse text-[10px] md:text-xs bg-[#d9d9e6]">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left"
+                                                                    style="width: 50%">
+                                                                    Rekomendasi Rencana Aksi
+                                                                </th>
+                                                                <th class="bg-[#5a8ac6] text-white font-bold border border-black px-2 py-1 text-center"
+                                                                    style="width: 15%">
+                                                                    Penanggung jawab
+                                                                </th>
+                                                                <th class="bg-[#5a8ac6] text-white font-bold border border-black px-2 py-1 text-left"
+                                                                    style="width: 35%">
+                                                                    Periode
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbodyRekomendasi12">
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="max-w-[1200px] mx-auto mt-1 p-4 bg-white border border-[#ffffff]">
+                                            <!-- Header Section -->
+                                            <h1 id="subjudul12a"
+                                                class="bg-[#0069b4] text-white text-xl sm:text-2xl font-normal px-4 py-2 mb-2 max-w-[900px]">
+                                                Nilai Kinerja Pelaksanaan Anggaran K/L
+                                            </h1>
+                                            <!-- Deskripsi -->
+                                            <p id="subutama12"
+                                                class="bg-[#d9e6f2] text-[15px] leading-tight px-4 py-2 mb-6 max-w-[900px]">
+
+                                            </p>
+
+
+                                            <!-- Preview Konten (Optional) -->
+                                            <div class="flex flex-col lg:flex-row gap-6">
+                                                <!-- KINERJA Section -->
+                                                <section class="bg-[#d9e6f2] p-4 flex-1 max-w-[900px]">
+                                                    <h2
+                                                        class="bg-[#0069b4] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[12px]">
+                                                        KINERJA
+                                                    </h2>
+                                                    <!-- Tabel Kinerja -->
+                                                    <table
+                                                        class="w-full border-collapse border border-[#0069b4] text-[15px] mb-4">
+                                                        <thead>
+                                                            <tr class="bg-[#0069b4] text-white text-center">
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[70px]">
+                                                                    Target</th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q1
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q2
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q3
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q4
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Y
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="bg-[#cbd6e6] text-center">
+                                                                <td class="border border-[#0069b4] px-2 py-1 text-left">
+                                                                    Target
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">80</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">80</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">80</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">80</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">80</td>
+                                                            </tr>
+                                                            <tr class="bg-[#cbd6e6] text-center">
+                                                                <td class="border border-[#0069b4] px-2 py-1 text-left">
+                                                                    Realisasi</td>
+                                                                <td id="Nilaislide12aa"
+                                                                    class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1"
+                                                                    id="totalCapaian4">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1"
+                                                                    id="totalCapaian5">-</td>
+                                                            </tr>
+                                                            <tr class="bg-[#cbd6e6] text-center font-bold">
+                                                                <td class="border border-[#0069b4] px-2 py-1 text-left">
+                                                                    Indeks
+                                                                    Capaian</td>
+                                                                <td id="nilaitotalslide12aa"
+                                                                    class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- List Keterangan -->
+                                                    <span class="font-bold">Hal yang menjadi <i>critical
+                                                            point</i>
+                                                        pencapaian IKI ini
+                                                        diantaranya:</span>
+
+                                                    <p id="critical12"
+                                                        class="list-decimal list-inside text-[12px] leading-tight space-y-1">
+
+
+                                                    </p>
+                                                    <span class="font-bold">
+                                                        Untuk menjaga ketercapaian IKI, sampai dengan Triwulan
+                                                        IV 2024
+                                                        telah dilakukan beberapa hal
+                                                        yaitu:
+                                                    </span>
+                                                    <p id="tindakan12a"
+                                                        class="list-decimal list-inside text-[12px] leading-tight space-y-1">
+
+
+
+                                                    </p>
+                                                </section>
+                                                <!-- RISIKO Section -->
+                                                <section
+                                                    class="flex flex-col items-center flex-1 max-w-[280px] border-l-2 border-dashed border-black px-4">
+                                                    <h2
+                                                        class="bg-[#7a6ba8] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[12px] w-full max-w-[280px]">
+                                                        RISIKO
+                                                    </h2>
+                                                    <!-- Risiko Chart Container -->
+                                                    <div id="hasilGambar23"
+                                                        class="bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full">
+
+                                                    </div>
+                                                    <!-- Status IRU Chart -->
+                                                    <div id="hasilGambar24" class="max-w-[280px] w-full">
+
+                                                    </div>
+                                                </section>
+                                                <!-- RENCANA AKSI12 & MITIGASI RISIKO Section -->
+                                                <section
+                                                    class="flex-1 max-w-[400px] border-l-2 border-dashed border-black bg-[#f1dfdb] p-4">
+                                                    <h2
+                                                        class="bg-[#009b3a] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[6px]">
+                                                        RENCANA AKSI &amp; MITIGASI RISIKO
+                                                    </h2>
+                                                    <table id="tabelRekomendasi12a"
+                                                        class="w-full border-collapse border border-black text-[12px]">
+                                                        <thead>
+                                                            <tr
+                                                                class="bg-[#009b3a] text-white text-center font-semibold">
+                                                                <th class="border border-black px-2 py-2 min-w-[120px]">
+                                                                    Rencana
+                                                                    Aksi</th>
+                                                                <th class="border border-black px-2 py-2 min-w-[90px]">
+                                                                    Periode
+                                                                </th>
+                                                                <th class="border border-black px-2 py-2 min-w-[60px]">
+                                                                    UIC</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbodyRekomendasi12a">
+
+                                                        </tbody>
+                                                    </table>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            // let nomorEntri = 1;
+                                            let rowspanCount = 0;
+                                            let lastPenanggungCell = null;
+
+                                            function tambahEntri12() {
+                                                const aksi12Input = document.getElementById('aksi12Input');
+                                                const periode12Input = document.getElementById('periode12Input');
+
+                                                const deskripsi = aksi12Input.value.trim();
+                                                const periode12 = periode12Input.value.trim();
+
+                                                if (deskripsi === '' || periode12 === '') {
+                                                    alert('Silakan masukkan deskripsi aksi12 dan periode12.');
+                                                    return;
+                                                }
+
+                                                const tbody = document.getElementById('tbodyRekomendasi12');
+                                                const tr = document.createElement('tr');
+
+                                                const tdAksi12 = document.createElement('td');
+                                                // Menambahkan <br> untuk menggantikan \n
+                                                tdAksi12.innerHTML = deskripsi.replace(/\n/g, "<br>");
+
+                                                const tdPeriode12 = document.createElement('td');
+                                                tdPeriode12.textContent = periode12;
+
+                                                tr.appendChild(tdAksi12);
+
+                                                if (rowspanCount === 0) {
+                                                    const tdPenanggungJawab12 = document.createElement('td');
+                                                    tdPenanggungJawab12.textContent = 'Seksi VeraKi';
+                                                    tdPenanggungJawab12.rowSpan = 1;
+                                                    tr.appendChild(tdPenanggungJawab12);
+                                                    lastPenanggungCell = tdPenanggungJawab12;
+                                                    rowspanCount = 1;
+                                                } else {
+                                                    rowspanCount++;
+                                                    lastPenanggungCell.rowSpan = rowspanCount;
+                                                }
+
+                                                tr.appendChild(tdPeriode12);
+                                                tbody.appendChild(tr);
+
+                                                aksi12Input.value = '';
+                                                periode12Input.value = '';
+                                                // nomorEntri++;
+
+                                                const tds = tr.querySelectorAll('td');
+                                                tds.forEach(td => {
+                                                    td.style.textAlign = 'left';
+                                                });
+
+
+                                            }
+                                        </script>
+                                        <script>
+                                            function submitPPT12() {
+
+                                                let judul12hasil = document.getElementById("judul12").innerText;
+                                                let subjudul12hasil = document.getElementById("subjudul12").innerText;
+                                                let kode12hasil = document.getElementById("kode12").innerText;
+                                                let isuutama12hasil = document.getElementById("isuutama12").innerText;
+                                                let implikasi12hasil = document.getElementById("implikasi12").innerText;
+                                                let penjelasanc12hasil = document.getElementById("penjelasanc12").innerText;
+                                                let sumberdata12hasil = document.getElementById("sumberdata12").innerText;
+                                                let akarmasalah12hasil = document.getElementById("akarmasalah12").innerText;
+                                                let tindakan12hasil = document.getElementById("tindakan12").innerText;
+                                                let subutama12hasil = document.getElementById("subutama12").innerText;
+                                                let critical12hasil = document.getElementById("critical12").innerText;
+                                                let subjudul12ahasil = document.getElementById("subjudul12a").innerText;
+                                                
+                                                
+                                                let totalrealisasi12a = document.getElementById("totalrealisasi12a").innerText;
+                                                let totalrealisasi12b = document.getElementById("totalrealisasi12b").innerText;
+                                                let totalrealisasi12c = document.getElementById("totalrealisasi12c").innerText;
+                                                let totalrealisasi12d = document.getElementById("totalrealisasi12d").innerText;
+
+                                                let tbodyRekomendasi12 = document.getElementById("tbodyRekomendasi12");
+                                                let rows = tbodyRekomendasi12.querySelectorAll("tr");
+                                                let rekomendasiData12 = [];
+
+                                                let lastPenanggungJawab12 = ''; // Menyimpan nilai terakhir
+
+                                                rows.forEach(row => {
+                                                    let cells = row.querySelectorAll("td");
+                                                    let aksi12 = cells[0]?.innerText || '';
+                                                    let periode12 = '';
+                                                    let penanggungJawab12 = '';
+
+                                                    if (cells.length === 3) {
+                                                        // Baris pertama, semua kolom ada
+                                                        penanggungJawab12 = cells[1].innerText;
+                                                        periode12 = cells[2].innerText;
+                                                        lastPenanggungJawab12 = penanggungJawab12; // Simpan nilai terbaru
+                                                    } else if (cells.length === 2) {
+                                                        // Baris tanpa kolom penanggung jawab
+                                                        penanggungJawab12 = lastPenanggungJawab12;
+                                                        periode12 = cells[1].innerText;
+                                                    }
+
+                                                    rekomendasiData12.push({
+                                                        aksi12: aksi12.replace(/<br>/g, '\n'),
+                                                        penanggungJawab12,
+                                                        periode12
+                                                    });
+                                                });
+
+                                                // let tbodyRekomendasi121a = document.getElementById("tbodyRekomendasi121a");
+                                                // let rows1 = tbodyRekomendasi121a.querySelectorAll("tr");
+                                                // let rekomendasiData121a = [];
+
+                                                // let lastPenanggungJawab121 = ''; // Menyimpan nilai terakhir
+
+                                                // rows1.forEach(row => {
+                                                //     let cells = row.querySelectorAll("td");
+                                                //     let aksi12 = cells[0]?.innerText || '';
+                                                //     let periode12 = '';
+                                                //     let penanggungJawab12 = '';
+
+                                                //     if (cells.length === 3) {
+                                                //         // Baris pertama, semua kolom ada
+                                                //         penanggungJawab12 = cells[1].innerText;
+                                                //         periode12 = cells[2].innerText;
+                                                //         lastPenanggungJawab121 = penanggungJawab12; // Simpan nilai terbaru
+                                                //     } else if (cells.length === 2) {
+                                                //         // Baris tanpa kolom penanggung jawab
+                                                //         penanggungJawab12 = lastPenanggungJawab121;
+                                                //         periode12 = cells[1].innerText;
+                                                //     }
+
+                                                //     rekomendasiData12.push({
+                                                //         aksi12: aksi12.replace(/<br>/g, '\n'),
+                                                //         penanggungJawab12,
+                                                //         periode12
+                                                //     });
+                                                // });
+
+
+
+
+                                                // Cek apakah ada data lama di localStorage
+                                                let storedData = localStorage.getItem("indeks_data");
+                                                let data = storedData ? JSON.parse(storedData) : {};
+
+
+                                                data.judul12 = judul12hasil;
+                                                data.subjudul12 = subjudul12hasil;
+                                                data.kode12 = kode12hasil;
+                                                data.isuutama12 = isuutama12hasil;
+                                                data.implikasi12 = implikasi12hasil;
+                                                data.penjelasanc12 = penjelasanc12hasil;
+                                                data.tindakan12 = tindakan12hasil;
+                                                data.totalrealisasi12a = totalrealisasi12a;
+                                                data.totalrealisasi12b = totalrealisasi12b;
+                                                data.totalrealisasi12c = totalrealisasi12c;
+                                                data.totalrealisasi12d = totalrealisasi12d;
+                                                data.sumberdata12 = sumberdata12hasil;
+                                                data.akarmasalah12 = akarmasalah12hasil;
+                                                data.subjudul12 = subjudul12ahasil;
+                                                
+                                                data.rekomendasi12 = rekomendasiData12;
+                                                data.subutama12 = subutama12hasil;
+                                                data.critical12 = critical12hasil;
+
+                                                try {
+                                                    // Simpan data biasa ke localStorage
+                                                    localStorage.setItem("indeks_data", JSON.stringify(data));
+
+                                                    // Coba simpan gambar ke sessionStorage (tidak masalah quota di sini karena sementara)
+                                                    if (gambarBase641 !== "") {
+                                                        sessionStorage.setItem("gambar23", gambarBase641);
+                                                    }
+                                                    if (gambarBase642 !== "") {
+                                                        sessionStorage.setItem("gambar24", gambarBase642);
+                                                    }
+
+                                                    // alert("Data berhasil disimpan!");
+
+                                                } catch (e) {
+                                                    if (e.name === 'QuotaExceededError') {
+                                                        alert("Penyimpanan penuh! Silakan hapus data lama dulu.");
+                                                    } else {
+                                                        alert("Terjadi kesalahan saat menyimpan data.");
+                                                    }
+                                                }
+
+                                                alert("Data dari Nilai Kinerja Pelaksanaan Anggaran K/L berhasil disimpan!");
+                                            }
+                                        </script>
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function () {
+                                                // Ambil data biasa dari localStorage
+                                                let data = localStorage.getItem("indeks_data");
+
+                                                if (data) {
+                                                    let parsedData = JSON.parse(data);
+
+                                                    // Set data text ke elemen sesuai id
+                                                    document.getElementById("judul12").innerText = parsedData.judul12 || "-";
+                                                    document.getElementById("subjudul12").innerText = parsedData.subjudul12 || "-";
+                                                    document.getElementById("subjudul12a").innerText = parsedData.subjudul12 || "-";
+                                                    document.getElementById("kode12").innerText = parsedData.kode12 || "-";
+                                                    document.getElementById("isuutama12").innerText = parsedData.isuutama12 || "-";
+                                                    document.getElementById("implikasi12").innerText = parsedData.implikasi12 || "-";
+                                                    document.getElementById("penjelasanc12").innerText = parsedData.penjelasanc12 || "-";
+                                                    document.getElementById("sumberdata12").innerText = parsedData.sumberdata12 || "-";
+                                                    document.getElementById("akarmasalah12").innerText = parsedData.akarmasalah12 || "-";
+                                                    document.getElementById("tindakan12").innerText = parsedData.tindakan12 || "-";
+                                                    document.getElementById("subutama12").innerText = parsedData.subutama12 || "-";
+                                                    document.getElementById("tindakan12a").innerText = parsedData.tindakan12 || "-";
+                                                    document.getElementById("critical12").innerText = parsedData.critical12 || "-";
+                                                    // document.getElementById("fslide12").innerText = parsedData.fslide12 || "-";
+                                                    // document.getElementById("fslide12a").innerText = parsedData.fslide12a || "-";
+                                                    // document.getElementById("formulaslide12").innerText = parsedData.formula12 || "-";
+                                                    document.getElementById("totalrealisasi12a").innerText = parsedData.totalrealisasi12a || "-";
+                                                    document.getElementById("totalrealisasi12b").innerText = parsedData.totalrealisasi12b || "-";
+                                                    document.getElementById("totalrealisasi12c").innerText = parsedData.totalrealisasi12c || "-";
+                                                    document.getElementById("totalrealisasi12d").innerText = parsedData.totalrealisasi12d || "-";
+
+
+                                                    document.getElementById("Nilaislide12a").innerText = parsedData.totalrealisasi12d || "-";
+
+                                                    let totalCapaian12 = parseFloat(parsedData.totalrealisasi12d);
+                                                    let nilaitotalslide12 = (totalCapaian12 >= 95) ? 120 : totalCapaian12.toFixed(0);
+                                                    document.getElementById("nilaitotalslide12").innerText = isNaN(nilaitotalslide12) ? "-" : nilaitotalslide12;
+
+                                                    // document.getElementById("totalslide12").innerText = parsedData.valuenilaiNKA || "-";
+                                                    // document.getElementById("totalslide12a").innerText = parsedData.valuenilaiLK || "-";
+                                                    // document.getElementById("totalslide12b").innerText = parsedData.totalrealisasi12d || "-";
+
+                                                    // document.getElementById("totalslide12d").innerText = parsedData.totalrealisasi12d || "-";
+                                                    document.getElementById("Nilaislide12aa").innerText = parsedData.totalrealisasi12d || "-";
+                                                    let totalCapaian12a = parseFloat(parsedData.totalrealisasi12d);
+                                                    let nilaitotalslide12aa = (totalCapaian12a >= 95) ? 120 : totalCapaian12a.toFixed(0);
+                                                    document.getElementById("nilaitotalslide12aa").innerText = isNaN(nilaitotalslide12aa) ? "-" : nilaitotalslide12aa;
+
+
+
+
+                                                    if (parsedData.rekomendasi12 && Array.isArray(parsedData.rekomendasi12)) {
+                                                        let tbody = document.getElementById("tbodyRekomendasi12");
+                                                        tbody.innerHTML = ""; // Kosongkan isi tabel
+
+                                                        const jumlahBaris = parsedData.rekomendasi12.length;
+
+                                                        parsedData.rekomendasi12.forEach((item, index) => {
+                                                            let tr = document.createElement("tr");
+
+                                                            // Kolom Rekomendasi Rencana Aksi12
+                                                            let tdAksi12 = document.createElement("td");
+                                                            tdAksi12.textContent = item.aksi12;
+                                                            tdAksi12.innerHTML = item.aksi12.replace(/\n/g, "<br>");
+                                                            tdAksi12.style.textAlign = "left";
+                                                            tr.appendChild(tdAksi12);
+
+                                                            // Jika baris pertama, tambahkan td Penanggung Jawab dengan rowspan
+                                                            if (index === 0) {
+                                                                let tdPenanggungJawab12 = document.createElement("td");
+                                                                tdPenanggungJawab12.textContent = item.penanggungJawab12;
+                                                                tdPenanggungJawab12.rowSpan = jumlahBaris;
+                                                                // Simpan dulu <td> penanggung jawab supaya ditambahkan nanti
+                                                                tr.appendChild(tdPenanggungJawab12);
+                                                            }
+
+                                                            // Kolom Periode12 (selalu ditambahkan)
+                                                            let tdPeriode12 = document.createElement("td");
+                                                            tdPeriode12.textContent = item.periode12;
+                                                            // tdPeriode12.innerHTML = item.periode12.replace(/\n/g, "<br>");
+                                                            tdPeriode12.style.textAlign = "left";
+                                                            tr.appendChild(tdPeriode12);
+
+                                                            // Tambahkan row ke tbody setelah semua kolom siap
+                                                            tbody.appendChild(tr);
+                                                        });
+                                                    }
+
+                                                    if (parsedData.rekomendasi12 && Array.isArray(parsedData.rekomendasi12)) {
+                                                        let tbody = document.getElementById("tbodyRekomendasi12a");
+                                                        tbody.innerHTML = ""; // Kosongkan isi tabel
+
+                                                        const jumlahBaris = parsedData.rekomendasi12.length;
+
+                                                        parsedData.rekomendasi12.forEach((item, index) => {
+                                                            let tr = document.createElement("tr");
+
+                                                            // Kolom Rekomendasi Rencana Aksi12
+                                                            let tdAksi12 = document.createElement("td");
+                                                            tdAksi12.textContent = item.aksi12;
+                                                            tdAksi12.innerHTML = item.aksi12.replace(/\n/g, "<br>");
+                                                            tdAksi12.style.textAlign = "left";
+                                                            tr.appendChild(tdAksi12);
+
+                                                            // Jika baris pertama, tambahkan td Penanggung Jawab dengan rowspan
+                                                            if (index === 0) {
+                                                                let tdPenanggungJawab12 = document.createElement("td");
+                                                                tdPenanggungJawab12.textContent = item.penanggungJawab12;
+                                                                tdPenanggungJawab12.rowSpan = jumlahBaris;
+                                                                // Simpan dulu <td> penanggung jawab supaya ditambahkan nanti
+                                                                tr.appendChild(tdPenanggungJawab12);
+                                                            }
+
+                                                            // Kolom Periode12 (selalu ditambahkan)
+                                                            let tdPeriode12 = document.createElement("td");
+                                                            tdPeriode12.textContent = item.periode12;
+                                                            tdPeriode12.style.textAlign = "left";
+                                                            tr.appendChild(tdPeriode12);
+
+                                                            // Tambahkan row ke tbody setelah semua kolom siap
+                                                            tbody.appendChild(tr);
+                                                        });
+                                                    }
+
+
+                                                    // // Memuat rekomendasi
+                                                    // if (parsedData.rekomendasi && Array.isArray(parsedData.rekomendasi)) {
+                                                    //         let tbody = document.getElementById("tbodyRekomendasi12");
+                                                    //         tbody.innerHTML = ""; // Kosongkan dulu isinya
+
+                                                    //         let rowspanCount = 0; // Inisialisasi penghitung untuk rowspan
+
+                                                    //         parsedData.rekomendasi.forEach(item => {
+                                                    //             let tr = document.createElement("tr");
+
+                                                    //             let tdAksi12 = document.createElement("td");
+                                                    //             tdAksi12.textContent = item.aksi12;
+                                                    //             tr.appendChild(tdAksi12);
+
+                                                    //             let tdPenanggungJawab12 = document.createElement("td");
+                                                    //             tdPenanggungJawab12.textContent = item.penanggungJawab12;
+
+                                                    //             // Set rowspan jika diperlukan
+                                                    //             tdPenanggungJawab12.rowSpan = item.rowspan || 1;
+                                                    //             tr.appendChild(tdPenanggungJawab12);
+
+                                                    //             let tdPeriode12 = document.createElement("td");
+                                                    //             tdPeriode12.textContent = item.periode12;
+                                                    //             tdPeriode12.style.textAlign = "left";
+                                                    //             tr.appendChild(tdPeriode12);
+
+                                                    //             tbody.appendChild(tr);
+
+                                                    //             // Menghitung rowspan jika ada entri yang bertambah
+                                                    //             // rowspanCount = item.rowspan;
+                                                    //         });
+
+                                                    // }
+
+                                                } else {
+                                                    alert("Tidak ada data tersimpan!");
+                                                }
+
+                                                // Ambil gambar23 dari sessionStorage
+                                                let gambar23 = sessionStorage.getItem("gambar23");
+                                                if (gambar23) {
+                                                    let container = document.createElement("div");
+                                                    container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                    let img = document.createElement("img");
+                                                    img.src = gambar23;
+                                                    img.className = "w-full h-auto";
+                                                    img.width = 280;
+                                                    img.height = 280;
+
+                                                    container.appendChild(img);
+                                                    document.getElementById("hasilGambar23").appendChild(container);
+                                                }
+
+                                                // Ambil gambar24 dari sessionStorage
+                                                let gambar24 = sessionStorage.getItem("gambar24");
+                                                if (gambar24) {
+                                                    let container = document.createElement("div");
+                                                    container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                    let img = document.createElement("img");
+                                                    img.src = gambar24;
+                                                    img.className = "w-full h-auto";
+                                                    img.width = 280;
+                                                    img.height = 280;
+
+                                                    container.appendChild(img);
+                                                    document.getElementById("hasilGambar24").appendChild(container);
+                                                }
+                                            });
+                                        </script>
+
+
+                                    </div>
+
+                                </body>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>

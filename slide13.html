@@ -1,0 +1,1551 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <!-- <meta name="description" content="Sufee Admin - HTML5 Admin Template"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    function navigatePage() {
+        var selectElement = document.getElementById("pageSelect");
+        var selectedValue = selectElement.value;
+
+        const pages = {
+            "slide1": "slide1.html",
+            "slide2": "slide2.html",
+            "slide3": "slide3.html",
+            "slide4": "slide4.html",
+            "slide5": "slide5.html",
+            "slide6": "slide6.html",
+            "slide7": "slide7.html",
+            "slide8": "slide8.html",
+            "slide9": "slide9.html",
+            "slide10": "slide10.html",
+            "slide11": "slide11.html",
+            "slide12": "slide12.html",
+            "slide13": "slide13.html",
+            "slide14": "slide14.html",
+            "slide14": "slide14.html",
+            "slide16": "slide16.html"
+        };
+
+        if (selectedValue in pages) {
+            window.location.href = pages[selectedValue];
+        }
+    }
+</script>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="dashboard.html"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="dashboard.html"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="w-full">
+                <script src="https://cdn.tailwindcss.com"></script>
+                <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-dashboard mr-2"></i>Dashboard
+                        </a>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none">
+                            <i class="fa fa-table mr-2"></i>Tables
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400"
+                                viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <ul
+                            class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10">
+                            <li>
+                                <a href="tables-basic.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-basic.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New PPT Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-data.html"
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="refresh" onclick="resetData()"><i class="fa fa-refresh"></i>
+                                Refresh</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                        <script>
+                            // Tombol untuk menghapus data localStorage dan sessionStorage
+                            function resetData() {
+                                if (confirm("Apakah Anda yakin ingin menghapus semua data?")) {
+                                    localStorage.removeItem("indeks_data");
+                                    sessionStorage.clear();
+                                    alert("Data berhasil dihapus!");
+                                    location.reload(); // Reload halaman untuk refresh tampilan
+                                }
+                            }
+                        </script>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">PPT DATA IKU KEMENKEU</strong>
+                                <!-- <label for="pageSelect">Pilih kategori:</label> -->
+                                <select id="pageSelect" onchange="navigatePage()">
+                                    <option value="" disabled selected>-- Pilih --</option>
+                                    <option value="slide1">Nilai Kinerja Pelaksanaan Anggaran K/L</option>
+                                    <option value="slide2">Indeks Kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="slide3">Indeks Kepuasan Satker terhadap Layanan KPPN</option>
+                                    <option value="slide4">Indeks Implementasi Standardisasi Kompetensi Pejabat
+                                        Perbendaharaan pada satker lingkup KPPN </option>
+                                    <option value="slide5">Tingkat Efektivitas Edukasi di Bidang Pengelolaan
+                                        Perbendaharaan</option>
+                                    <option value="slide6">Persentase Akurasi perencanaan Kas</option>
+                                    <option value="slide7">Tingkat Kualitas penyelesaian SP2D</option>
+                                    <option value="slide8">Nilai Kinerja Penyaluran Dana Transfer ke Daerah</option>
+                                    <option value="slide9">Indeks Digitalisasi Pengelolaan Keuangan KPPN</option>
+                                    <option value="slide10">Indeks kualitas Laporan Pertanggungjawaban Bendahara K/L
+                                    </option>
+                                    <option value="slide11">Tingkat implementasi penajaman tugas Financial Advisory
+                                    </option>
+                                    <option value="slide12">Tingkat Kualitas Pengelolaan Kinerja Organisasi</option>
+                                    <option value="slide13">Nilai kualitas pengelolaan SDM </option>
+                                    <option value="slide14">Nilai hasil evaluasi pelaksanaan tugas kepatuhan internal
+                                    </option>
+                                    <option value="slide14">Persentase Kualitas Pelaksanaan anggaran KPPN</option>
+                                    <option value="slide16">Persentase Kualitas pengelolaan BMN dan Pengadaan</option>
+                                </select>
+
+                                <body>
+
+                                    <div id="slide13" class="content">
+                                        <br>
+                                        <h3><b>7. Pengelolaan keuangan yang akuntabel</b></h3>
+
+                                        <label for="judul13">Masukkan Judul: </label>
+                                        <textarea id="inputjudul13" class="form-control" rows="1"
+                                            placeholder="Masukkan Judul..." oninput="updatejudul13()"></textarea>
+
+                                        <script>
+                                            function updatejudul13() {
+                                                let inputText = document.getElementById("inputjudul13").value;
+                                                let judul13 = document.getElementById("judul13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                judul13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="subjudul13">Masukkan subJudul: </label>
+                                        <textarea id="inputsubjudul13" class="form-control" rows="1"
+                                            placeholder="Masukkan subJudul..." oninput="updatesubjudul13()"></textarea>
+
+                                        <script>
+                                            function updatesubjudul13() {
+                                                let inputText = document.getElementById("inputsubjudul13").value;
+                                                let subjudul13 = document.getElementById("subjudul13");
+                                                let subjudul13a = document.getElementById("subjudul13a");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                subjudul13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                                subjudul13a.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <label for="kode13">Masukkan kode: </label>
+                                        <textarea id="inputkode13" class="form-control" rows="1"
+                                            placeholder="Masukkan kode..." oninput="updatekode13()"></textarea>
+
+
+                                        <script>
+                                            function updatekode13() {
+                                                let inputText = document.getElementById("inputkode13").value;
+                                                let kode13 = document.getElementById("kode13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                kode13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="isuutama13">Masukkan Isu Utama: </label>
+                                        <textarea id="inputisuutama13" class="form-control" rows="3"
+                                            placeholder="Masukkan Isu Utama..." oninput="updateisuutama13()"></textarea>
+
+
+                                        <script>
+                                            function updateisuutama13() {
+                                                let inputText = document.getElementById("inputisuutama13").value;
+                                                let isuutama13 = document.getElementById("isuutama13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                isuutama13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="implikasi13">Masukkan Implikasi: </label>
+                                        <textarea id="inputimplikasi13" class="form-control" rows="3"
+                                            placeholder="Masukkan Implikasi..."
+                                            oninput="updateimplikasi13()"></textarea>
+
+
+                                        <script>
+                                            function updateimplikasi13() {
+                                                let inputText = document.getElementById("inputimplikasi13").value;
+                                                let implikasi13 = document.getElementById("implikasi13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                implikasi13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="penjelasanc13">Masukkan Penjelasan Capaian: </label>
+                                        <textarea id="inputpenjelasanc13" class="form-control" rows="3"
+                                            placeholder="Masukkan Penjelasan Capaian..."
+                                            oninput="updatepenjelasanc13()"></textarea>
+
+
+                                        <script>
+                                            function updatepenjelasanc13() {
+                                                let inputText = document.getElementById("inputpenjelasanc13").value;
+                                                let penjelasanc13 = document.getElementById("penjelasanc13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                penjelasanc13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="tindakan13">Masukkan Tindakan: </label>
+                                        <textarea id="inputtindakan13" class="form-control" rows="8"
+                                            placeholder="Masukkan Tindakan..." oninput="updatetindakan13()"></textarea>
+
+
+                                        <script>
+                                            function updatetindakan13() {
+                                                let inputText = document.getElementById("inputtindakan13").value;
+                                                let tindakan13 = document.getElementById("tindakan13");
+                                                let tindakan13a = document.getElementById("tindakan13a");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                tindakan13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                                tindakan13a.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="sumberdata13">Masukkan Sumber Data: </label>
+                                        <textarea id="inputsumberdata13" class="form-control" rows="3"
+                                            placeholder="Masukkan Sumber Data..."
+                                            oninput="updatesumberdata13()"></textarea>
+
+
+                                        <script>
+                                            function updatesumberdata13() {
+                                                let inputText = document.getElementById("inputsumberdata13").value;
+                                                let sumberdata13 = document.getElementById("sumberdata13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                sumberdata13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="akarmasalah13">Masukkan Akar Masalah: </label>
+                                        <textarea id="inputakarmasalah13" class="form-control" rows="4"
+                                            placeholder="Masukkan Akar Masalah..."
+                                            oninput="updateakarmasalah13()"></textarea>
+
+
+                                        <script>
+                                            function updateakarmasalah13() {
+                                                let inputText = document.getElementById("inputakarmasalah13").value;
+                                                let akarmasalah13 = document.getElementById("akarmasalah13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                akarmasalah13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+
+
+
+
+                                        <!-- <div class="input-group"> -->
+                                        <label for="aksi13Input">Aksi13:</label>
+                                        <textarea class="form-control" type="text" id="aksi13Input"
+                                            placeholder="Masukkan deskripsi aksi13" rows="5"></textarea>
+
+                                        <!-- </div> -->
+
+                                        <!-- <div class="input-group"> -->
+                                        <label for="periode13Input">Periode13:</label>
+                                        <textarea class="form-control" type="text" id="periode13Input"
+                                            placeholder="Masukkan Periode" rows="3"></textarea>
+                                        <!-- </div> -->
+
+                                        <button
+                                            class="px-3 py-2 bg-[#f1dfdb] text-black font-semibold rounded hover:bg-[#e6cbc5]"
+                                            onclick="tambahEntri13()">Tambah Entri</button>
+
+                                        <br>
+                                        <label for="fslide13">Masukkan Formula A: </label>
+                                        <textarea id="inputfslide13" class="form-control" rows="2"
+                                            placeholder="Masukkan Formula A..." oninput="updatefslide13()"></textarea>
+
+                                        <script>
+                                            function updatefslide13() {
+                                                let inputText = document.getElementById("inputfslide13").value;
+                                                let fslide13 = document.getElementById("fslide13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                fslide13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <label for="fslide13a">Masukkan Formula B: </label>
+                                        <textarea id="inputfslide13a" class="form-control" rows="2"
+                                            placeholder="Masukkan Formula B..." oninput="updatefslide13a()"></textarea>
+
+                                        <script>
+                                            function updatefslide13a() {
+                                                let inputText = document.getElementById("inputfslide13a").value;
+                                                let fslide13a = document.getElementById("fslide13a");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                fslide13a.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <label for="totalrealisasi13">Masukkan Realisasi 1: </label>
+                                        <textarea id="inputrealisasi13" class="form-control" rows="2"
+                                            placeholder="Masukkan Realisasi 1..."
+                                            oninput="updaterealisasi13()"></textarea>
+
+                                        <script>
+                                            function updaterealisasi13() {
+                                                let inputText = document.getElementById("inputrealisasi13").value;
+                                                let totalrealisasi13 = document.getElementById("totalrealisasi13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                totalrealisasi13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <label for="totalrealisasi13a">Masukkan Realisasi 2: </label>
+                                        <textarea id="inputrealisasi13a" class="form-control" rows="2"
+                                            placeholder="Masukkan Realisasi 2..."
+                                            oninput="updaterealisasi13a()"></textarea>
+
+                                        <script>
+                                            function updaterealisasi13a() {
+                                                let inputText = document.getElementById("inputrealisasi13a").value;
+                                                let totalrealisasi13a = document.getElementById("totalrealisasi13a");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                totalrealisasi13a.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <label for="totalrealisasi13b">Masukkan Realisasi 3: </label>
+                                        <textarea id="inputrealisasi13b" class="form-control" rows="2"
+                                            placeholder="Masukkan Realisasi 3..."
+                                            oninput="updaterealisasi13b()"></textarea>
+
+                                        <script>
+                                            function updaterealisasi13b() {
+                                                let inputText = document.getElementById("inputrealisasi13b").value;
+                                                let totalrealisasi13b = document.getElementById("totalrealisasi13b");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                totalrealisasi13b.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+
+
+                                        <label for="subutama13">Masukkan Sub Utama: </label>
+                                        <textarea id="inputsubutama13" class="form-control" rows="4"
+                                            placeholder="Masukkan Sub Utama..." oninput="updatesubutama13()"></textarea>
+
+
+                                        <script>
+                                            function updatesubutama13() {
+                                                let inputText = document.getElementById("inputsubutama13").value;
+                                                let subutama13 = document.getElementById("subutama13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                subutama13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+
+                                        <label for="critical13">Masukkan Critical Point: </label>
+                                        <textarea id="inputcritical13" class="form-control" rows="4"
+                                            placeholder="Masukkan Critical Point..."
+                                            oninput="updatecritical13()"></textarea>
+
+
+                                        <script>
+                                            function updatecritical13() {
+                                                let inputText = document.getElementById("inputcritical13").value;
+                                                let critical13 = document.getElementById("critical13");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                critical13.innerHTML = inputText.replace(/\n/g, "<br>");
+                                            }
+                                        </script>
+                                        <!-- <label for="uploadGambar">Upload Gambar:</label>
+                                        <input type="file" id="uploadGambar" accept="image/*">
+                                        <button onclick="tambahGambar()">Tambah Gambar</button> -->
+                                        <div class="max-w-[1200px] mx-auto mt-2 p-4 bg-white border border-[#ffffff]">
+                                            <!-- Gambar 1 -->
+                                            <div class="flex items-center gap-4">
+                                                <label for="uploadGambar25"
+                                                    class="text-sm font-medium text-gray-700 w-32">Upload Gambar
+                                                    1:</label>
+                                                <input type="file" id="uploadGambar25" accept="image/*"
+                                                    class="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:font-semibold file:bg-[#f1dfdb] file:text-black hover:file:bg-[#e6cbc5] rounded w-full">
+                                                <button onclick="tambahGambar(25)"
+                                                    class="px-4 py-2 bg-[#f1dfdb] text-black font-semibold rounded hover:bg-[#e6cbc5]">Tambah</button>
+                                            </div>
+
+                                            <!-- Gambar 2 -->
+                                            <div class="flex items-center gap-4">
+                                                <label for="uploadGambar26"
+                                                    class="text-sm font-medium text-gray-700 w-32">Upload Gambar
+                                                    2:</label>
+                                                <input type="file" id="uploadGambar26" accept="image/*"
+                                                    class="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:font-semibold file:bg-[#f1dfdb] file:text-black hover:file:bg-[#e6cbc5] rounded w-full">
+                                                <button onclick="tambahGambar(26)"
+                                                    class="px-4 py-2 bg-[#f1dfdb] text-black font-semibold rounded hover:bg-[#e6cbc5]">Tambah</button>
+                                            </div>
+                                        </div>
+
+
+                                        <script>
+                                            let gambarBase641 = "";
+                                            let gambarBase642 = "";
+
+                                            function tambahGambar(nomor) {
+                                                let fileInput = document.getElementById("uploadGambar" + nomor);
+                                                let file = fileInput.files[0];
+
+                                                if (!file) {
+                                                    alert("Pilih gambar terlebih dahulu.");
+                                                    return;
+                                                }
+
+                                                let reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    if (nomor === 25) {
+                                                        gambarBase641 = e.target.result;
+                                                        sessionStorage.setItem("gambar25", gambarBase641);
+                                                        tampilkanPreview("hasilGambar25", gambarBase641);
+                                                    } else if (nomor === 26) {
+                                                        gambarBase642 = e.target.result;
+                                                        sessionStorage.setItem("gambar26", gambarBase642);
+                                                        tampilkanPreview("hasilGambar26", gambarBase642);
+                                                    }
+                                                };
+
+                                                reader.readAsDataURL(file);
+                                            }
+
+                                            function tampilkanPreview(divId, base64data) {
+                                                let container = document.createElement("div");
+                                                container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                let img = document.createElement("img");
+                                                img.src = base64data;
+                                                img.className = "w-full h-auto";
+                                                img.width = 280;
+                                                img.height = 280;
+
+                                                container.appendChild(img);
+                                                document.getElementById(divId).innerHTML = ""; // clear gambar lama
+                                                document.getElementById(divId).appendChild(container);
+                                            }    
+                                        </script>
+
+
+                                        <!-- <script>
+                                            let gambarBase64 = "";  // Buat variabel global
+
+                                        function tambahGambar() {
+                                            let fileInput = document.getElementById("uploadGambar");
+                                            let file = fileInput.files[0];
+
+                                            if (!file) {
+                                                alert("Pilih gambar terlebih dahulu.");
+                                                return;
+                                            }
+
+                                            let reader = new FileReader();
+
+                                            reader.onload = function (e) {
+                                                // Simpan base64 ke variabel global
+                                                gambarBase64 = e.target.result;
+
+                                                // Tampilkan gambar ke div hasilGambar
+                                                let container = document.createElement("div");
+                                                container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                let img = document.createElement("img");
+                                                img.src = gambarBase64;
+                                                img.className = "w-full h-auto";
+                                                img.width = 280;
+                                                img.height = 280;
+
+                                                container.appendChild(img);
+                                                document.getElementById("hasilGambar").innerHTML = "";  // Clear gambar lama
+                                                document.getElementById("hasilGambar").appendChild(container);
+                                            }
+
+                                            reader.readAsDataURL(file);
+                                        }
+
+                                        </script> -->
+
+
+
+
+
+                                        <br>
+                                        <div style="text-align: right; ">
+                                            <button
+                                                class="btn-simpan flex items-center gap-2 px-3 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 transition-all"
+                                                onclick="submitPPT13()"
+                                                style="display: inline-flex; align-items: center;">
+                                                <img src="savedata.png" alt="save" style="width: 35px; height: 35px;">
+                                                <span>Simpan</span>
+                                            </button>
+                                            <!-- <div style="text-align: right; margin-bottom: 10px;">
+                                            <button onclick="submitPPT13()" class="btn-simpan">
+                                                <img src="savedata.png" alt="save"> Simpan </button> -->
+                                        </div><br>
+                                        <div class="max-w-[1200px] mx-auto p-4 bg-white border border-[#ffffff]">
+
+                                            <table
+                                                class="w-full border border-black border-collapse text-[10px] md:text-xs">
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2"
+                                                            class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left"
+                                                            style="width: 10%">
+                                                            KPPN Majene
+                                                        </th>
+                                                        <th id="judul13" colspan="9"
+                                                            class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                                            13. Perbendaharaan Negara yang optimal
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th colspan="9"
+                                                            class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                                            <span id="kode13">7a-CP</span>
+                                                            <span id="subjudul13"> Nilai kinerja pelaksanaan anggaran
+                                                                K/L</span>
+                                                        </th>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            T/R
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q1
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q2
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Sm.I
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q3
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            s.d. Q3
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Q4
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 7%">
+                                                            Y
+                                                        </th>
+                                                        <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                                            style="width: 10%">
+                                                            Pol/ K P
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bg-[#f4d9d7] border border-black">
+                                                        <td class="border border-black px-2 py-1">Target</td>
+                                                        <td class="border border-black px-2 py-1 text-center">3</td>
+                                                        <td class="border border-black px-2 py-1 text-center">3</ td>
+                                                        <td class="border border-black px-2 py-1 text-center">3</td>
+                                                        <td class="border border-black px-2 py-1 text-center">3</td>
+                                                        <td class="border border-black px-2 py-1 text-center">3</td>
+                                                        <td class="border border-black px-2 py-1 text-center">3</td>
+                                                        <td class="border border-black px-2 py-1 text-center">3</td>
+                                                        <td class="border border-black px-2 py-1 text-center align-middle"
+                                                            rowspan="3">
+                                                            Max/TLK
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="bg-[#f4d9d7] border border-black">
+                                                        <td class="border border-black px-2 py-1">
+                                                            Realisasi</td>
+                                                        <td id="Nilaislide13a"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide13b"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide13c"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide13d"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td id="Nilaislide13e"
+                                                            class="border border-black px-2 py-1 text-center">-</td>
+                                                        <td class="border border-black px-2 py-1 text-center"
+                                                            id="Nilaislide13f">-</td>
+                                                        <td class="border border-black px-2 py-1 text-center"
+                                                            id="Nilaislide13g">-</td>
+
+                                                    </tr>
+                                                    <tr class="bg-[#f4d9d7] border border-black font-bold">
+                                                        <td class="border border-black px-2 py-1 font-bold">Capaian</td>
+                                                        <td id="nilaitotalslide13"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide13a"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide13b"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide13c"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide13d"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide13e"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                        <td id="nilaitotalslide13f"
+                                                            class="border border-black px-2 py-1 text-center font-bold">
+                                                            -
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+                                                <div class="flex-1 flex flex-col space-y-2">
+                                                    <div
+                                                        class="bg-[#f79443] text-white font-bold px-2 py-1 text-[11px] md:text-sm">
+                                                        Isu Utama dan Implikasi <span class="italic font-normal">(Apa
+                                                            yang
+                                                            Terjadi dan Implikasinya?)</span>
+                                                    </div>
+                                                    <div class="bg-[#fce9d0] p-2 text-[10px] md:text-xs leading-tight">
+                                                        <p class="font-bold mb-1">Isu Utama</p>
+                                                        <p id="isuutama13" class="mb-2">
+                                                            Nilai 3 indikator kinerja pelaksanaan anggaran belum optimal
+                                                            yaitu
+                                                            Deviasi Halaman III DIPA,
+                                                            Penyerapan anggaran, &amp; Capaian Output.
+                                                        </p>
+                                                        <p class="font-bold mb-1">Implikasi</p>
+                                                        <p id="implikasi13" class="mb-2">Nilai IKPA TW IV 2024 belum
+                                                            maksi13mal</p>
+                                                        <p class="font-bold mb-1">Penjelasan capaian:</p>
+                                                        <p id="penjelasanc13" class="mb-2"> IKPA TW IV 2024
+                                                            belum maksi13mal</p>
+                                                        <table
+                                                            class="w-full border border-black border-collapse text-[12px] md:text-[12px] bg-[#e6f0f6]">
+                                                            <colgroup>
+                                                                <col style="width: 30%">
+                                                                <col style="width: 30%">
+                                                                <col style="width: 40%">
+
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Nilai IKPA
+                                                                        </div>
+                                                                    </th>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">LK UAKPA & UAKPB
+                                                                        </div>
+                                                                    </th>
+                                                                    <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Persentase Kualitas
+                                                                            Pengelolaan Keuangan KPPN</div>
+                                                                    </th>
+
+                                                                    <!-- <th
+                                                                        class="border border-black px-1 py-0.5 leading-tight ">
+                                                                        <div class="text-center">Indeks Capaian IKU
+                                                                        </div>
+                                                                    </th> -->
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center">Formula:</h5>
+                                                                        <h5 class="text-center" id="fslide13">Realisasi
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center">(Telah terbit SK OKI Kanwil DJPb Prov. Sulbar  nomor KEP-10/WPB.26/2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center">Formula:</h5>
+                                                                        <h5 class="text-center" id="fslide13a">
+                                                                            Penyampaian</h5>
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan sosialisasi security awareness tanggal 21 Maret 2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center">Formula:</h5>
+                                                                        <h5 class="text-center" id="formulaslide13">
+                                                                            Penyampaian</h5>
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan tiga publikasi mengenai keamanan informasi pada Instagram KPPN Majene)</h5> -->
+                                                                    </td>
+
+                                                                    <!-- <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi13">
+                                                                        </h5>
+                                                                        <h5 class="text-center" id="totalslide13d">0
+                                                                        </h5>
+                                                                    </td> -->
+                                                                </tr>
+                                                                <tr>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi13">a
+                                                                        </h5>
+                                                                        <h5 class="text-center" id="totalslide13">0</h5>
+                                                                        <!-- <h5 class="text-center">(Telah terbit SK OKI Kanwil DJPb Prov. Sulbar  nomor KEP-10/WPB.26/2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi13a">a
+                                                                        </h5>
+                                                                        <h5 class="text-center" id="totalslide13a">0
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan sosialisasi security awareness tanggal 21 Maret 2025)</h5> -->
+                                                                    </td>
+                                                                    <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi13b">a
+                                                                        </h5>
+                                                                        <h5 class="text-center" id="totalslide13b">0
+                                                                        </h5>
+                                                                        <!-- <h5 class="text-center">(Telah dilaksanakan tiga publikasi mengenai keamanan informasi pada Instagram KPPN Majene)</h5> -->
+                                                                    </td>
+
+                                                                    <!-- <td
+                                                                        class="border border-black px-1 py-0.5 align-top">
+                                                                        <h5 class="text-center" id="totalrealisasi13">
+                                                                        </h5>
+                                                                        <h5 class="text-center" id="totalslide13d">0
+                                                                        </h5>
+                                                                    </td> -->
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <div
+                                                            class="w-[360px]  p-2 bg-[#fce9d0] flex flex-col justify-center">
+                                                            <p class="font-bold italic mb-[2px]">Sumber Data:</p>
+                                                            <p id="sumberdata13">
+
+                                                            </p>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div>
+                                                        <table
+                                                            class="w-full border border-black border-collapse text-[10px] md:text-xs bg-[#d9d9e6]">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="1"
+                                                                        class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                                                        Akar Masalah (Mengapa hal tersebut terjadi?)
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        class="border border-black px-2 py-1 text-[10px] md:text-xs leading-tight text-left">
+                                                                        <p id="akarmasalah13" class="font-bold mb-1">
+
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-1 flex flex-col space-y-2">
+                                                    <div
+                                                        class="bg-[#fbbd7a] text-white font-bold px-2 py-1 text-[11px] md:text-sm">
+                                                        Tindakan yang Telah Dilaksanakan
+                                                    </div>
+                                                    <div id="tindakan13"
+                                                        class="bg-[#fce9d0] p-2 text-[10px] md:text-xs leading-tight">
+
+                                                    </div>
+
+                                                    <table id="tabelRekomendasi13"
+                                                        class=" w-full border border-black border-collapse text-[10px] md:text-xs bg-[#d9d9e6]">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left"
+                                                                    style="width: 50%">
+                                                                    Rekomendasi Rencana Aksi
+                                                                </th>
+                                                                <th class="bg-[#5a8ac6] text-white font-bold border border-black px-2 py-1 text-center"
+                                                                    style="width: 13%">
+                                                                    Penanggung jawab
+                                                                </th>
+                                                                <th class="bg-[#5a8ac6] text-white font-bold border border-black px-2 py-1 text-left"
+                                                                    style="width: 35%">
+                                                                    Periode
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbodyRekomendasi13">
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="max-w-[1200px] mx-auto mt-2 p-4 bg-white border border-[#ffffff]">
+                                            <!-- Header Section -->
+                                            <h1 id="subjudul13a"
+                                                class="bg-[#0069b4] text-white text-xl sm:text-2xl font-normal px-4 py-2 mb-2 max-w-[900px]">
+                                                Nilai Kinerja Pelaksanaan Anggaran K/L
+                                            </h1>
+                                            <!-- Deskripsi -->
+                                            <p id="subutama13"
+                                                class="bg-[#d9e6f2] text-[13px] leading-tight px-4 py-2 mb-6 max-w-[900px]">
+
+                                            </p>
+
+
+                                            <!-- Preview Konten (Optional) -->
+                                            <div class="flex flex-col lg:flex-row gap-6">
+                                                <!-- KINERJA Section -->
+                                                <section class="bg-[#d9e6f2] p-4 flex-1 max-w-[900px]">
+                                                    <h2
+                                                        class="bg-[#0069b4] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[12px]">
+                                                        KINERJA
+                                                    </h2>
+                                                    <!-- Tabel Kinerja -->
+                                                    <table
+                                                        class="w-full border-collapse border border-[#0069b4] text-[13px] mb-4">
+                                                        <thead>
+                                                            <tr class="bg-[#0069b4] text-white text-center">
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[70px]">
+                                                                    Target</th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q1
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q2
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q3
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Q4
+                                                                </th>
+                                                                <th
+                                                                    class="border border-[#0069b4] px-2 py-1 min-w-[50px]">
+                                                                    Y
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="bg-[#cbd6e6] text-center">
+                                                                <td class="border border-[#0069b4] px-2 py-1 text-left">
+                                                                    Target
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
+                                                            </tr>
+                                                            <tr class="bg-[#cbd6e6] text-center">
+                                                                <td class="border border-[#0069b4] px-2 py-1 text-left">
+                                                                    Realisasi</td>
+                                                                <td id="Nilaislide13aa"
+                                                                    class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1"
+                                                                    id="totalCapaian4">-</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1"
+                                                                    id="totalCapaian5">-</td>
+                                                            </tr>
+                                                            <tr class="bg-[#cbd6e6] text-center font-bold">
+                                                                <td class="border border-[#0069b4] px-2 py-1 text-left">
+                                                                    Indeks
+                                                                    Capaian</td>
+                                                                <td id="nilaitotalslide13aa"
+                                                                    class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- List Keterangan -->
+                                                    <span class="font-bold">Hal yang menjadi <i>critical
+                                                            point</i>
+                                                        pencapaian IKI ini
+                                                        diantaranya:</span>
+
+                                                    <p id="critical13"
+                                                        class="list-decimal list-inside text-[13px] leading-tight space-y-1">
+
+
+                                                    </p>
+                                                    <span class="font-bold">
+                                                        Untuk menjaga ketercapaian IKI, sampai dengan Triwulan
+                                                        IV 2024
+                                                        telah dilakukan beberapa hal
+                                                        yaitu:
+                                                    </span>
+                                                    <p id="tindakan13a"
+                                                        class="list-decimal list-inside text-[13px] leading-tight space-y-1">
+
+
+
+                                                    </p>
+                                                </section>
+                                                <!-- RISIKO Section -->
+                                                <section
+                                                    class="flex flex-col items-center flex-1 max-w-[280px] border-l-2 border-dashed border-black px-4">
+                                                    <h2
+                                                        class="bg-[#7a6ba8] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[12px] w-full max-w-[280px]">
+                                                        RISIKO
+                                                    </h2>
+                                                    <!-- Risiko Chart Container -->
+                                                    <div id="hasilGambar25"
+                                                        class="bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full">
+
+                                                    </div>
+                                                    <!-- Status IRU Chart -->
+                                                    <div id="hasilGambar26" class="max-w-[280px] w-full">
+
+                                                    </div>
+                                                </section>
+                                                <!-- RENCANA AKSI13 & MITIGASI RISIKO Section -->
+                                                <section
+                                                    class="flex-1 max-w-[400px] border-l-2 border-dashed border-black bg-[#f1dfdb] p-4">
+                                                    <h2
+                                                        class="bg-[#009b3a] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[6px]">
+                                                        RENCANA AKSI13 &amp; MITIGASI RISIKO
+                                                    </h2>
+                                                    <table id="tabelRekomendasi13a"
+                                                        class="w-full border-collapse border border-black text-[13px]">
+                                                        <thead>
+                                                            <tr
+                                                                class="bg-[#009b3a] text-white text-center font-semibold">
+                                                                <th class="border border-black px-2 py-2 min-w-[120px]">
+                                                                    Rencana
+                                                                    Aksi13</th>
+                                                                <th class="border border-black px-2 py-2 min-w-[90px]">
+                                                                    Periode
+                                                                </th>
+                                                                <th class="border border-black px-2 py-2 min-w-[60px]">
+                                                                    UIC</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbodyRekomendasi13a">
+
+                                                        </tbody>
+                                                    </table>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            // let nomorEntri = 1;
+                                            let rowspanCount = 0;
+                                            let lastPenanggungCell = null;
+
+                                            function tambahEntri13() {
+                                                const aksi13Input = document.getElementById('aksi13Input');
+                                                const periode13Input = document.getElementById('periode13Input');
+
+                                                const deskripsi = aksi13Input.value.trim();
+                                                const periode13 = periode13Input.value.trim();
+
+                                                if (deskripsi === '' || periode13 === '') {
+                                                    alert('Silakan masukkan deskripsi aksi13 dan periode13.');
+                                                    return;
+                                                }
+
+                                                const tbody = document.getElementById('tbodyRekomendasi13');
+                                                const tr = document.createElement('tr');
+
+                                                const tdAksi13 = document.createElement('td');
+                                                // Menambahkan <br> untuk menggantikan \n
+                                                tdAksi13.innerHTML = deskripsi.replace(/\n/g, "<br>");
+
+                                                const tdPeriode13 = document.createElement('td');
+                                                tdPeriode13.textContent = periode13;
+
+                                                tr.appendChild(tdAksi13);
+
+                                                if (rowspanCount === 0) {
+                                                    const tdPenanggungJawab13 = document.createElement('td');
+                                                    tdPenanggungJawab13.textContent = 'Subbagian Umum';
+                                                    tdPenanggungJawab13.rowSpan = 1;
+                                                    tr.appendChild(tdPenanggungJawab13);
+                                                    lastPenanggungCell = tdPenanggungJawab13;
+                                                    rowspanCount = 1;
+                                                } else {
+                                                    rowspanCount++;
+                                                    lastPenanggungCell.rowSpan = rowspanCount;
+                                                }
+
+                                                tr.appendChild(tdPeriode13);
+                                                tbody.appendChild(tr);
+
+                                                aksi13Input.value = '';
+                                                periode13Input.value = '';
+                                                // nomorEntri++;
+
+                                                const tds = tr.querySelectorAll('td');
+                                                tds.forEach(td => {
+                                                    td.style.textAlign = 'left';
+                                                });
+
+
+                                            }
+                                        </script>
+                                        <script>
+                                            function submitPPT13() {
+
+                                                let judul13hasil = document.getElementById("judul13").innerText;
+                                                let subjudul13hasil = document.getElementById("subjudul13").innerText;
+                                                let kode13hasil = document.getElementById("kode13").innerText;
+                                                let isuutama13hasil = document.getElementById("isuutama13").innerText;
+                                                let implikasi13hasil = document.getElementById("implikasi13").innerText;
+                                                let penjelasanc13hasil = document.getElementById("penjelasanc13").innerText;
+                                                let sumberdata13hasil = document.getElementById("sumberdata13").innerText;
+                                                let akarmasalah13hasil = document.getElementById("akarmasalah13").innerText;
+                                                let tindakan13hasil = document.getElementById("tindakan13").innerText;
+                                                let subutama13hasil = document.getElementById("subutama13").innerText;
+                                                let critical13hasil = document.getElementById("critical13").innerText;
+                                                let subjudul13ahasil = document.getElementById("subjudul13a").innerText;
+                                                let fslide13 = document.getElementById("fslide13").innerText;
+                                                let fslide13a = document.getElementById("fslide13a").innerText;
+                                                let totalrealisasi13 = document.getElementById("totalrealisasi13").innerText;
+                                                let totalrealisasi13a = document.getElementById("totalrealisasi13a").innerText;
+                                                let totalrealisasi13b = document.getElementById("totalrealisasi13b").innerText;
+
+                                                let tbodyRekomendasi13 = document.getElementById("tbodyRekomendasi13");
+                                                let rows = tbodyRekomendasi13.querySelectorAll("tr");
+                                                let rekomendasiData13 = [];
+
+                                                let lastPenanggungJawab13 = ''; // Menyimpan nilai terakhir
+
+                                                rows.forEach(row => {
+                                                    let cells = row.querySelectorAll("td");
+                                                    let aksi13 = cells[0]?.innerText || '';
+                                                    let periode13 = '';
+                                                    let penanggungJawab13 = '';
+
+                                                    if (cells.length === 3) {
+                                                        // Baris pertama, semua kolom ada
+                                                        penanggungJawab13 = cells[1].innerText;
+                                                        periode13 = cells[2].innerText;
+                                                        lastPenanggungJawab13 = penanggungJawab13; // Simpan nilai terbaru
+                                                    } else if (cells.length === 2) {
+                                                        // Baris tanpa kolom penanggung jawab
+                                                        penanggungJawab13 = lastPenanggungJawab13;
+                                                        periode13 = cells[1].innerText;
+                                                    }
+
+                                                    rekomendasiData13.push({
+                                                        aksi13: aksi13.replace(/<br>/g, '\n'),
+                                                        penanggungJawab13,
+                                                        periode13
+                                                    });
+                                                });
+
+                                                // let tbodyRekomendasi131a = document.getElementById("tbodyRekomendasi131a");
+                                                // let rows1 = tbodyRekomendasi131a.querySelectorAll("tr");
+                                                // let rekomendasiData131a = [];
+
+                                                // let lastPenanggungJawab131 = ''; // Menyimpan nilai terakhir
+
+                                                // rows1.forEach(row => {
+                                                //     let cells = row.querySelectorAll("td");
+                                                //     let aksi13 = cells[0]?.innerText || '';
+                                                //     let periode13 = '';
+                                                //     let penanggungJawab13 = '';
+
+                                                //     if (cells.length === 3) {
+                                                //         // Baris pertama, semua kolom ada
+                                                //         penanggungJawab13 = cells[1].innerText;
+                                                //         periode13 = cells[2].innerText;
+                                                //         lastPenanggungJawab131 = penanggungJawab13; // Simpan nilai terbaru
+                                                //     } else if (cells.length === 2) {
+                                                //         // Baris tanpa kolom penanggung jawab
+                                                //         penanggungJawab13 = lastPenanggungJawab131;
+                                                //         periode13 = cells[1].innerText;
+                                                //     }
+
+                                                //     rekomendasiData13.push({
+                                                //         aksi13: aksi13.replace(/<br>/g, '\n'),
+                                                //         penanggungJawab13,
+                                                //         periode13
+                                                //     });
+                                                // });
+
+
+
+
+                                                // Cek apakah ada data lama di localStorage
+                                                let storedData = localStorage.getItem("indeks_data");
+                                                let data = storedData ? JSON.parse(storedData) : {};
+
+
+                                                data.judul13 = judul13hasil;
+                                                data.subjudul13 = subjudul13hasil;
+                                                data.kode13 = kode13hasil;
+                                                data.isuutama13 = isuutama13hasil;
+                                                data.implikasi13 = implikasi13hasil;
+                                                data.penjelasanc13 = penjelasanc13hasil;
+                                                data.sumberdata13 = sumberdata13hasil;
+                                                data.akarmasalah13 = akarmasalah13hasil;
+                                                data.subjudul13 = subjudul13ahasil;
+                                                data.fslide13 = fslide13;
+                                                data.fslide13a = fslide13a;
+                                                data.totalrealisasi13 = totalrealisasi13;
+                                                data.totalrealisasi13a = totalrealisasi13a;
+                                                data.totalrealisasi13b = totalrealisasi13b;
+                                                data.rekomendasi13 = rekomendasiData13;
+                                                data.tindakan13 = tindakan13hasil;
+                                                data.subutama13 = subutama13hasil;
+                                                data.critical13 = critical13hasil;
+
+                                                try {
+                                                    // Simpan data biasa ke localStorage
+                                                    localStorage.setItem("indeks_data", JSON.stringify(data));
+
+                                                    // Coba simpan gambar ke sessionStorage (tidak masalah quota di sini karena sementara)
+                                                    if (gambarBase641 !== "") {
+                                                        sessionStorage.setItem("gambar25", gambarBase641);
+                                                    }
+                                                    if (gambarBase642 !== "") {
+                                                        sessionStorage.setItem("gambar26", gambarBase642);
+                                                    }
+
+                                                    // alert("Data berhasil disimpan!");
+
+                                                } catch (e) {
+                                                    if (e.name === 'QuotaExceededError') {
+                                                        alert("Penyimpanan penuh! Silakan hapus data lama dulu.");
+                                                    } else {
+                                                        alert("Terjadi kesalahan saat menyimpan data.");
+                                                    }
+                                                }
+
+                                                alert("Data dari Nilai Kinerja Pelaksanaan Anggaran K/L berhasil disimpan!");
+                                            }
+                                        </script>
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function () {
+                                                // Ambil data biasa dari localStorage
+                                                let data = localStorage.getItem("indeks_data");
+
+                                                if (data) {
+                                                    let parsedData = JSON.parse(data);
+
+                                                    // Set data text ke elemen sesuai id
+                                                    document.getElementById("judul13").innerText = parsedData.judul13 || "-";
+                                                    document.getElementById("subjudul13").innerText = parsedData.subjudul13 || "-";
+                                                    document.getElementById("subjudul13a").innerText = parsedData.subjudul13 || "-";
+                                                    document.getElementById("kode13").innerText = parsedData.kode13 || "-";
+                                                    document.getElementById("isuutama13").innerText = parsedData.isuutama13 || "-";
+                                                    document.getElementById("implikasi13").innerText = parsedData.implikasi13 || "-";
+                                                    document.getElementById("penjelasanc13").innerText = parsedData.penjelasanc13 || "-";
+                                                    document.getElementById("sumberdata13").innerText = parsedData.sumberdata13 || "-";
+                                                    document.getElementById("akarmasalah13").innerText = parsedData.akarmasalah13 || "-";
+                                                    document.getElementById("tindakan13").innerText = parsedData.tindakan13 || "-";
+                                                    document.getElementById("subutama13").innerText = parsedData.subutama13 || "-";
+                                                    document.getElementById("tindakan13a").innerText = parsedData.tindakan13 || "-";
+                                                    document.getElementById("critical13").innerText = parsedData.critical13 || "-";
+                                                    document.getElementById("fslide13").innerText = parsedData.fslide13 || "-";
+                                                    document.getElementById("fslide13a").innerText = parsedData.fslide13a || "-";
+                                                    document.getElementById("formulaslide13").innerText = parsedData.formula13 || "-";
+                                                    document.getElementById("totalrealisasi13").innerText = parsedData.totalrealisasi13 || "-";
+                                                    document.getElementById("totalrealisasi13a").innerText = parsedData.totalrealisasi13a || "-";
+                                                    document.getElementById("totalrealisasi13b").innerText = parsedData.totalrealisasi13b || "-";
+
+
+                                                    document.getElementById("Nilaislide13a").innerText = parsedData.Nilai13 || "-";
+
+                                                    let totalCapaian13 = parseFloat(parsedData.Nilai13);
+                                                    let nilaitotalslide13 = (totalCapaian13 >= 100) ? 120 : totalCapaian13.toFixed(0);
+                                                    document.getElementById("nilaitotalslide13").innerText = isNaN(nilaitotalslide13) ? "-" : nilaitotalslide13;
+
+                                                    document.getElementById("totalslide13").innerText = parsedData.valuenilaiNKA || "-";
+                                                    document.getElementById("totalslide13a").innerText = parsedData.valuenilaiLK || "-";
+                                                    document.getElementById("totalslide13b").innerText = parsedData.Nilai13 || "-";
+
+                                                    // document.getElementById("totalslide13d").innerText = parsedData.Nilai13 || "-";
+                                                    document.getElementById("Nilaislide13aa").innerText = parsedData.Nilai13 || "-";
+                                                    let totalCapaian13a = parseFloat(parsedData.Nilai13);
+                                                    let nilaitotalslide13aa = (totalCapaian13a >= 100) ? 120 : totalCapaian13a.toFixed(0);
+                                                    document.getElementById("nilaitotalslide13aa").innerText = isNaN(nilaitotalslide13aa) ? "-" : nilaitotalslide13aa;
+
+
+
+
+                                                    if (parsedData.rekomendasi13 && Array.isArray(parsedData.rekomendasi13)) {
+                                                        let tbody = document.getElementById("tbodyRekomendasi13");
+                                                        tbody.innerHTML = ""; // Kosongkan isi tabel
+
+                                                        const jumlahBaris = parsedData.rekomendasi13.length;
+
+                                                        parsedData.rekomendasi13.forEach((item, index) => {
+                                                            let tr = document.createElement("tr");
+
+                                                            // Kolom Rekomendasi Rencana Aksi13
+                                                            let tdAksi13 = document.createElement("td");
+                                                            tdAksi13.textContent = item.aksi13;
+                                                            tdAksi13.innerHTML = item.aksi13.replace(/\n/g, "<br>");
+                                                            tdAksi13.style.textAlign = "left";
+                                                            tr.appendChild(tdAksi13);
+
+                                                            // Jika baris pertama, tambahkan td Penanggung Jawab dengan rowspan
+                                                            if (index === 0) {
+                                                                let tdPenanggungJawab13 = document.createElement("td");
+                                                                tdPenanggungJawab13.textContent = item.penanggungJawab13;
+                                                                tdPenanggungJawab13.rowSpan = jumlahBaris;
+                                                                // Simpan dulu <td> penanggung jawab supaya ditambahkan nanti
+                                                                tr.appendChild(tdPenanggungJawab13);
+                                                            }
+
+                                                            // Kolom Periode13 (selalu ditambahkan)
+                                                            let tdPeriode13 = document.createElement("td");
+                                                            tdPeriode13.textContent = item.periode13;
+                                                            // tdPeriode13.innerHTML = item.periode13.replace(/\n/g, "<br>");
+                                                            tdPeriode13.style.textAlign = "left";
+                                                            tr.appendChild(tdPeriode13);
+
+                                                            // Tambahkan row ke tbody setelah semua kolom siap
+                                                            tbody.appendChild(tr);
+                                                        });
+                                                    }
+
+                                                    if (parsedData.rekomendasi13 && Array.isArray(parsedData.rekomendasi13)) {
+                                                        let tbody = document.getElementById("tbodyRekomendasi13a");
+                                                        tbody.innerHTML = ""; // Kosongkan isi tabel
+
+                                                        const jumlahBaris = parsedData.rekomendasi13.length;
+
+                                                        parsedData.rekomendasi13.forEach((item, index) => {
+                                                            let tr = document.createElement("tr");
+
+                                                            // Kolom Rekomendasi Rencana Aksi13
+                                                            let tdAksi13 = document.createElement("td");
+                                                            tdAksi13.textContent = item.aksi13;
+                                                            tdAksi13.innerHTML = item.aksi13.replace(/\n/g, "<br>");
+                                                            tdAksi13.style.textAlign = "left";
+                                                            tr.appendChild(tdAksi13);
+
+                                                            // Jika baris pertama, tambahkan td Penanggung Jawab dengan rowspan
+                                                            if (index === 0) {
+                                                                let tdPenanggungJawab13 = document.createElement("td");
+                                                                tdPenanggungJawab13.textContent = item.penanggungJawab13;
+                                                                tdPenanggungJawab13.rowSpan = jumlahBaris;
+                                                                // Simpan dulu <td> penanggung jawab supaya ditambahkan nanti
+                                                                tr.appendChild(tdPenanggungJawab13);
+                                                            }
+
+                                                            // Kolom Periode13 (selalu ditambahkan)
+                                                            let tdPeriode13 = document.createElement("td");
+                                                            tdPeriode13.textContent = item.periode13;
+                                                            tdPeriode13.style.textAlign = "left";
+                                                            tr.appendChild(tdPeriode13);
+
+                                                            // Tambahkan row ke tbody setelah semua kolom siap
+                                                            tbody.appendChild(tr);
+                                                        });
+                                                    }
+
+
+                                                    // // Memuat rekomendasi
+                                                    // if (parsedData.rekomendasi && Array.isArray(parsedData.rekomendasi)) {
+                                                    //         let tbody = document.getElementById("tbodyRekomendasi13");
+                                                    //         tbody.innerHTML = ""; // Kosongkan dulu isinya
+
+                                                    //         let rowspanCount = 0; // Inisialisasi penghitung untuk rowspan
+
+                                                    //         parsedData.rekomendasi.forEach(item => {
+                                                    //             let tr = document.createElement("tr");
+
+                                                    //             let tdAksi13 = document.createElement("td");
+                                                    //             tdAksi13.textContent = item.aksi13;
+                                                    //             tr.appendChild(tdAksi13);
+
+                                                    //             let tdPenanggungJawab13 = document.createElement("td");
+                                                    //             tdPenanggungJawab13.textContent = item.penanggungJawab13;
+
+                                                    //             // Set rowspan jika diperlukan
+                                                    //             tdPenanggungJawab13.rowSpan = item.rowspan || 1;
+                                                    //             tr.appendChild(tdPenanggungJawab13);
+
+                                                    //             let tdPeriode13 = document.createElement("td");
+                                                    //             tdPeriode13.textContent = item.periode13;
+                                                    //             tdPeriode13.style.textAlign = "left";
+                                                    //             tr.appendChild(tdPeriode13);
+
+                                                    //             tbody.appendChild(tr);
+
+                                                    //             // Menghitung rowspan jika ada entri yang bertambah
+                                                    //             // rowspanCount = item.rowspan;
+                                                    //         });
+
+                                                    // }
+
+                                                } else {
+                                                    alert("Tidak ada data tersimpan!");
+                                                }
+
+                                                // Ambil gambar25 dari sessionStorage
+                                                let gambar25 = sessionStorage.getItem("gambar25");
+                                                if (gambar25) {
+                                                    let container = document.createElement("div");
+                                                    container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                    let img = document.createElement("img");
+                                                    img.src = gambar25;
+                                                    img.className = "w-full h-auto";
+                                                    img.width = 280;
+                                                    img.height = 280;
+
+                                                    container.appendChild(img);
+                                                    document.getElementById("hasilGambar25").appendChild(container);
+                                                }
+
+                                                // Ambil gambar26 dari sessionStorage
+                                                let gambar26 = sessionStorage.getItem("gambar26");
+                                                if (gambar26) {
+                                                    let container = document.createElement("div");
+                                                    container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
+
+                                                    let img = document.createElement("img");
+                                                    img.src = gambar26;
+                                                    img.className = "w-full h-auto";
+                                                    img.width = 280;
+                                                    img.height = 280;
+
+                                                    container.appendChild(img);
+                                                    document.getElementById("hasilGambar26").appendChild(container);
+                                                }
+                                            });
+                                        </script>
+
+
+                                    </div>
+
+                                </body>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>
