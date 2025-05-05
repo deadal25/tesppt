@@ -643,13 +643,13 @@
                                                 <tbody>
                                                     <tr class="bg-[#f4d9d7] border border-black">
                                                         <td class="border border-black px-2 py-1">Target</td>
-                                                        <td class="border border-black px-2 py-1 text-center">3</td>
-                                                        <td class="border border-black px-2 py-1 text-center">3</ td>
-                                                        <td class="border border-black px-2 py-1 text-center">3</td>
-                                                        <td class="border border-black px-2 py-1 text-center">3</td>
-                                                        <td class="border border-black px-2 py-1 text-center">3</td>
-                                                        <td class="border border-black px-2 py-1 text-center">3</td>
-                                                        <td class="border border-black px-2 py-1 text-center">3</td>
+                                                        <td class="border border-black px-2 py-1 text-center">4</td>
+                                                        <td class="border border-black px-2 py-1 text-center">4</ td>
+                                                        <td class="border border-black px-2 py-1 text-center">4</td>
+                                                        <td class="border border-black px-2 py-1 text-center">4</td>
+                                                        <td class="border border-black px-2 py-1 text-center">4</td>
+                                                        <td class="border border-black px-2 py-1 text-center">4</td>
+                                                        <td class="border border-black px-2 py-1 text-center">4</td>
                                                         <td class="border border-black px-2 py-1 text-center align-middle"
                                                             rowspan="3">
                                                             Max/TLK
@@ -1120,11 +1120,11 @@
                                                                 <td class="border border-[#0069b4] px-2 py-1 text-left">
                                                                     Target
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">3</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">4</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">4</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">4</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">4</td>
+                                                                <td class="border border-[#0069b4] px-2 py-1">4</td>
                                                             </tr>
                                                             <tr class="bg-[#cbd6e6] text-center">
                                                                 <td class="border border-[#0069b4] px-2 py-1 text-left">
@@ -1501,16 +1501,38 @@
                                                         document.getElementById("lkuakpaScore").innerText = parsedData.lkuakpaScore != null ? Number(parsedData.lkuakpaScore).toFixed(0) : "-";
                                                         document.getElementById("realisasiScore").innerText = parsedData.realisasiScore != null ? Number(parsedData.realisasiScore).toFixed(0) : "-";
                                                         document.getElementById("totalCapaian5").innerText = parsedData.totalCapaian5 != null ? Number(parsedData.totalCapaian5).toFixed(0) : "-";
-                                                        let totalCapaian5 = parseFloat(parsedData.totalCapaian5);
-                                                        let nilaitotalslide5 = (totalCapaian5 >= 100) ? 120 : totalCapaian5.toFixed(0);
-                                                        document.getElementById("nilaitotalslide5").innerText = isNaN(nilaitotalslide5) ? "-" : nilaitotalslide5;
+                                                        
+                                                        
+                                                        // Tetapkan target
+                                                        let target5 = 4;
 
+                                                        // Ambil nilai realisasi
+                                                        let realisasi5 = parseFloat(parsedData.totalIndeksCp5);
+
+                                                        // Hitung capaian (dalam persen)
+                                                        let capaian5 = (realisasi5 / target5) * 100;
+
+                                                        // Tampilkan capaian dengan pembulatan maksimal 120%
+                                                        let nilaitotalslide5 = (capaian5 >= 120) ? "120%" : capaian5.toFixed(2) + "%";
+                                                        document.getElementById("nilaitotalslide5").innerText = isNaN(capaian5) ? "-" : nilaitotalslide5;
+
+                                                        // Tampilkan ulang nilai indeks (jika ingin)
                                                         document.getElementById("Nilaislide5aa").innerText = parsedData.totalIndeksCp5 || "-";
-                                                        let totalCapaian5a = parseFloat(parsedData.totalCapaian5);
-                                                        let nilaitotalslide5aa = (totalCapaian5a >= 100) ? 120 : totalCapaian5a.toFixed(0);
-                                                        document.getElementById("nilaitotalslide5aa").innerText = isNaN(nilaitotalslide5aa) ? "-" : nilaitotalslide5aa;
 
-                                            //         let totalCapaian1all = parseFloat(parsedData.totalCapaian1all);
+                                                        // Tampilkan capaian di tempat kedua (jika perlu)
+                                                        let nilaitotalslide5aa = (capaian5 >= 120) ? "120%" : capaian5.toFixed(2) + "%";
+                                                        document.getElementById("nilaitotalslide5aa").innerText = isNaN(capaian5) ? "-" : nilaitotalslide5aa;
+
+                                                        
+                                                        //         let totalCapaian1all = parseFloat(parsedData.totalCapaian1all);
+                                                        // let totalIndeksCp5 = parseFloat(parsedData.totalCapaian5);
+                                                        // let nilaitotalslide5 = (totalCapaian5 >= 100) ? 120 : totalCapaian5.toFixed(0);
+                                                        // document.getElementById("nilaitotalslide5").innerText = isNaN(nilaitotalslide5) ? "-" : nilaitotalslide5;
+
+                                                        // document.getElementById("Nilaislide5aa").innerText = parsedData.totalIndeksCp5 || "-";
+                                                        // let totalCapaian5a = parseFloat(parsedData.totalCapaian5);
+                                                        // let nilaitotalslide5aa = (totalCapaian5a >= 100) ? 120 : totalCapaian5a.toFixed(0);
+                                                        // document.getElementById("nilaitotalslide5aa").innerText = isNaN(nilaitotalslide5aa) ? "-" : nilaitotalslide5aa;
                                             // let nilaitotalslide5 = (totalCapaian1all >= 100) ? 120 : totalCapaian1all.toFixed(0);
                                             // document.getElementById("nilaitotalslide5").innerText = isNaN(nilaitotalslide5) ? "-" : nilaitotalslide5;
 

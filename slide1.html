@@ -348,6 +348,20 @@
                                                 sumberdata1.innerHTML = inputText.replace(/\n/g, "<br>");
                                             }
                                         </script>
+                                            <label for="tindakan1">Masukkan Tindakan: </label>
+                                            <textarea id="inputtindakan1" class="form-control" rows="8"
+                                                placeholder="Masukkan kode..." oninput="updatetindakan1()"></textarea>
+    
+    
+                                            <script>
+                                                function updatetindakan1() {
+                                                    let inputText = document.getElementById("inputtindakan1").value;
+                                                    let tindakan1 = document.getElementById("tindakan1");
+    
+                                                    // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                    tindakan1.innerHTML = inputText.replace(/\n/g, "<br>");
+                                                }
+                                            </script>
 
                                         <label for="akarmasalah1">Masukkan Akar Masalah: </label>
                                         <textarea id="inputakarmasalah1" class="form-control" rows="4"
@@ -365,21 +379,6 @@
                                             }
                                         </script>
 
-                                        <label for="subutama1">Masukkan Sub Utama: </label>
-                                        <textarea id="inputsubutama1" class="form-control" rows="4"
-                                            placeholder="Masukkan Sub Utama..."
-                                            oninput="updatesubutama1()"></textarea>
-
-
-                                        <script>
-                                            function updatesubutama1() {
-                                                let inputText = document.getElementById("inputsubutama1").value;
-                                                let subutama1 = document.getElementById("subutama1");
-
-                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
-                                                subutama1.innerHTML = inputText.replace(/\n/g, "<br>");
-                                            }
-                                        </script>
 
 
 
@@ -409,26 +408,27 @@
                                             function updaterealisasi1() {
                                                 let inputText = document.getElementById("inputrealisasi1").value;
                                                 let totalrealisasi1 = document.getElementById("totalrealisasi1");
-
+                                                
                                                 // Menampilkan teks yang diinput dengan paragraf sesuai format
                                                 totalrealisasi1.innerHTML = inputText.replace(/\n/g, "<br>");
                                             }
                                         </script>
 
-                                        <label for="tindakan1">Masukkan Tindakan: </label>
-                                        <textarea id="inputtindakan1" class="form-control" rows="8"
-                                            placeholder="Masukkan kode..." oninput="updatetindakan1()"></textarea>
-
-
-                                        <script>
-                                            function updatetindakan1() {
-                                                let inputText = document.getElementById("inputtindakan1").value;
-                                                let tindakan1 = document.getElementById("tindakan1");
-
-                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
-                                                tindakan1.innerHTML = inputText.replace(/\n/g, "<br>");
-                                            }
-                                        </script>
+                                            <label for="subutama1">Masukkan Sub Utama: </label>
+                                            <textarea id="inputsubutama1" class="form-control" rows="4"
+                                                placeholder="Masukkan Sub Utama..."
+                                                oninput="updatesubutama1()"></textarea>
+    
+    
+                                            <script>
+                                                function updatesubutama1() {
+                                                    let inputText = document.getElementById("inputsubutama1").value;
+                                                    let subutama1 = document.getElementById("subutama1");
+    
+                                                    // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                    subutama1.innerHTML = inputText.replace(/\n/g, "<br>");
+                                                }
+                                            </script>
 
                                         <label for="critical1">Masukkan Critical Point: </label>
                                         <textarea id="inputcritical1" class="form-control" rows="4"
@@ -440,7 +440,7 @@
                                             function updatecritical1() {
                                                 let inputText = document.getElementById("inputcritical1").value;
                                                 let critical1 = document.getElementById("critical1");
-
+                                                
                                                 // Menampilkan teks yang diinput dengan paragraf sesuai format
                                                 critical1.innerHTML = inputText.replace(/\n/g, "<br>");
                                             }
@@ -1430,21 +1430,67 @@
                                                     // document.getElementById("nilaislide1a").innerText = parsedData.indeksIKI1  || "-";
                                                     document.getElementById("Nilaislide1a").innerText = parsedData.indeksIKI1 || "-";
 
-                                                    let totalCapaian1all = parseFloat(parsedData.totalCapaian1all);
-                                            let nilaitotalslide1 = (totalCapaian1all >= 100) ? 120 : totalCapaian1all.toFixed(0);
-                                            document.getElementById("nilaitotalslide1").innerText = isNaN(nilaitotalslide1) ? "-" : nilaitotalslide1;
+                                                    // Tetapkan target
+                                                    let target1 = 3;
 
-                                            document.getElementById("Nilaislide2a").innerText = parsedData.indeksIKI1 || "-";
+                                                    // Ambil nilai realisasi
+                                                    let realisasi1 = parseFloat(parsedData.indeksIKI1);
 
-                                            let nilaitotalslide2 = (totalCapaian1all >= 100) ? 120 : totalCapaian1all.toFixed(0);
-                                            document.getElementById("nilaitotalslide2").innerText = isNaN(nilaitotalslide2) ? "-" : nilaitotalslide2;
+                                                    // Hitung capaian (dalam persen)
+                                                    let capaian1 = (realisasi1 / target1) * 100;
 
-                                            // Tambahan: Pastikan totalslide1 dan totalslide1a juga angka bulat tanpa koma
-                                            let totalCapaian1 = parseFloat(parsedData.totalCapaian1);
-                                            document.getElementById("totalslide1").innerText = isNaN(totalCapaian1) ? "-" : totalCapaian1.toFixed(0);
+                                                    // Tampilkan capaian dengan pembulatan dan maksimum 120%
+                                                    let nilaitotalslide1 = (capaian1 >= 120) ? "120%" : capaian1.toFixed(2) + "%";
+                                                    document.getElementById("nilaitotalslide1").innerText = isNaN(capaian1) ? "-" : nilaitotalslide1;
 
-                                            let jumlahSatker1Value = parseFloat(parsedData.jumlahsatker1Value);
-                                            document.getElementById("totalslide1a").innerText = isNaN(jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
+                                                    // Tampilkan indeks IKI
+                                                    document.getElementById("Nilaislide2a").innerText = parsedData.indeksIKI1 || "-";
+
+                                                    // Tampilkan capaian di tempat kedua (jika perlu)
+                                                    let nilaitotalslide2 = (capaian1 >= 120) ? "120%" : capaian1.toFixed(2) + "%";
+                                                    document.getElementById("nilaitotalslide2").innerText = isNaN(capaian1) ? "-" : nilaitotalslide2;
+
+                                                    // Tampilkan nilai realisasi murni (dibulatkan tanpa persen)
+                                                    let totalCapaian1 = parseFloat(parsedData.totalCapaian1);
+                                                    document.getElementById("totalslide1").innerText = isNaN(totalCapaian1) ? "-" : totalCapaian1.toFixed(0);
+
+                                                    // Tampilkan jumlah satker (dibulatkan)
+                                                    let jumlahSatker1Value = parseFloat(parsedData.jumlahsatker1Value);
+                                                    document.getElementById("totalslide1a").innerText = isNaN(jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
+
+
+                                                    // let totalCapaian1all = parseFloat(parsedData.totalCapaian1all);
+                                                    // let nilaitotalslide1 = (totalCapaian1all >= 100) ? "120%" : totalCapaian1all.toFixed(0) + "%";
+                                                    // document.getElementById("nilaitotalslide1").innerText = isNaN(totalCapaian1all) ? "-" : nilaitotalslide1;
+
+                                                    // document.getElementById("Nilaislide2a").innerText = parsedData.indeksIKI1 || "-";
+
+                                                    // let nilaitotalslide2 = (totalCapaian1all >= 100) ? "120%" : totalCapaian1all.toFixed(0) + "%";
+                                                    // document.getElementById("nilaitotalslide2").innerText = isNaN(totalCapaian1all) ? "-" : nilaitotalslide2;
+
+                                                    // // Tambahan: Pastikan totalslide1 dan totalslide1a juga angka bulat tanpa koma
+                                                    // let totalCapaian1 = parseFloat(parsedData.totalCapaian1);
+                                                    // document.getElementById("totalslide1").innerText = isNaN(totalCapaian1) ? "-" : totalCapaian1.toFixed(0);
+
+                                                    // let jumlahSatker1Value = parseFloat(parsedData.jumlahsatker1Value);
+                                                    // document.getElementById("totalslide1a").innerText = isNaN(jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
+
+
+                                            //         let totalCapaian1all = parseFloat(parsedData.totalCapaian1all);
+                                            // let nilaitotalslide1 = (totalCapaian1all >= 100) ? 120 : totalCapaian1all.toFixed(0) + "%";
+                                            // document.getElementById("nilaitotalslide1").innerText = isNaN(nilaitotalslide1) ? "-" : nilaitotalslide1;
+
+                                            // document.getElementById("Nilaislide2a").innerText = parsedData.indeksIKI1 || "-";
+
+                                            // let nilaitotalslide2 = (totalCapaian1all >= 100) ? 120 : totalCapaian1all.toFixed(0);
+                                            // document.getElementById("nilaitotalslide2").innerText = isNaN(nilaitotalslide2) ? "-" : nilaitotalslide2;
+
+                                            // // Tambahan: Pastikan totalslide1 dan totalslide1a juga angka bulat tanpa koma
+                                            // let totalCapaian1 = parseFloat(parsedData.totalCapaian1);
+                                            // document.getElementById("totalslide1").innerText = isNaN(totalCapaian1) ? "-" : totalCapaian1.toFixed(0);
+
+                                            // let jumlahSatker1Value = parseFloat(parsedData.jumlahsatker1Value);
+                                            // document.getElementById("totalslide1a").innerText = isNaN(jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
 
                                                     document.getElementById("totalrealisasi1").innerText = parsedData.totalrealisasi1 || "-";
                                                     // document.getElementById("tbodyRekomendasi1a").innerText = parsedData.tbodyRekomendasi || "-";

@@ -193,13 +193,20 @@
                                     <div id="4a-CP" class="content">
                                         <br>
                                         <h3><b>Persentase akurasi perencanaan kas </b></h3>
-                                        <label>Pilih Periode:
+
+                                        <label>Rata - Rata Deviasi Unit:</label>
+                                        <input type="number" id="IndeviasiUnit7" min="0" max="100" oninput="hitungAkurasi7()">
+                                        <label>Rata - Rata Deviasi Nilai:</label>
+                                        <input type="number" id="IndeviasiNilai7" min="0" max="100" oninput="hitungAkurasi7()">
+                                        <label>Rasio Dispensasi RPD Harian:</label>
+                                        <input type="number" id="Indispensasi7" min="1" max="30" oninput="hitungAkurasi7()">
+                                        <!-- <label>Pilih Periode:
                                             <select id="periode7" onchange="tampilkanInput7()">
                                                 <option value="bulan7">Bulanan</option>
                                                 <option value="triwulan7">Triwulanan</option>
                                             </select>
                                         </label>
-                                        <div id="inputsContainer7"></div>
+                                        <div id="inputsContainer7"></div> -->
 
                                         <label for="formula7">Masukkan Formula:</label>
                                         <textarea id="inputFormula7" class="form-control" rows="3"
@@ -259,7 +266,7 @@
                                                         RPD harian KPPN per
                                                         periode </td>
                                                     <td>20%</td>
-                                                    <td  id="nilaiDeviasiUnit7">0</td>
+                                                    <td  id="deviasiUnit7">0</td>
                                                     <td id="valueDeviasiUnit7">0</td>
                                                     <td rowspan="4" valign="top" class="left-align" id="formula7">Tolong selalu enter agar tidak terlalu panjang</td>
                                                     <td rowspan="4" valign="top" class="left-align" id="keterangan7">
@@ -275,14 +282,14 @@
                                                         RPD harian KPPN per
                                                         periode </td>
                                                     <td>80%</td>
-                                                    <td id="nilaiDeviasiNilai7">0</td>
+                                                    <td id="deviasiNilai7">0</td>
                                                     <td id="valueDeviasiNilai7">0</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rasio Dispensasi RPD
                                                         harian KPPN per periode </td>
                                                     <td></td>
-                                                    <td id="nilaiDispensasi7">0</td>
+                                                    <td id="dispensasi7">0</td>
                                                     <td id="valueDispensasiNilai7">0</td>
                                                 </tr>
                                                 <tr>
@@ -293,63 +300,55 @@
                                         </table>
 
                                         <script>
-                                            function tampilkanInput7() {
-                                                let periode7 = document.getElementById('periode7').value;
-                                                let container7 = document.getElementById('inputsContainer7');
-                                                container7.innerHTML = ''; // Memastikan container dikosongkan sebelum ditampilkan ulang
-                                                let jumlahInput = periode7 === 'triwulan7' ? 3 : 1;
+                                            // function tampilkanInput7() {
+                                            //     let periode7 = document.getElementById('periode7').value;
+                                            //     let container7 = document.getElementById('inputsContainer7');
+                                            //     container7.innerHTML = ''; // Memastikan container dikosongkan sebelum ditampilkan ulang
+                                            //     let jumlahInput = periode7 === 'triwulan7' ? 3 : 1;
 
-                                                ["deviasiUnit7", "deviasiNilai7", "dispensasi7"].forEach((komponen) => {
-                                                    let labelText = komponen === "deviasiUnit7" ? "Rata - Rata Deviasi Unit" :
-                                                        komponen === "deviasiNilai7" ? "Rata - Rata Deviasi Nilai" :
-                                                            "Rasio Dispensasi RPD Harian";
+                                            //     ["deviasiUnit7", "deviasiNilai7", "dispensasi7"].forEach((komponen) => {
+                                            //         let labelText = komponen === "deviasiUnit7" ? "Rata - Rata Deviasi Unit" :
+                                            //             komponen === "deviasiNilai7" ? "Rata - Rata Deviasi Nilai" :
+                                            //                 "Rasio Dispensasi RPD Harian";
 
-                                                    let div = document.createElement("div");
-                                                    div.innerHTML = `<label>${labelText}:
-                                                    ${Array.from({ length: jumlahInput }).map((_, i) =>
-                                                        `<input type="number" class="${komponen}" step="0.01" oninput="hitungAkurasi7()">`)
-                                                            .join('')}
-                                                </label>`;
-                                                    container7.appendChild(div);
-                                                });
-                                            }
-
+                                            //         let div = document.createElement("div");
+                                            //         div.innerHTML = `<label>${labelText}:
+                                            //         ${Array.from({ length: jumlahInput }).map((_, i) =>
+                                            //             `<input type="number" class="${komponen}" step="0.01" oninput="hitungAkurasi7()">`)
+                                            //                 .join('')}
+                                            //     </label>`;
+                                            //         container7.appendChild(div);
+                                            //     });
+                                            // }
                                             function hitungAkurasi7() {
-                                                let periode7 = document.getElementById('periode7').value;
-                                                let jumlahInput = periode7 === 'triwulan7' ? 3 : 1;
+                                                let deviasiUnit7 = parseFloat(document.getElementById("IndeviasiUnit7").value) || 0;
+                                                let deviasiNilai7 = parseFloat(document.getElementById("IndeviasiNilai7").value) || 0;
+                                                let dispensasi7 = parseFloat(document.getElementById("Indispensasi7").value) || 0;
 
-                                                function getAverage(className, bobot) {
-                                                    let values = [...document.getElementsByClassName(className)].map(input => parseFloat(input.value) || 0);
-                                                    let sum = values.reduce((acc, val) => acc + val, 0);
-                                                    return (sum / jumlahInput) * bobot;
-                                                }
-
-                                                let nilaiDeviasiUnit7 = getAverage("deviasiUnit7", 0.2).toFixed(2);
-                                                let nilaiDeviasiNilai7 = getAverage("deviasiNilai7", 0.8).toFixed(2);
-                                                let nilaiDispensasi7 = getAverage("dispensasi7", 1).toFixed(2);
-
-                                                let valueDeviasiUnit7 = ((nilaiDeviasiUnit7 * 0.2).toFixed(3)) ;
-                                                let valueDeviasiNilai7 = ((nilaiDeviasiNilai7 * 0.8 ).toFixed(3));
-                                                let valueDispensasiNilai7 = nilaiDispensasi7;
+                                                let valueDeviasiUnit7 = ((deviasiUnit7 * 0.2).toFixed(2)) ;
+                                                let valueDeviasiNilai7 = ((deviasiNilai7 * 0.8 ).toFixed(2));
+                                                let valueDispensasiNilai7 = dispensasi7;
 
                                                 let hasil7 = (100 - valueDeviasiUnit7 - valueDeviasiNilai7 - valueDispensasiNilai7).toFixed(2);
 
-
-                                                document.getElementById("nilaiDeviasiUnit7").innerText = nilaiDeviasiUnit7;
-                                                document.getElementById("nilaiDeviasiNilai7").innerText = nilaiDeviasiNilai7;
-                                                document.getElementById("nilaiDispensasi7").innerText = nilaiDispensasi7;
+                                                document.getElementById("deviasiUnit7").innerText = deviasiUnit7;
+                                                document.getElementById("deviasiNilai7").innerText = deviasiNilai7;
+                                                document.getElementById("dispensasi7").innerText = dispensasi7;
                                                 document.getElementById("valueDeviasiUnit7").innerText = valueDeviasiUnit7;
                                                 document.getElementById("valueDeviasiNilai7").innerText = valueDeviasiNilai7;
                                                 document.getElementById("valueDispensasiNilai7").innerText = valueDispensasiNilai7;
                                                 document.getElementById("hasil7").innerText = hasil7;
+
                                             }
-                                            window.onload = tampilkanInput7;
+
+                                            
+                                            // window.onload = tampilkanInput7;
                                         </script>
                                         <script>
                                             function submitData7() {
-                                                let nilaiDeviasiUnit7 = document.getElementById("nilaiDeviasiUnit7").innerText;
-                                                let nilaiDeviasiNilai7 = document.getElementById("nilaiDeviasiNilai7").innerText;
-                                                let nilaiDispensasi7 = document.getElementById("nilaiDispensasi7").innerText;
+                                                let deviasiUnit7 = document.getElementById("deviasiUnit7").innerText;
+                                                let deviasiNilai7 = document.getElementById("deviasiNilai7").innerText;
+                                                let dispensasi7 = document.getElementById("dispensasi7").innerText;
                                                 let valueDeviasiUnit7 = document.getElementById("valueDeviasiUnit7").innerText;
                                                 let valueDeviasiNilai7 = document.getElementById("valueDeviasiNilai7").innerText;
                                                 let valueDispensasiNilai7 = document.getElementById("valueDispensasiNilai7").innerText;
@@ -362,9 +361,9 @@
                                                 let data = storedData ? JSON.parse(storedData) : {};
 
                                                 // Update hanya bagian halaman 7
-                                                data.nilaiDeviasiUnit7 = nilaiDeviasiUnit7;
-                                                data.nilaiDeviasiNilai7 = nilaiDeviasiNilai7;
-                                                data.nilaiDispensasi7 = nilaiDispensasi7;
+                                                data.deviasiUnit7 = deviasiUnit7;
+                                                data.deviasiNilai7 = deviasiNilai7;
+                                                data.dispensasi7 = dispensasi7;
                                                 data.valueDeviasiUnit7 = valueDeviasiUnit7;
                                                 data.valueDeviasiNilai7 = valueDeviasiNilai7;
                                                 data.valueDispensasiNilai7 = valueDispensasiNilai7;

@@ -301,10 +301,21 @@
                                                 let ivLPJ = parseFloat(document.getElementById("okt").value) || 0;
                                                 // let VinputC8 = parseFloat(document.getElementById("inputC8").value) || 0;
 
+                                                function getIndeksIKI9(value) {
+    if (value > 98.5) return 4;
+    else if (value > 97) return 3.5;
+    else if (value > 95) return 3;
+    else if (value > 92.5) return 2.5;
+    else if (value > 90) return 2;
+    else return 1;
+}
+
+
                                                 let indeksSept = (ipLPJ * 0.5);
                                                 let indeksOkt = (ivLPJ * 0.5);
                                                 // let indeksC8 = (VinputC8 * 100/3*100) /100/100;
                                                 let indeksTotal9 = indeksSept + indeksOkt;
+                                                let indeksIKI9 = getIndeksIKI9(indeksTotal9);
 
                                                 document.getElementById("valueindeksSept").innerText = ipLPJ;
                                                 document.getElementById("valueindeksOkt").innerText = ivLPJ ;
@@ -314,8 +325,17 @@
                                                 document.getElementById("indeksOkt").innerText = indeksOkt.toFixed(2);
                                                 // document.getElementById("indeksC8").innerText = indeksC8.toFixed(2);
 
-                                                document.getElementById("indeksTotal9").innerText = indeksTotal9.toFixed(0);
+                                                document.getElementById("indeksTotal9").innerText = indeksIKI9.toFixed(1);
                                             }
+                                            // function getIndeksIKI9(value) {
+                                            //     if (value <= 100 && value > 98.5 ) return 4;
+                                            //     else if (value <= 98.5 && value > 97) return 3.5;
+                                            //     else if (value <= 97 && value > 95) return 3;
+                                            //     else if (value <= 95 && value > 92.5) return 2.5;
+                                            //     else if (value <= 92.5 && value > 90) return 2;
+                                            //     else if (value <= 90) return 1;
+                                                
+                                            // }
 
 
                                             // function hitungIndeks9() {
@@ -348,6 +368,8 @@
                                                 let formula9hasil = document.getElementById("formula9").innerText;
                                                 let keterangan9hasil = document.getElementById("keterangan9").innerText;
 
+                                                let nilaiTotal9 = indeksSept + indeksOkt;
+
                                                 // Cek apakah ada data lama di localStorage
                                                 let storedData = localStorage.getItem("indeks_data");
                                                 let data = storedData ? JSON.parse(storedData) : {};
@@ -358,6 +380,7 @@
                                                 data.indeksSept = indeksSept;
                                                 data.indeksOkt = indeksOkt;
                                                 data.indeksTotal9 = indeksTotal9;
+                                                data.nilaiTotal9 = nilaiTotal9;
                                                 data.formula9 = formula9hasil;
                                                 data.keterangan9 = keterangan9hasil;
                                                 // Simpan kembali ke localStorage
