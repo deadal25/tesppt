@@ -11032,7 +11032,7 @@
                                                     { text:  findeks3c, options: { valign: "top", fill: '#ffffff',colspan:3 } }
                                                 ],
                                                 [
-                                                    { text: "Capaian", options: { align:'center', valign: "top", fill: '#b9cde5' } },
+                                                    { text: "Capaian", options: { bold:true, align:'left', valign: "top", fill: '#b9cde5' } },
                                                     { text:  findeks3, options: { valign: "top", fill: '#b9cde5',colspan:3 } }
                                                 ]
 
@@ -11716,9 +11716,9 @@
                                                     { text:  "20%", options: { valign: "top", fill: '#d0d8e8' } },
                                                     { text:  totalindeks4c + "%", options: { valign: "top", fill: '#d0d8e8' } }
                                                 ],[
-                                                    { text: "Total", options: {  valign: "top", fill: '#e9edf4',colspan:2 } },
-                                                    { text: "100%", options: {  valign: "top", fill: '#e9edf4' } },
-                                                    { text:  totalindeks4 + "%", options: { valign: "top", fill: '#e9edf4' } }
+                                                    { text: "Total", options: { bold:true, valign: "top", fill: '#e9edf4',colspan:2 } },
+                                                    { text: "100%", options: { bold:true, valign: "top", fill: '#e9edf4' } },
+                                                    { text:  totalindeks4 + "%", options: {bold:true, valign: "top", fill: '#e9edf4' } }
                                                 ]
 
                                             ],
@@ -13127,7 +13127,7 @@
                                                 ],[
                                                     { text: "Capaian", options: {  bold:true, valign: "top", fill: '#b9cde5' } },
                                                    
-                                                    { text:  "Indeks " + totalindeks6, options: { valign: "top", fill: '#b9cde5',colspan:3 } }
+                                                    { text:  "Indeks " + totalindeks6, options: {bold:true, valign: "top", fill: '#b9cde5',colspan:3 } }
                                                 ]
 
                                             ],
@@ -14540,8 +14540,8 @@
                                                     
                                                 ],
                                                 [
-                                                    { text: "Capaian", options: { bold:true, color:"ffffff", valign: "top", fill: '#b9cde5' } },
-                                                    { text: totalrealisasi8c, options: { bold:true, color:"ffffff", valign: "top", fill: '#b9cde5' } },
+                                                    { text: "Capaian", options: {align:"left", bold:true, color:"000000", valign: "top", fill: '#b9cde5' } },
+                                                    { text: totalrealisasi8c, options: { bold:true, color:"000000", valign: "top", fill: '#b9cde5' } },
                                                     
                                                 ]
                                                 
@@ -16633,16 +16633,16 @@
                                                 ],
                                                 [
                                                     { text: totalrealisasi11+"\n="+totalslide11, options: { valign: "top", fill: '#e9edf4' } },
-                                                    { text: [
-                                                            { text: totalrealisasi11a + "\n", align: 'left' },
-                                                            { text: totalslide11a, align: 'center' }
-                                                        ],
-                                                        options: {
-                                                            valign: "top",
-                                                            fill: '#e9edf4'
-                                                        }
-                                                    },
-                                                    // { text: totalrealisasi11a+"\n="+totalslide11a, options: {align:"left", valign: "top", fill: '#e9edf4' } },
+                                                    // { text: [
+                                                    //         { text: totalrealisasi11a + "\n", align: 'left' },
+                                                    //         { text: "= "+totalslide11a, align: 'center' }
+                                                    //     ],
+                                                    //     options: {
+                                                    //         valign: "top",
+                                                    //         fill: '#e9edf4'
+                                                    //     }
+                                                    // },
+                                                    { text: totalrealisasi11a+"\n="+totalslide11a, options: {valign: "top", fill: '#e9edf4' } },
                                                     { text: totalrealisasi11b+"\n="+totalslide11b, options: { valign: "top", fill: '#e9edf4' } }
                                                     // { text: totalslide13b, options: { valign: "middle", fill: '#e9edf4' } },
                                                     // { text: totalslide13c+"\n(Telah disusun middle kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#d0d8e8' } },
@@ -19436,7 +19436,7 @@
                                                 ]
                                             ],
                                             {
-                                                x: 0.12,
+                                                x: 0.15,
                                                 y: 4.21,
                                                 w: 6.38,
                                                 fontSize: 9,
@@ -19459,8 +19459,8 @@
                                         slide28.addText(sumberdata15, {
                                             x: 0.1,
                                             y: 5.83,
-                                            w: 6.6,
-                                            fontSize: 9.8,
+                                            w: 6.83,
+                                            fontSize: 9.65,
                                             italic: true,
                                             color: "003366",
                                             autoFit: true,  // supaya teks membesar ke bawah
