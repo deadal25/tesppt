@@ -471,8 +471,8 @@
 
 
                                         <script>
-                                            let gambarBase641 = "";
-                                            let gambarBase642 = "";
+                                            let gambarBase647 = "";
+                                            let gambarBase648 = "";
 
                                             function tambahGambar(nomor) {
                                                 let fileInput = document.getElementById("uploadGambar" + nomor);
@@ -487,13 +487,13 @@
 
                                                 reader.onload = function (e) {
                                                     if (nomor === 29) {
-                                                        gambarBase641 = e.target.result;
-                                                        sessionStorage.setItem("gambar29", gambarBase641);
-                                                        tampilkanPreview("hasilGambar29", gambarBase641);
+                                                        gambarBase647 = e.target.result;
+                                                        sessionStorage.setItem("gambar29", gambarBase647);
+                                                        tampilkanPreview("hasilGambar29", gambarBase647);
                                                     } else if (nomor === 30) {
-                                                        gambarBase642 = e.target.result;
-                                                        sessionStorage.setItem("gambar30", gambarBase642);
-                                                        tampilkanPreview("hasilGambar30", gambarBase642);
+                                                        gambarBase648 = e.target.result;
+                                                        sessionStorage.setItem("gambar30", gambarBase648);
+                                                        tampilkanPreview("hasilGambar30", gambarBase648);
                                                     }
                                                 };
 
@@ -1330,11 +1330,11 @@
                                                     localStorage.setItem("indeks_data", JSON.stringify(data));
 
                                                     // Coba simpan gambar ke sessionStorage (tidak masalah quota di sini karena sementara)
-                                                    if (gambarBase641 !== "") {
-                                                        sessionStorage.setItem("gambar29", gambarBase641);
+                                                    if (gambarBase647 !== "") {
+                                                        sessionStorage.setItem("gambar29", gambarBase647);
                                                     }
-                                                    if (gambarBase642 !== "") {
-                                                        sessionStorage.setItem("gambar30", gambarBase642);
+                                                    if (gambarBase648 !== "") {
+                                                        sessionStorage.setItem("gambar30", gambarBase648);
                                                     }
 
                                                     // alert("Data berhasil disimpan!");
