@@ -51,8 +51,8 @@
             "slide12": "slide12.html",
             "slide13": "slide13.html",
             "slide14": "slide14.html",
-            "slide14": "slide14.html",
-            "slide16": "slide16.html"
+            "slide15": "slide15.html"
+            
         };
 
         if (selectedValue in pages) {
@@ -84,39 +84,45 @@
                             <i class="fa fa-dashboard mr-2"></i>Dashboard
                         </a>
                     </li>
-
+            
                     <li class="relative group">
-                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none">
+                        <button
+                            class="flex items-center text-white hover:text-blue-400 focus:outline-none"
+                        >
                             <i class="fa fa-table mr-2"></i>Tables
-                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400"
-                                viewBox="0 0 20 20">
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
                                 <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
                             </svg>
                         </button>
                         <!-- Dropdown menu -->
                         <ul
-                            class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10">
+                            class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10"
+                        >
                             <li>
                                 <a href="tables-basic.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>New Data
                                 </a>
                             </li>
                             <li>
                                 <a href="tables-data.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>Raw Data
                                 </a>
                             </li>
                             <li>
                                 <a href="ppt-basic.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>New PPT Data
                                 </a>
                             </li>
                             <li>
                                 <a href="ppt-data.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>PPT Data
                                 </a>
                             </li>
@@ -214,34 +220,29 @@
                                 <!-- <label for="pageSelect">Pilih kategori:</label> -->
                                 <select id="pageSelect" onchange="navigatePage()">
                                     <option value="" disabled selected>-- Pilih --</option>
-                                    <option value="slide1">Nilai Kinerja Pelaksanaan Anggaran K/L</option>
-                                    <option value="slide2">Indeks Kualitas LK Kuasa BUN KPPN</option>
-                                    <option value="slide3">Indeks Kepuasan Satker terhadap Layanan KPPN</option>
-                                    <option value="slide4">Indeks Implementasi Standardisasi Kompetensi Pejabat
-                                        Perbendaharaan pada satker lingkup KPPN </option>
-                                    <option value="slide5">Tingkat Efektivitas Edukasi di Bidang Pengelolaan
-                                        Perbendaharaan</option>
-                                    <option value="slide6">Persentase Akurasi perencanaan Kas</option>
-                                    <option value="slide7">Tingkat Kualitas penyelesaian SP2D</option>
-                                    <option value="slide8">Nilai Kinerja Penyaluran Dana Transfer ke Daerah</option>
-                                    <option value="slide9">Indeks Digitalisasi Pengelolaan Keuangan KPPN</option>
-                                    <option value="slide10">Indeks kualitas Laporan Pertanggungjawaban Bendahara K/L
-                                    </option>
-                                    <option value="slide11">Tingkat implementasi penajaman tugas Financial Advisory
-                                    </option>
-                                    <option value="slide12">Tingkat Kualitas Pengelolaan Kinerja Organisasi</option>
-                                    <option value="slide13">Nilai kualitas pengelolaan SDM </option>
-                                    <option value="slide14">Nilai hasil evaluasi pelaksanaan tugas kepatuhan internal
-                                    </option>
-                                    <option value="slide14">Persentase Kualitas Pelaksanaan anggaran KPPN</option>
-                                    <option value="slide16">Persentase Kualitas pengelolaan BMN dan Pengadaan</option>
+                                    <option value="slide1">1a-CP Indeks Kualitas Nilai IKPA K/L</option>
+                                    <option value="slide2">1b-N Indeks kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="slide3">2a-N Indeks kepuasan terhadap layanan KPPN</option>
+                                    <option value="slide4">2b-N Tingkat Implementasi Penajaman Tugas Financial Advisory</option>
+                                    <option value="slide5">3a-CP Indeks Kinerja Penyaluran Dana Transfer ke Daerah pada KPPN</option>
+                                    <option value="slide6">3b-N Indeks Digitalisasi Pengelolaan Keuangan</option>
+                                    <option value="slide7">4a-CP Persentase akurasi perencanaan kas</option>
+                                    <option value="slide8">4b-N Indeks kualitas penyelesaian SP2D</option>
+                                    <option value="slide9">5a-N Indeks kualitas Laporan Pertanggungjawaban Bendahara K/L</option>
+                                    <option value="slide10">6a-N Tingkat Kualitas Pengelolaan Kinerja Organisasi</option>
+                                    <option value="slide11">6b-N Nilai Kualitas Pengelolaan SDM</option>
+                                    <option value="slide12">6c-N Nilai hasil evaluasi pelaksanaan tugas kepatuhan internal</option>
+                                    <option value="slide13">7a-CP Indeks Kualitas Pengelolaan Keuangan KPPN</option>
+                                    <option value="slide14">7b-N Indeks Kualitas Pengelolaan BMN dan Pengadaan</option>
+                                    <option value="slide15">7c-N Nilai Kinerja TIK KPPN</option>
+                                    
                                 </select>
 
                                 <body>
 
                                     <div id="slide14" class="content">
                                         <br>
-                                        <h3><b>7. Pengelolaan keuangan yang akuntabel</b></h3>
+                                        <h3><b>7b-N Indeks Kualitas Pengelolaan BMN dan Pengadaan</b></h3>
 
                                         <label for="judul14">Masukkan Judul: </label>
                                         <textarea id="inputjudul14" class="form-control" rows="1"

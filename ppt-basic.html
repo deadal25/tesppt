@@ -38,20 +38,20 @@
         const pages = {
             "slide1": "slide1.html",
             "slide2": "slide2.html",
-            "2a-N": "tabelnomor3.html",
-            "3a-N": "tabelnomor4.html",
-            "3b-N": "tabelnomor5.html",
-            "4a-CP": "tabelnomor6.html",
-            "4b-N": "tabelnomor7.html",
-            "5a-CP": "tabelnomor8.html",
-            "5b-N": "tabelnomor9.html",
-            "6a-N": "tabelnomor10.html",
-            "7a-N": "tabelnomor11.html",
-            "8a-N": "tabelnomor12.html",
-            "8b-N": "tabelnomor13.html",
-            "8c-N": "tabelnomor14.html",
-            "9a-CP": "tabelnomor15.html",
-            "9b-N": "tabelnomor16.html"
+            "slide3": "slide3.html",
+            "slide4": "slide4.html",
+            "slide5": "slide5.html",
+            "slide6": "slide6.html",
+            "slide7": "slide7.html",
+            "slide8": "slide8.html",
+            "slide9": "slide9.html",
+            "slide10": "slide10.html",
+            "slide11": "slide11.html",
+            "slide12": "slide12.html",
+            "slide13": "slide13.html",
+            "slide14": "slide14.html",
+            "slide15": "slide15.html"
+            
         };
 
         if (selectedValue && pages[selectedValue]) {
@@ -86,39 +86,45 @@
                             <i class="fa fa-dashboard mr-2"></i>Dashboard
                         </a>
                     </li>
-
+            
                     <li class="relative group">
-                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none">
+                        <button
+                            class="flex items-center text-white hover:text-blue-400 focus:outline-none"
+                        >
                             <i class="fa fa-table mr-2"></i>Tables
-                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400"
-                                viewBox="0 0 20 20">
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
                                 <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
                             </svg>
                         </button>
                         <!-- Dropdown menu -->
                         <ul
-                            class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10">
+                            class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10"
+                        >
                             <li>
                                 <a href="tables-basic.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>New Data
                                 </a>
                             </li>
                             <li>
                                 <a href="tables-data.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>Raw Data
                                 </a>
                             </li>
                             <li>
                                 <a href="ppt-basic.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>New PPT Data
                                 </a>
                             </li>
                             <li>
                                 <a href="ppt-data.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
+                                >
                                     <i class="fa fa-table mr-2"></i>PPT Data
                                 </a>
                             </li>
@@ -212,27 +218,22 @@
                                 <!-- <label for="pageSelect">Pilih kategori:</label> -->
                                 <select id="pageSelect" onchange="navigatePage()">
                                     <option value="" disabled selected>-- Pilih --</option>
-                                    <option value="slide1">Nilai Kinerja Pelaksanaan Anggaran K/L</option>
-                                    <option value="slide2">Indeks Kualitas LK Kuasa BUN KPPN</option>
-                                    <option value="2a-N">Indeks Kepuasan Satker terhadap Layanan KPPN</option>
-                                    <option value="3a-N">Indeks Implementasi Standardisasi Kompetensi Pejabat
-                                        Perbendaharaan pada satker lingkup KPPN </option>
-                                    <option value="3b-N">Tingkat Efektivitas Edukasi di Bidang Pengelolaan
-                                        Perbendaharaan</option>
-                                    <option value="4a-CP">Persentase Akurasi perencanaan Kas</option>
-                                    <option value="4b-N">Tingkat Kualitas penyelesaian SP2D</option>
-                                    <option value="5a-CP">Nilai Kinerja Penyaluran Dana Transfer ke Daerah</option>
-                                    <option value="5b-N">Indeks Digitalisasi Pengelolaan Keuangan KPPN</option>
-                                    <option value="6a-N">Indeks kualitas Laporan Pertanggungjawaban Bendahara K/L
-                                    </option>
-                                    <option value="7a-N">Tingkat implementasi penajaman tugas Financial Advisory
-                                    </option>
-                                    <option value="8a-N">Tingkat Kualitas Pengelolaan Kinerja Organisasi</option>
-                                    <option value="8b-N">Nilai kualitas pengelolaan SDM </option>
-                                    <option value="8c-N">Nilai hasil evaluasi pelaksanaan tugas kepatuhan internal
-                                    </option>
-                                    <option value="9a-CP">Persentase Kualitas Pelaksanaan anggaran KPPN</option>
-                                    <option value="9b-N">Persentase Kualitas pengelolaan BMN dan Pengadaan</option>
+                                    <option value="slide1">1a-CP Indeks Kualitas Nilai IKPA K/L</option>
+                                    <option value="slide2">1b-N Indeks kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="slide3">2a-N Indeks kepuasan terhadap layanan KPPN</option>
+                                    <option value="slide4">2b-N Tingkat Implementasi Penajaman Tugas Financial Advisory</option>
+                                    <option value="slide5">3a-CP Indeks Kinerja Penyaluran Dana Transfer ke Daerah pada KPPN</option>
+                                    <option value="slide6">3b-N Indeks Digitalisasi Pengelolaan Keuangan</option>
+                                    <option value="slide7">4a-CP Persentase akurasi perencanaan kas</option>
+                                    <option value="slide8">4b-N Indeks kualitas penyelesaian SP2D</option>
+                                    <option value="slide9">5a-N Indeks kualitas Laporan Pertanggungjawaban Bendahara K/L</option>
+                                    <option value="slide10">6a-N Tingkat Kualitas Pengelolaan Kinerja Organisasi</option>
+                                    <option value="slide11">6b-N Nilai Kualitas Pengelolaan SDM</option>
+                                    <option value="slide12">6c-N Nilai hasil evaluasi pelaksanaan tugas kepatuhan internal</option>
+                                    <option value="slide13">7a-CP Indeks Kualitas Pengelolaan Keuangan KPPN</option>
+                                    <option value="slide14">7b-N Indeks Kualitas Pengelolaan BMN dan Pengadaan</option>
+                                    <option value="slide15">7c-N Nilai Kinerja TIK KPPN</option>
+                                    
                                 </select>
 
                                 <body>
