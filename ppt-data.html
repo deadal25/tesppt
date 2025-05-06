@@ -16633,7 +16633,16 @@
                                                 ],
                                                 [
                                                     { text: totalrealisasi11+"\n="+totalslide11, options: { valign: "top", fill: '#e9edf4' } },
-                                                    { text: totalrealisasi11a+"            \n="+totalslide11a, options: {align:"left", valign: "top", fill: '#e9edf4' } },
+                                                    { text: [
+                                                            { text: totalrealisasi11a + "\n", align: 'left' },
+                                                            { text: totalslide11a, align: 'center' }
+                                                        ],
+                                                        options: {
+                                                            valign: "top",
+                                                            fill: '#e9edf4'
+                                                        }
+                                                    },
+                                                    // { text: totalrealisasi11a+"\n="+totalslide11a, options: {align:"left", valign: "top", fill: '#e9edf4' } },
                                                     { text: totalrealisasi11b+"\n="+totalslide11b, options: { valign: "top", fill: '#e9edf4' } }
                                                     // { text: totalslide13b, options: { valign: "middle", fill: '#e9edf4' } },
                                                     // { text: totalslide13c+"\n(Telah disusun middle kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#d0d8e8' } },
