@@ -8221,13 +8221,13 @@
                                             totalrealisasi9a = parsedData.totalrealisasi9a || "-";
                                             totalrealisasi9b = parsedData.totalrealisasi9b || "-";
 
-                                            // Nilaislide9a = parsedData.indeksTotal9 || "-";
-                                            let Nilaislide9a = !isNaN(parsedData.indeksTotal9) ? Number(parsedData.indeksTotal9).toFixed(0) : "-";
+                                            Nilaislide9a = parsedData.indeksTotal9 || "-";
+                                            // let Nilaislide9a = !isNaN(parsedData.indeksTotal9) ? Number(parsedData.indeksTotal9).toFixed(0) : "-";
                                             nilaitotalslide9 = (Nilaislide9a >= 4) ? 120 : Nilaislide9a;
                                             nilaitotalslide9 = isNaN(nilaitotalslide9) ? "-" : nilaitotalslide9;
                                           
-                                            // Nilaislide9aa = parsedData.indeksTotal9 || "-";
-                                            let Nilaislide9aa = !isNaN(parsedData.indeksTotal9) ? Number(parsedData.indeksTotal9).toFixed(0) : "-";
+                                            Nilaislide9aa = parsedData.indeksTotal9 || "-";
+                                            // let Nilaislide9aa = !isNaN(parsedData.indeksTotal9) ? Number(parsedData.indeksTotal9).toFixed(0) : "-";
                                             let totalCapaian9a = parseFloat(parsedData.indeksTotal9);
                                             nilaitotalslide9aa = (totalCapaian9a >= 4) ? 120 : totalCapaian9a;
                                             nilaitotalslide9aa = isNaN(nilaitotalslide9aa) ? "-" : nilaitotalslide9aa;
@@ -13094,10 +13094,10 @@
                                         slide10.addTable(
                                             [
                                                 [
-                                                    { text: "Komponen", options: { color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Target", options: { color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Realisasi", options: { color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Indeks", options: { color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } }
+                                                    { text: "Komponen", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Target", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Realisasi", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Indeks", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } }
                                                 ],
                                                 [
                                                     { text: "Digipay Satu", options: { align:'left', valign: "top", fill: '#ffffff' } },
@@ -13116,7 +13116,7 @@
                                                     { text:  totalrealisasi6c, options: { valign: "top", fill: '#ffffff' } },
                                                     { text:  totalindeks6c, options: { valign: "top", fill: '#ffffff' } }
                                                 ],[
-                                                    { text: "Capaian", options: {  valign: "top", fill: '#b9cde5' } },
+                                                    { text: "Capaian", options: {  bold:true, valign: "top", fill: '#b9cde5' } },
                                                    
                                                     { text:  "Indeks " + totalindeks6, options: { valign: "top", fill: '#b9cde5',colspan:3 } }
                                                 ]
@@ -13798,36 +13798,36 @@
                                         slide12.addTable(
                                             [
                                                 [
-                                                    { text: "Komponen", options: { valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Indeks", options: { valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Bobot", options: { valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Penilaian", options: { valign: "top", align: "center", fill: '#4f81bd' } }
+                                                    { text: "Komponen", options: { bold:true, color:"ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Indeks", options: { bold:true, color:"ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Bobot", options: { bold:true, color:"ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Penilaian", options: { bold:true, color:"ffffff", valign: "top", align: "center", fill: '#4f81bd' } }
                                                    
                                                 ],
                                                 [
-                                                    { text: "Rata-Rata Deviasi Unit", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalindeks7a, options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: "20%", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi7a, options: { valign: "top", fill: '#e6e0ec' } }
+                                                    { text: "Rata-Rata Deviasi Unit", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalindeks7a, options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: "20%", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalrealisasi7a, options: { valign: "top", fill: '#ffffff' } }
                                                     
                                                 ],
                                                 [
-                                                    { text: "Rata-Rata Deviasi Nilai", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalindeks7b, options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: "80%", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi7b, options: { valign: "top", fill: '#e6e0ec' } }
+                                                    { text: "Rata-Rata Deviasi Nilai", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalindeks7b, options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: "80%", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalrealisasi7b, options: { valign: "top", fill: '#ffffff' } }
                                                     
                                                 ],
                                                 [
-                                                    { text: "Rata-Rata Rasio Dispensasi", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalindeks7c, options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: " ", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi7c, options: { valign: "top", fill: '#e6e0ec' } }
+                                                    { text: "Rata-Rata Rasio Dispensasi", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalindeks7c, options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: " ", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalrealisasi7c, options: { valign: "top", fill: '#ffffff' } }
                                                     
                                                 ],
                                                 [
-                                                    { text: "Capaian", options: { valign: "top", fill: '#e6e0ec', colspan:3 } },
-                                                    { text: totalrealisasi7, options: { valign: "top", fill: '#e6e0ec' } },
+                                                    { text: "Capaian", options: { bold:true, valign: "top", fill: '#b9cde5', colspan:3 } },
+                                                    { text: totalrealisasi7, options: { bold:true, valign: "top", fill: '#b9cde5' } },
                                                     
                                                 ]
                                                 
@@ -14509,28 +14509,28 @@
                                         slide14.addTable(
                                             [
                                                 [
-                                                    { text: "Komponen", options: { valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Indeks", options: { valign: "top", align: "center", fill: '#4f81bd' } }
+                                                    { text: "Komponen", options: { bold:true, color:'ffffff', valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Indeks", options: { bold:true, color:'ffffff', valign: "top", align: "center", fill: '#4f81bd' } }
                                                    
                                                 ],
                                                 [
-                                                    { text: "Penyelesaian SP2D secara tepat waktu", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi8, options: { valign: "top", fill: '#e6e0ec' } },
+                                                    { text: "Penyelesaian SP2D secara tepat waktu", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalrealisasi8, options: { valign: "top", fill: '#ffffff' } },
                                                     
                                                 ],
                                                 [
-                                                    { text: "Efektivitas Penyaluran Dana SP2D yang akurat", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi8a, options: { valign: "top", fill: '#e6e0ec' } },
+                                                    { text: "Efektivitas Penyaluran Dana SP2D yang akurat", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalrealisasi8a, options: { valign: "top", fill: '#ffffff' } },
                                                     
                                                 ],
                                                 [
-                                                    { text: "Efektivitas kecepatan penyelesaian retur SP2D", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi8b, options: { valign: "top", fill: '#e6e0ec' } },
+                                                    { text: "Efektivitas kecepatan penyelesaian retur SP2D", options: { valign: "top", fill: '#ffffff' } },
+                                                    { text: totalrealisasi8b, options: { valign: "top", fill: '#ffffff' } },
                                                     
                                                 ],
                                                 [
-                                                    { text: "Capaian", options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi8c, options: { valign: "top", fill: '#e6e0ec' } },
+                                                    { text: "Capaian", options: { bold:true, color:"ffffff", valign: "top", fill: '#b9cde5' } },
+                                                    { text: totalrealisasi8c, options: { bold:true, color:"ffffff", valign: "top", fill: '#b9cde5' } },
                                                     
                                                 ]
                                                 
@@ -15223,11 +15223,11 @@
 
                                             ],
                                             {
-                                                x: 0.12,
+                                                x: 0.25,
                                                 y: 3.58,
-                                                w: 6.85,
+                                                w: 6.25,
                                                 fontSize: 9,
-                                                colW: [1.45, 3.45, 1.93],
+                                                colW: [1.95, 3.05, 1.25],
                                                 border: { type: "solid", color: "000000", pt: 1 },
                                                 fill: "#e6e0ec",
                                                 align: "center",
@@ -17303,11 +17303,11 @@
                                         slide22.addTable(
                                             [
                                                 [
-                                                    { text: "Unit Kerja", options: { valign: "middle", align: "center", fill: '#93cddd' } },
-                                                    { text: "Penerapan MR", options: { valign: "middle", align: "center", fill: '#93cddd' } },
-                                                    { text: "Pelaksanaan PPINE", options: { valign: "middle", align: "center", fill: '#93cddd' } },
-                                                    { text: "Pengeloaan Pengaduan", options: { valign: "middle", align: "center", fill: '#93cddd' } },
-                                                    { text: "Nilai", options: { valign: "middle", align: "center", fill: '#93cddd' } }
+                                                    { text: "Unit Kerja", options: { bold:true, valign: "middle", align: "center", fill: '#93cddd' } },
+                                                    { text: "Penerapan MR", options: { bold:true, valign: "middle", align: "center", fill: '#93cddd' } },
+                                                    { text: "Pelaksanaan PPINE", options: { bold:true, valign: "middle", align: "center", fill: '#93cddd' } },
+                                                    { text: "Pengeloaan Pengaduan", options: { bold:true, valign: "middle", align: "center", fill: '#93cddd' } },
+                                                    { text: "Nilai", options: { bold:true, valign: "middle", align: "center", fill: '#93cddd' } }
                                                 ],
                                                 [
                                                     { text: "Target", options: { valign: "middle", fill: '#dbeef4' } },
@@ -19431,8 +19431,8 @@
                                         slide28.addText(sumberdata15, {
                                             x: 0.1,
                                             y: 5.83,
-                                            w: 6.38,
-                                            fontSize: 10,
+                                            w: 6.6,
+                                            fontSize: 9.8,
                                             italic: true,
                                             color: "003366",
                                             autoFit: true,  // supaya teks membesar ke bawah
