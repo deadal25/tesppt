@@ -8221,11 +8221,13 @@
                                             totalrealisasi9a = parsedData.totalrealisasi9a || "-";
                                             totalrealisasi9b = parsedData.totalrealisasi9b || "-";
 
-                                            Nilaislide9a = parsedData.indeksTotal9 || "-";
+                                            // Nilaislide9a = parsedData.indeksTotal9 || "-";
+                                            let Nilaislide9a = !isNaN(parsedData.indeksTotal9) ? Number(parsedData.indeksTotal9).toFixed(0) : "-";
                                             nilaitotalslide9 = (Nilaislide9a >= 4) ? 120 : Nilaislide9a;
                                             nilaitotalslide9 = isNaN(nilaitotalslide9) ? "-" : nilaitotalslide9;
                                           
-                                            Nilaislide9aa = parsedData.indeksTotal9 || "-";
+                                            // Nilaislide9aa = parsedData.indeksTotal9 || "-";
+                                            let Nilaislide9aa = !isNaN(parsedData.indeksTotal9) ? Number(parsedData.indeksTotal9).toFixed(0) : "-";
                                             let totalCapaian9a = parseFloat(parsedData.indeksTotal9);
                                             nilaitotalslide9aa = (totalCapaian9a >= 4) ? 120 : totalCapaian9a;
                                             nilaitotalslide9aa = isNaN(nilaitotalslide9aa) ? "-" : nilaitotalslide9aa;
@@ -9877,12 +9879,12 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
@@ -9895,12 +9897,12 @@
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide2 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide2 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -10648,12 +10650,12 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
@@ -10666,12 +10668,12 @@
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide2baa + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide2baa + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -11327,12 +11329,12 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
@@ -11345,12 +11347,12 @@
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide3 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide3 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -12031,12 +12033,12 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "81%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "81%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "81%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "81%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "81%", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "81%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "81%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "81%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "81%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "81%", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
@@ -12049,12 +12051,12 @@
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide4 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide4 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -12731,12 +12733,12 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
@@ -12749,12 +12751,12 @@
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide5aa + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide5aa + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -13438,30 +13440,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "4", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "4", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide6aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide6aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide6 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide6 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -14149,30 +14151,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "82%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "82%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "82%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "82%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "82%", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "82%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "82%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "82%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "82%", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "82%", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide7aa + "%", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide7aa + "%", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide7aa + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide7aa + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -14853,30 +14855,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide8aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide8aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide8 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide8 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -15212,9 +15214,9 @@
                                             [
                                                 
                                                 [
-                                                    { text: totalrealisasi9, options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi9a, options: { valign: "top", fill: '#e6e0ec' } },
-                                                    { text: totalrealisasi9b, options: { valign: "top", fill: '#e6e0ec' } }
+                                                    { text: totalrealisasi9, options: { valign: "top", fill: '#dbeef4' } },
+                                                    { text: totalrealisasi9a, options: { valign: "top", fill: '#dbeef4' } },
+                                                    { text: totalrealisasi9b, options: { valign: "top", fill: '#dbeef4' } }
                                                     // { text: totalslide13b, options: { valign: "middle", fill: '#e6e0ec' } },
                                                     // { text: totalslide13c+"\n(Telah disusun middle kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#e6e0ec' } },
                                                 ]
@@ -15359,7 +15361,7 @@
                                         slide17.addShape(pptx.ShapeType.rect, {
                                             x: 0.001,
                                             y: 0.35,
-                                            w: 8.01,
+                                            w: 9.01,
                                             h: 0.5,
                                             fill: { color: "#0070c0" },
                                             line: { color: "#0070c0" } // tanpa border
@@ -15538,30 +15540,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "3", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide9aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide9aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide9 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide9 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -15911,11 +15913,11 @@
                                                     // { text: totalrealisasi10+"\n"+"="+totalslide10d, options: { valign: "top", fill: '#d0d8e8' } }
                                                 ],
                                                 [
-                                                    { text: "Formula:\n"+ fslide10, options: { valign: "top", fill: '#d0d8e8' } },
-                                                    { text: "Formula:\n"+ fslide10a, options: { valign: "top", fill: '#d0d8e8' } },
-                                                    { text: "Formula:\n"+ formulaslide10, options: { valign: "top", fill: '#d0d8e8' } },
-                                                    // { text: totalslide10c+"\n(Telah disusun top kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#d0d8e8' } },
-                                                    // { text: totalrealisasi10+"\n"+"="+totalslide10d, options: { valign: "top", fill: '#d0d8e8' } }
+                                                    { text: fslide10, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: fslide10a, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: formulaslide10, options: { valign: "top", fill: '#e9edf4' } },
+                                                    // { text: totalslide10c+"\n(Telah disusun top kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#e9edf4' } },
+                                                    // { text: totalrealisasi10+"\n"+"="+totalslide10d, options: { valign: "top", fill: '#e9edf4' } }
                                                 ],
                                                 [
                                                     { text: totalrealisasi10+"\n="+totalslide10, options: { valign: "top", fill: '#d0d8e8' } },
@@ -16065,7 +16067,7 @@
                                         slide19.addShape(pptx.ShapeType.rect, {
                                             x: 0.001,
                                             y: 0.35,
-                                            w: 8.01,
+                                            w: 10.01,
                                             h: 0.5,
                                             fill: { color: "#0070c0" },
                                             line: { color: "#0070c0" } // tanpa border
@@ -16244,30 +16246,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide10aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide10aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide10aa + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide10aa + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -16616,10 +16618,10 @@
                                                     // { text: totalrealisasi11+"\n"+"="+totalslide11d, options: { valign: "top", fill: '#d0d8e8' } }
                                                 ],
                                                 [
-                                                    { text: totalrealisasi11+"\n="+totalslide11, options: { valign: "top", fill: '#d0d8e8' } },
-                                                    { text: totalrealisasi11a+"="+totalslide11a, options: { valign: "top", fill: '#d0d8e8' } },
-                                                    { text: totalrealisasi11b+"\n="+totalslide11b, options: { valign: "top", fill: '#d0d8e8' } }
-                                                    // { text: totalslide13b, options: { valign: "middle", fill: '#d0d8e8' } },
+                                                    { text: totalrealisasi11+"\n="+totalslide11, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: totalrealisasi11a+"="+totalslide11a, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: totalrealisasi11b+"\n="+totalslide11b, options: { valign: "top", fill: '#e9edf4' } }
+                                                    // { text: totalslide13b, options: { valign: "middle", fill: '#e9edf4' } },
                                                     // { text: totalslide13c+"\n(Telah disusun middle kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#d0d8e8' } },
                                                 ]
 
@@ -16943,30 +16945,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "100", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide11aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide11aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide11 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide11 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -17644,30 +17646,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "80", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "80", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "80", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "80", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "80", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide12aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide12aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide12 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide12 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -18016,10 +18018,10 @@
                                                     // { text: totalrealisasi13+"\n"+"="+totalslide13d, options: { valign: "top", fill: '#d0d8e8' } }
                                                 ],
                                                 [
-                                                    { text: totalrealisasi13+"\n"+"="+totalslide13, options: { valign: "top", fill: '#d0d8e8' } },
-                                                    { text: totalrealisasi13a+"\n"+"="+totalslide13a, options: { valign: "top", fill: '#d0d8e8' } },
-                                                    { text: totalrealisasi13b+"\n"+"="+totalslide13b, options: { valign: "top", fill: '#d0d8e8' } }
-                                                    // { text: totalslide13b, options: { valign: "middle", fill: '#d0d8e8' } },
+                                                    { text: totalrealisasi13+"\n"+"="+totalslide13, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: totalrealisasi13a+"\n"+"="+totalslide13a, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: totalrealisasi13b+"\n"+"="+totalslide13b, options: { valign: "top", fill: '#e9edf4' } }
+                                                    // { text: totalslide13b, options: { valign: "middle", fill: '#e9edf4' } },
                                                     // { text: totalslide13c+"\n(Telah disusun middle kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#d0d8e8' } },
                                                 ]
 
@@ -18342,30 +18344,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide13aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide13aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide13 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide13 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -19033,30 +19035,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "100", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide14aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide14aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide14 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide14 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
@@ -19472,8 +19474,8 @@
                                                 x: 7.0,
                                                 y: 2.17,
                                                 w: 6.3,
-                                                h: 2.15,
-                                                fontSize: 10,
+                                                h: 1.98,
+                                                fontSize: 10.5,
                                                 autoFit: true,  // supaya teks membesar ke bawah
                                                 valign: "top",
                                                 color: "000000",
@@ -19530,9 +19532,9 @@
                                             
                                             {
                                                 x: 7.03,
-                                                y: 4.51,
+                                                y: 4.36,
                                                 w: 6.22,
-                                                fontSize: 13,
+                                                fontSize: 12,
                                                 colW: [3, 1.52, 1.7],
                                                 align: "left",
                                                 border: { type: "solid", color: "000000", pt: 1 },
@@ -19724,30 +19726,30 @@
                                             ],
                                             // Baris Target
                                             [
-                                                { text: "Target", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "3", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Target", options: { fill: "#d0d8e8", color: "000000", bold: false, align: "left" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } },
+                                                { text: "80", options: { fill: "#d0d8e8", align: "center" } }
                                             ],
                                             // Baris Realisasi
                                             [
-                                                { text: "Realisasi", options: { fill: "#cbd6e6", color: "000000", bold: false, align: "left" } },
-                                                { text: Nilaislide15aa, options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", align: "center" } }
+                                                { text: "Realisasi", options: { fill: "#e9edf4", color: "000000", bold: false, align: "left" } },
+                                                { text: Nilaislide15aa, options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } },
+                                                { text: "-", options: { fill: "#e9edf4", align: "center" } }
                                             ],
                                             // Baris Indeks Capaian
                                             [
-                                                { text: "Indeks Capaian", options: { fill: "#cbd6e6", color: "000000", bold: true, align: "left" } },
-                                                { text: nilaitotalslide15 + "%", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } },
-                                                { text: "-", options: { fill: "#cbd6e6", bold: true, align: "center" } }
+                                                { text: "Indeks Capaian", options: { fill: "#d0d8e8", color: "000000", bold: true, align: "left" } },
+                                                { text: nilaitotalslide15 + "%", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } },
+                                                { text: "-", options: { fill: "#d0d8e8", bold: true, align: "center" } }
                                             ]
                                         ];
 
