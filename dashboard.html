@@ -37,7 +37,6 @@
 
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
-
             <div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
                     aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +45,7 @@
                 <a class="navbar-brand" href="dashboard.html"><img src="logo.png" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="dashboard.html"><img src="logo2.png" alt="Logo"></a>
             </div>
-
+    
             <div id="main-menu" class="w-full">
                 <script src="https://cdn.tailwindcss.com"></script>
                 <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
@@ -55,54 +54,145 @@
                             <i class="fa fa-dashboard mr-2"></i>Dashboard
                         </a>
                     </li>
-            
+    
+                    <li>
+                        <a href="ppt-basic.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>New PPT Data
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ppt-data.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>PPT Data
+                        </a>
+                    </li>
+    
+                    <!-- Triwulan 1 -->
                     <li class="relative group">
-                        <button
-                            class="flex items-center text-white hover:text-blue-400 focus:outline-none"
-                        >
-                            <i class="fa fa-table mr-2"></i>Tables
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan1')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 1
                             <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
                                 <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
                             </svg>
                         </button>
-                        <!-- Dropdown menu -->
-                        <ul
-                            class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10"
-                        >
+                        <ul id="triwulan1" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
                             <li>
-                                <a href="tables-basic.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
-                                >
-                                    <i class="fa fa-table mr-2"></i>New Data
+                                <a href="tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data Tw 1
                                 </a>
                             </li>
                             <li>
-                                <a href="tables-data.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
-                                >
-                                    <i class="fa fa-table mr-2"></i>Raw Data
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ppt-basic.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
-                                >
-                                    <i class="fa fa-table mr-2"></i>New PPT Data
-                                </a>
-                            </li>
-                            <li>
-                                <a href="ppt-data.html"
-                                    class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white"
-                                >
-                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                <a href="tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data Tw 1
                                 </a>
                             </li>
                         </ul>
                     </li>
+    
+                    <!-- Triwulan 2 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan2')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 2
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan2" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="triwulan2-newdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data Tw 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="triwulan2-rawdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data Tw 2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 3 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan3')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 3
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan3" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="triwulan3-newdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data Tw 3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="triwulan3-rawdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data Tw 3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 4 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan4')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 4
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan4" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="triwulan4-newdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data Tw 4
+                                </a>
+                            </li>
+                            <li>
+                                <a href="triwulan4-rawdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data Tw 4
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan5')">
+                            <i class="fa fa-calendar mr-2"></i>Year
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan5" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="triwulan4-newdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data Tahun
+                                </a>
+                            </li>
+                            <li>
+                                <a href="triwulan4-rawdata.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data Tahun
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
                 </ul>
             </div>
         </nav>
-    </aside><!-- /#left-panel -->
+    </aside>
+    
+    <script>
+        function toggleSubMenu(id) {
+            const menus = document.querySelectorAll('.absolute');
+            menus.forEach(menu => {
+                if(menu.id !== id) {
+                    menu.classList.add('hidden');
+                }
+            });
+            const selectedMenu = document.getElementById(id);
+            selectedMenu.classList.toggle('hidden');
+        }
+    </script>
+    
 
     <!-- Left Panel -->
 
