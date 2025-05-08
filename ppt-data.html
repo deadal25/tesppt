@@ -602,7 +602,7 @@
                                                         <td id="tw2nilaitotalslide2" class="border border-[#0069b4] px-2 py-1">-</td>
                                                         <td id="tw3nilaitotalslide2" class="border border-[#0069b4] px-2 py-1">-</td>
                                                         <td id="tw4nilaitotalslide2" class="border border-[#0069b4] px-2 py-1">-</td>
-                                                        <td id="ynilaitotalslide2" class="border border-[#0069b4] px-2 py-1">-</td>
+                                                        <td id="yearnilaitotalslide2" class="border border-[#0069b4] px-2 py-1">-</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -7912,9 +7912,9 @@
 
 
                                         let tableRekomendasi3 = [];
-                                        let tableRekomendasi3a = [];
+                                        let tableRekomendasi3aa = [];
                                         let tableRekomendasi4 = [];
-                                        let tableRekomendasi4a = [];
+                                        let tableRekomendasi4aa = [];
                                         let tableRekomendasi5 = [];
                                         let tableRekomendasi5a = [];
                                         let tableRekomendasi6 = [];
@@ -9752,7 +9752,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide.addTable(tableRekomendasi1,
+                                        if (Array.isArray(tableRekomendasi1) && tableRekomendasi1.length > 0) {
+                                            slide.addTable(tableRekomendasi1,
                                             
                                             {
                                                 x: 7.03,
@@ -9765,6 +9766,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide.addTable(tableRekomendasi1,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 10,
+                                        //         colW: [3, 1.52, 1.7],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide1 = pptx.addSlide();
 
@@ -10126,8 +10141,8 @@
                                         });
 
                                        
-
-                                        slide1.addTable(tableRekomendasi1a, {
+                                        if (Array.isArray(tableRekomendasi1a) && tableRekomendasi1a.length > 0) {
+                                            slide1.addTable(tableRekomendasi1a, {
                                             x: 8.52,
                                             y: 2.85,
                                             w: 4.61,
@@ -10136,6 +10151,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide1.addTable(tableRekomendasi1a, {
+                                        //     x: 8.52,
+                                        //     y: 2.85,
+                                        //     w: 4.61,
+                                        //     colW: [2.3, 1.11, 1.2],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
 
 
@@ -10470,7 +10496,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide2.addTable(tableRekomendasi2,
+                                        if (Array.isArray(tableRekomendasi2) && tableRekomendasi2.length > 0) {
+                                            slide2.addTable(tableRekomendasi2,
                                             
                                             {
                                                 x: 7.03,
@@ -10483,6 +10510,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide2.addTable(tableRekomendasi2,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 5.21,
+                                        //         w: 6.22,
+                                        //         fontSize: 9.7,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide3 = pptx.addSlide();
 
@@ -10824,7 +10865,8 @@
                                             },
                                         });
 
-                                        slide3.addTable(tableRekomendasi2aa, {
+                                        if (Array.isArray(tableRekomendasi2aa) && tableRekomendasi2aa.length > 0) {
+                                            slide3.addTable(tableRekomendasi2aa, {
                                             x: 8.52,
                                             y: 2.71,
                                             w: 4.55,
@@ -10833,6 +10875,18 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+
+                                        }
+
+                                        // slide3.addTable(tableRekomendasi2aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.71,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide4 = pptx.addSlide();
 
@@ -11150,19 +11204,30 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide4.addTable(tableRekomendasi3,
-                                            
-                                            {
+                                        if (Array.isArray(tableRekomendasi3) && tableRekomendasi3.length > 0) {
+                                            slide4.addTable(tableRekomendasi3, {
                                                 x: 7.03,
                                                 y: 5.21,
                                                 w: 6.22,
-                                                fontSize: 9.7,
                                                 colW: [3.17, 1.52, 1.53],
-                                                align: "left",
-                                                border: { type: "solid", color: "000000", pt: 1 },
-                                                rowHeight: 0.6
+                                                fontSize: 9.7
+                                            });
                                             }
-                                        );
+                                        
+
+                                        // slide4.addTable(tableRekomendasi3,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 5.21,
+                                        //         w: 6.22,
+                                        //         fontSize: 9.7,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide5 = pptx.addSlide();
 
@@ -11504,7 +11569,8 @@
                                             },
                                         });
 
-                                        slide5.addTable(tableRekomendasi3aa, {
+                                        if (Array.isArray(tableRekomendasi3aa) && tableRekomendasi3aa.length > 0) {
+                                            slide5.addTable(tableRekomendasi3aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -11513,6 +11579,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide5.addTable(tableRekomendasi3aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide6 = pptx.addSlide();
 
@@ -11855,7 +11932,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide6.addTable(tableRekomendasi4,
+                                        if (Array.isArray(tableRekomendasi4) && tableRekomendasi4.length > 0) {
+                                            slide6.addTable(tableRekomendasi4,
                                             
                                             {
                                                 x: 7.03,
@@ -11868,6 +11946,21 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+
+                                        }
+                                        // slide6.addTable(tableRekomendasi4,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.03,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.46, 1.36, 1.40],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide7 = pptx.addSlide();
 
@@ -12209,7 +12302,8 @@
                                             },
                                         });
 
-                                        slide7.addTable(tableRekomendasi4aa, {
+                                        if (Array.isArray(tableRekomendasi4aa) && tableRekomendasi4aa.length > 0) {
+                                            slide7.addTable(tableRekomendasi4aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -12218,6 +12312,18 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+
+                                        }
+
+                                        // slide7.addTable(tableRekomendasi4aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide8 = pptx.addSlide();
 
@@ -12570,7 +12676,18 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide8.addTable(tableRekomendasi5,
+                                         slide7.addTable(tableRekomendasi4aa, {
+                                            x: 8.52,
+                                            y: 2.87,
+                                            w: 4.55,
+                                            colW: [2.33, 1.11, 1.11],
+                                            border: { type: "solid", color: "000000", pt: 1 },
+                                            fontSize: 12,
+                                            align: "left"
+                                        });
+
+                                        if (Array.isArray(tableRekomendasi5) && tableRekomendasi5.length > 0) {
+                                            slide8.addTable(tableRekomendasi5,
                                            
                                             {
                                                 x: 7.03,
@@ -12582,7 +12699,22 @@
                                                 border: { type: "solid", color: "000000", pt: 1 },
                                                 rowHeight: 0.6
                                             }
-                                        );
+                                        );    
+                                        }
+                                        // slide8.addTable(tableRekomendasi5,
+                                           
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3, 1.52, 1.7],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
+                                        
 
                                         let slide9 = pptx.addSlide();
 
@@ -12911,8 +13043,8 @@
                                             },
                                         });
 
-
-                                        slide9.addTable(tableRekomendasi5a, {
+                                        if (Array.isArray(tableRekomendasi5a) && tableRekomendasi5a.length > 0) {
+                                            slide9.addTable(tableRekomendasi5a, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -12921,6 +13053,16 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+                                        // slide9.addTable(tableRekomendasi5a, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
 
                                         let slide10 = pptx.addSlide();
@@ -13263,8 +13405,8 @@
                                             }
                                         );
 
-                                        // Tambahkan tabel
-                                        slide10.addTable(tableRekomendasi6,
+                                        if (Array.isArray(tableRekomendasi6) && tableRekomendasi6.length > 0) {
+                                            slide10.addTable(tableRekomendasi6,
                                             
                                             {
                                                 x: 7.03,
@@ -13277,6 +13419,22 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+
+                                        // Tambahkan tabel
+                                        // slide10.addTable(tableRekomendasi6,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide11 = pptx.addSlide();
 
@@ -13618,7 +13776,8 @@
                                             },
                                         });
 
-                                        slide11.addTable(tableRekomendasi6aa, {
+                                        if (Array.isArray(tableRekomendasi6aa) && tableRekomendasi6aa.length > 0) {
+                                            slide11.addTable(tableRekomendasi6aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -13627,6 +13786,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide11.addTable(tableRekomendasi6aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide12 = pptx.addSlide();
 
@@ -13976,7 +14146,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide12.addTable(tableRekomendasi7,
+                                        if (Array.isArray(tableRekomendasi7) && tableRekomendasi7.length > 0) {
+                                            slide12.addTable(tableRekomendasi7,
                                             
                                             {
                                                 x: 7.03,
@@ -13989,6 +14160,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide12.addTable(tableRekomendasi7,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide13 = pptx.addSlide();
 
@@ -14330,7 +14515,8 @@
                                             },
                                         });
 
-                                        slide13.addTable(tableRekomendasi7aa, {
+                                        if (Array.isArray(tableRekomendasi7aa) && tableRekomendasi7aa.length > 0) {
+                                            slide13.addTable(tableRekomendasi7aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -14339,6 +14525,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        
+                                        }
+                                        // slide13.addTable(tableRekomendasi7aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide14 = pptx.addSlide();
 
@@ -14680,7 +14877,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide14.addTable(tableRekomendasi8,
+                                        if (Array.isArray(tableRekomendasi8) && tableRekomendasi8.length > 0) {
+                                            slide14.addTable(tableRekomendasi8,
                                             
                                             {
                                                 x: 7.03,
@@ -14693,6 +14891,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide14.addTable(tableRekomendasi8,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
 
                                         let slide15 = pptx.addSlide();
@@ -15035,7 +15247,8 @@
                                             },
                                         });
 
-                                        slide15.addTable(tableRekomendasi8aa, {
+                                        if (Array.isArray(tableRekomendasi8aa) && tableRekomendasi8aa.length > 0) {
+                                            slide15.addTable(tableRekomendasi8aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -15044,6 +15257,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide15.addTable(tableRekomendasi8aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide16 = pptx.addSlide();
 
@@ -15367,7 +15591,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide16.addTable(tableRekomendasi9,
+                                        if (Array.isArray(tableRekomendasi9) && tableRekomendasi9.length > 0) {
+                                            slide16.addTable(tableRekomendasi9,
                                             
                                             {
                                                 x: 7.03,
@@ -15380,6 +15605,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide16.addTable(tableRekomendasi9,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide17 = pptx.addSlide();
 
@@ -15721,7 +15960,8 @@
                                             },
                                         });
 
-                                        slide17.addTable(tableRekomendasi9aa, {
+                                        if (Array.isArray(tableRekomendasi9aa) && tableRekomendasi9aa.length > 0) {
+                                            slide17.addTable(tableRekomendasi9aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -15730,6 +15970,16 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+                                        // slide17.addTable(tableRekomendasi9aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide18 = pptx.addSlide();
 
@@ -16074,7 +16324,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide18.addTable(tableRekomendasi10,
+                                        if (Array.isArray(tableRekomendasi10) && tableRekomendasi10.length > 0) {
+                                            slide18.addTable(tableRekomendasi10,
                                             
                                             {
                                                 x: 7.03,
@@ -16087,6 +16338,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide18.addTable(tableRekomendasi10,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide19 = pptx.addSlide();
 
@@ -16428,7 +16693,8 @@
                                             },
                                         });
 
-                                        slide19.addTable(tableRekomendasi10aa, {
+                                        if (Array.isArray(tableRekomendasi10aa) && tableRekomendasi10aa.length > 0) {
+                                            slide19.addTable(tableRekomendasi10aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -16437,6 +16703,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide19.addTable(tableRekomendasi10aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide20 = pptx.addSlide();
 
@@ -16782,7 +17059,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide20.addTable(tableRekomendasi11,
+                                        if (Array.isArray(tableRekomendasi11) && tableRekomendasi11.length > 0) {
+                                            slide20.addTable(tableRekomendasi11,
                                             
                                             {
                                                 x: 7.03,
@@ -16795,6 +17073,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide20.addTable(tableRekomendasi11,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
 
                                         let slide21 = pptx.addSlide();
@@ -17137,7 +17429,8 @@
                                             },
                                         });
 
-                                        slide21.addTable(tableRekomendasi11aa, {
+                                        if (Array.isArray(tableRekomendasi11aa) && tableRekomendasi11aa.length > 0) {
+                                            slide21.addTable(tableRekomendasi11aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -17146,6 +17439,16 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+                                        // slide21.addTable(tableRekomendasi11aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide22 = pptx.addSlide();
 
@@ -17485,7 +17788,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide22.addTable(tableRekomendasi12,
+                                        if (Array.isArray(tableRekomendasi12) && tableRekomendasi12.length > 0) {
+                                            slide22.addTable(tableRekomendasi12,
                                             
                                             {
                                                 x: 7.03,
@@ -17498,6 +17802,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide22.addTable(tableRekomendasi12,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3, 1.52, 1.7],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide23 = pptx.addSlide();
 
@@ -17839,7 +18157,8 @@
                                             },
                                         });
 
-                                        slide23.addTable(tableRekomendasi12aa, {
+                                        if (Array.isArray(tableRekomendasi12aa) && tableRekomendasi12aa.length > 0) {
+                                            slide23.addTable(tableRekomendasi12aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -17848,6 +18167,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide23.addTable(tableRekomendasi12aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide24 = pptx.addSlide();
 
@@ -18184,7 +18514,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide24.addTable(tableRekomendasi13,
+                                        if (Array.isArray(tableRekomendasi13) && tableRekomendasi13.length > 0) {
+                                            slide24.addTable(tableRekomendasi13,
                                             
                                             {
                                                 x: 7.03,
@@ -18197,6 +18528,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide24.addTable(tableRekomendasi13,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3.17, 1.52, 1.53],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide25 = pptx.addSlide();
 
@@ -18538,7 +18883,8 @@
                                             },
                                         });
 
-                                        slide25.addTable(tableRekomendasi13aa, {
+                                        if (Array.isArray(tableRekomendasi13aa) && tableRekomendasi13aa.length > 0) {
+                                            slide25.addTable(tableRekomendasi13aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -18547,6 +18893,16 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+                                        // slide25.addTable(tableRekomendasi13aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         let slide26 = pptx.addSlide();
 
@@ -18875,7 +19231,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide26.addTable(tableRekomendasi14,
+                                        if (Array.isArray(tableRekomendasi14) && tableRekomendasi14.length > 0) {
+                                            slide26.addTable(tableRekomendasi14,
                                             
                                             {
                                                 x: 7.03,
@@ -18888,6 +19245,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide26.addTable(tableRekomendasi14,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.51,
+                                        //         w: 6.22,
+                                        //         fontSize: 13,
+                                        //         colW: [3, 1.52, 1.7],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
 
                                         let slide27 = pptx.addSlide();
@@ -19230,7 +19601,8 @@
                                             },
                                         });
 
-                                        slide27.addTable(tableRekomendasi14aa, {
+                                        if (Array.isArray(tableRekomendasi14aa) && tableRekomendasi14aa.length > 0) {
+                                            slide27.addTable(tableRekomendasi14aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -19239,6 +19611,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide27.addTable(tableRekomendasi14aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
 
                                         let slide28 = pptx.addSlide();
@@ -19569,7 +19952,8 @@
                                         );
 
                                         // Tambahkan tabel
-                                        slide28.addTable(tableRekomendasi15,
+                                        if (Array.isArray(tableRekomendasi15) && tableRekomendasi15.length > 0) {
+                                            slide28.addTable(tableRekomendasi15,
                                             
                                             {
                                                 x: 7.03,
@@ -19582,6 +19966,20 @@
                                                 rowHeight: 0.6
                                             }
                                         );
+                                        }
+                                        // slide28.addTable(tableRekomendasi15,
+                                            
+                                        //     {
+                                        //         x: 7.03,
+                                        //         y: 4.36,
+                                        //         w: 6.22,
+                                        //         fontSize: 12,
+                                        //         colW: [3, 1.52, 1.7],
+                                        //         align: "left",
+                                        //         border: { type: "solid", color: "000000", pt: 1 },
+                                        //         rowHeight: 0.6
+                                        //     }
+                                        // );
 
                                         let slide29 = pptx.addSlide();
 
@@ -19923,7 +20321,8 @@
                                             },
                                         });
 
-                                        slide29.addTable(tableRekomendasi15aa, {
+                                        if (Array.isArray(tableRekomendasi15aa) && tableRekomendasi15aa.length > 0) {
+                                            slide29.addTable(tableRekomendasi15aa, {
                                             x: 8.52,
                                             y: 2.87,
                                             w: 4.55,
@@ -19932,6 +20331,17 @@
                                             fontSize: 12,
                                             align: "left"
                                         });
+                                        }
+
+                                        // slide29.addTable(tableRekomendasi15aa, {
+                                        //     x: 8.52,
+                                        //     y: 2.87,
+                                        //     w: 4.55,
+                                        //     colW: [2.33, 1.11, 1.11],
+                                        //     border: { type: "solid", color: "000000", pt: 1 },
+                                        //     fontSize: 12,
+                                        //     align: "left"
+                                        // });
 
                                         
 
@@ -20023,28 +20433,14 @@
 
                                                     // Tampilkan nilai realisasi murni (dibulatkan tanpa persen)
                                                     let tw2totalCapaian1 = parseFloat(parsedData.tw2totalCapaian1);
-                                                    document.getElementById("tw2totalslide1").innerText = isNaN(tw2totalCapaian1) ? "-" : tw2totalCapaian1.toFixed(0);
+                                                    // document.getElementById("tw2totalslide1").innerText = isNaN(tw2totalCapaian1) ? "-" : tw2totalCapaian1.toFixed(0);
 
                                                     // Tampilkan jumlah satker (dibulatkan)
                                                     let tw2jumlahSatker1Value = parseFloat(parsedData.tw2jumlahsatker1Value);
-                                                    document.getElementById("tw2totalslide1a").innerText = isNaN(tw2jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
+                                                    // document.getElementById("tw2totalslide1a").innerText = isNaN(tw2jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
 
 
-                                            // let totalCapaian1all = parseFloat(parsedData.totalCapaian1all);
-                                            //         let nilaitotalslide1 = (totalCapaian1all >= 100) ? "120%" : totalCapaian1all.toFixed(0) + "%";
-                                            //         document.getElementById("nilaitotalslide1").innerText = isNaN(totalCapaian1all) ? "-" : nilaitotalslide1;
-
-                                            //         document.getElementById("Nilaislide2a").innerText = parsedData.indeksIKI1 || "-";
-
-                                            //         let nilaitotalslide2 = (totalCapaian1all >= 100) ? "120%" : totalCapaian1all.toFixed(0) + "%";
-                                            //         document.getElementById("nilaitotalslide2").innerText = isNaN(totalCapaian1all) ? "-" : nilaitotalslide2;
-
-                                            //         // Tambahan: Pastikan totalslide1 dan totalslide1a juga angka bulat tanpa koma
-                                            //         let totalCapaian1 = parseFloat(parsedData.totalCapaian1);
-                                            //         document.getElementById("totalslide1").innerText = isNaN(totalCapaian1) ? "-" : totalCapaian1.toFixed(0);
-
-                                            //         let jumlahSatker1Value = parseFloat(parsedData.jumlahsatker1Value);
-                                            //         document.getElementById("totalslide1a").innerText = isNaN(jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
+                                            
 
                                             document.getElementById("totalrealisasi1").innerText = parsedData.totalrealisasi1 || "-";
 
