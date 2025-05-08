@@ -717,18 +717,18 @@
                                                             Realisasi</td>
                                                         <td id="Nilaislide13a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide13b"
+                                                        <td id="tw2Nilaislide13a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide13c"
+                                                        <td id="sm1Nilaislide13a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide13d"
+                                                        <td id="tw3Nilaislide13a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide13e"
+                                                        <td id="sm3Nilaislide13a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
                                                         <td class="border border-black px-2 py-1 text-center"
-                                                            id="Nilaislide13f">-</td>
+                                                            id="tw4Nilaislide13a">-</td>
                                                         <td class="border border-black px-2 py-1 text-center"
-                                                            id="Nilaislide13g">-</td>
+                                                            id="yearNilaislide13a">-</td>
 
                                                     </tr>
                                                     <tr class="bg-[#f4d9d7] border border-black font-bold">
@@ -737,27 +737,27 @@
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide13a"
+                                                        <td id="tw2nilaitotalslide13"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide13b"
+                                                        <td id="sm1nilaitotalslide13"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide13c"
+                                                        <td id="tw3nilaitotalslide13"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide13d"
+                                                        <td id="sm3nilaitotalslide13"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide13e"
+                                                        <td id="tw4nilaitotalslide13"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide13f"
+                                                        <td id="yearnilaitotalslide13"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
@@ -1026,12 +1026,12 @@
                                                                     Realisasi</td>
                                                                 <td id="Nilaislide13aa"
                                                                     class="border border-[#0069b4] px-2 py-1">-</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td id="tw2Nilaislide13aa" class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td id="tw3Nilaislide13aa" class="border border-[#0069b4] px-2 py-1">-</td>
                                                                 <td class="border border-[#0069b4] px-2 py-1"
-                                                                    id="totalCapaian4">-</td>
+                                                                id="tw4Nilaislide13aa">-</td>
                                                                 <td class="border border-[#0069b4] px-2 py-1"
-                                                                    id="totalCapaian5">-</td>
+                                                                id="yearNilaislide13aa">-</td>
                                                             </tr>
                                                             <tr class="bg-[#cbd6e6] text-center font-bold">
                                                                 <td class="border border-[#0069b4] px-2 py-1 text-left">
@@ -1040,13 +1040,13 @@
                                                                 <td id="nilaitotalslide13aa"
                                                                     class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td id="tw2nilaitotalslide13aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td id="tw3nilaitotalslide13aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td id="tw4nilaitotalslide13aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td id="yearnilaitotalslide13aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -1340,21 +1340,67 @@
                                                     document.getElementById("totalrealisasi13b").innerText = parsedData.totalrealisasi13b || "-";
 
 
-                                                    document.getElementById("Nilaislide13a").innerText = parsedData.Nilai13 || "-";
+                                                    document.getElementById("Nilaislide13a").innerText = parsedData.Nilai13 + "%" || "-";
 
-                                                    let totalCapaian13 = parseFloat(parsedData.Nilai13);
-                                                    let nilaitotalslide13 = (totalCapaian13 >= 100) ? 120 : totalCapaian13.toFixed(0);
-                                                    document.getElementById("nilaitotalslide13").innerText = isNaN(nilaitotalslide13) ? "-" : nilaitotalslide13;
+                                                    // Tetapkan target
+                                                    let target13 = 100;
 
-                                                    document.getElementById("totalslide13").innerText = parsedData.valuenilaiNKA || "-";
-                                                    document.getElementById("totalslide13a").innerText = parsedData.valuenilaiLK || "-";
-                                                    document.getElementById("totalslide13b").innerText = parsedData.Nilai13 || "-";
+                                                    // Ambil nilai realisasi
+                                                    let realisasi13 = parseFloat(parsedData.Nilai13);
 
-                                                    // document.getElementById("totalslide13d").innerText = parsedData.Nilai13 || "-";
-                                                    document.getElementById("Nilaislide13aa").innerText = parsedData.Nilai13 || "-";
-                                                    let totalCapaian13a = parseFloat(parsedData.Nilai13);
-                                                    let nilaitotalslide13aa = (totalCapaian13a >= 100) ? 120 : totalCapaian13a.toFixed(0);
-                                                    document.getElementById("nilaitotalslide13aa").innerText = isNaN(nilaitotalslide13aa) ? "-" : nilaitotalslide13aa;
+                                                    // Hitung capaian
+                                                    let capaian13 = (realisasi13 / target13) * 100;
+
+                                                    // Tampilkan Capaian dengan pembulatan
+                                                    let nilaitotalslide13 = (capaian13 >= 120) ? 120 : capaian13.toFixed(2) + "%";
+                                                    document.getElementById("nilaitotalslide13").innerText = isNaN(capaian13) ? "-" : nilaitotalslide13;
+
+                                                    // Tampilkan ulang nilai realisasi (jika ingin muncul di dua tempat)
+                                                    document.getElementById("Nilaislide13aa").innerText = parsedData.Nilai13 + "%" || "-";
+
+                                                    // Jika ingin tampilkan capaian di tempat kedua juga
+                                                    let nilaitotalslide13aa = (capaian13 >= 120) ? 120 : capaian13.toFixed(2) + "%";
+                                                    document.getElementById("nilaitotalslide13aa").innerText = isNaN(capaian13) ? "-" : nilaitotalslide13aa;
+
+                                                    document.getElementById("tw2Nilaislide13a").innerText = parsedData.tw2Nilai13 + "%" || "-";
+                                                    document.getElementById("sm1Nilaislide13a").innerText = parsedData.tw2Nilai13 + "%" || "-";
+
+                                                    // Tetapkan target
+                                                    let tw2target13 = 100;
+
+                                                    // Ambil nilai realisasi
+                                                    let tw2realisasi13 = parseFloat(parsedData.tw2Nilai13);
+
+                                                    // Hitung capaian
+                                                    let tw2capaian13 = (tw2realisasi13 / tw2target13) * 100;
+
+                                                    // Tampilkan Capaian dengan pembulatan
+                                                    let tw2nilaitotalslide13 = (tw2capaian13 >= 120) ? 120 : tw2capaian13.toFixed(2) + "%";
+                                                    document.getElementById("tw2nilaitotalslide13").innerText = isNaN(tw2capaian13) ? "-" : tw2nilaitotalslide13;
+                                                    document.getElementById("sm1nilaitotalslide13").innerText = isNaN(tw2capaian13) ? "-" : tw2nilaitotalslide13;
+
+                                                    // Tampilkan ulang nilai realisasi (jika ingin muncul di dua tempat)
+                                                    document.getElementById("tw2Nilaislide13aa").innerText = parsedData.tw2Nilai13 + "%" || "-";
+
+                                                    // Jika ingin tampilkan capaian di tempat kedua juga
+                                                    let tw2nilaitotalslide13aa = (tw2capaian13 >= 120) ? 120 : tw2capaian13.toFixed(2) + "%";
+                                                    document.getElementById("tw2nilaitotalslide13aa").innerText = isNaN(tw2capaian13) ? "-" : tw2nilaitotalslide13aa;
+
+                                                    // document.getElementById("Nilaislide13a").innerText = parsedData.Nilai13 || "-";
+
+                                                    // let totalCapaian13 = parseFloat(parsedData.Nilai13);
+                                                    // let nilaitotalslide13 = (totalCapaian13 >= 100) ? 120 : totalCapaian13.toFixed(0);
+                                                    // document.getElementById("nilaitotalslide13").innerText = isNaN(nilaitotalslide13) ? "-" : nilaitotalslide13;
+
+                                                    // document.getElementById("totalslide13").innerText = parsedData.valuenilaiNKA || "-";
+                                                    // document.getElementById("totalslide13a").innerText = parsedData.valuenilaiLK || "-";
+                                                    // document.getElementById("totalslide13b").innerText = parsedData.Nilai13 || "-";
+
+                                                    // // document.getElementById("totalslide13d").innerText = parsedData.Nilai13 || "-";
+                                                    // document.getElementById("Nilaislide13aa").innerText = parsedData.Nilai13 || "-";
+                                                    // let totalCapaian13a = parseFloat(parsedData.Nilai13);
+                                                    // let nilaitotalslide13aa = (totalCapaian13a >= 100) ? 120 : totalCapaian13a.toFixed(0);
+                                                    // document.getElementById("nilaitotalslide13aa").innerText = isNaN(nilaitotalslide13aa) ? "-" : nilaitotalslide13aa;
 
 
 

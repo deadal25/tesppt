@@ -515,49 +515,6 @@
                                             }    
                                         </script>
 
-
-                                        <!-- <script>
-                                            let gambarBase64 = "";  // Buat variabel global
-
-                                        function tambahGambar() {
-                                            let fileInput = document.getElementById("uploadGambar");
-                                            let file = fileInput.files[0];
-
-                                            if (!file) {
-                                                alert("Pilih gambar terlebih dahulu.");
-                                                return;
-                                            }
-
-                                            let reader = new FileReader();
-
-                                            reader.onload = function (e) {
-                                                // Simpan base64 ke variabel global
-                                                gambarBase64 = e.target.result;
-
-                                                // Tampilkan gambar ke div hasilGambar
-                                                let container = document.createElement("div");
-                                                container.className = "bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full";
-
-                                                let img = document.createElement("img");
-                                                img.src = gambarBase64;
-                                                img.className = "w-full h-auto";
-                                                img.width = 280;
-                                                img.height = 280;
-
-                                                container.appendChild(img);
-                                                document.getElementById("hasilGambar").innerHTML = "";  // Clear gambar lama
-                                                document.getElementById("hasilGambar").appendChild(container);
-                                            }
-
-                                            reader.readAsDataURL(file);
-                                        }
-
-                                        </script> -->
-
-
-
-
-
                                         <br>
                                         <div style="text-align: right; ">
                                             <button
@@ -656,18 +613,18 @@
                                                             Realisasi</td>
                                                         <td id="Nilaislide5a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide5b"
+                                                        <td id="tw2Nilaislide5a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide5c"
+                                                        <td id="sm1Nilaislide5a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide5d"
+                                                        <td id="tw3Nilaislide5a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
-                                                        <td id="Nilaislide5e"
+                                                        <td id="sm3Nilaislide5a"
                                                             class="border border-black px-2 py-1 text-center">-</td>
                                                         <td class="border border-black px-2 py-1 text-center"
-                                                            id="Nilaislide5f">-</td>
+                                                            id="tw4Nilaislide5a">-</td>
                                                         <td class="border border-black px-2 py-1 text-center"
-                                                            id="Nilaislide5g">-</td>
+                                                            id="yearNilaislide5a">-</td>
 
                                                     </tr>
                                                     <tr class="bg-[#f4d9d7] border border-black font-bold">
@@ -676,27 +633,27 @@
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                         -
                                                         </td>
-                                                        <td id="nilaitotalslide5a"
+                                                        <td id="tw2nilaitotalslide5"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide5b"
+                                                        <td id="sm1nilaitotalslide5"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide5c"
+                                                        <td id="tw3nilaitotalslide5"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide5d"
+                                                        <td id="sm3nilaitotalslide5"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide5e"
+                                                        <td id="tw4nilaitotalslide5"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
-                                                        <td id="nilaitotalslide5f"
+                                                        <td id="yearnilaitotalslide5"
                                                             class="border border-black px-2 py-1 text-center font-bold">
                                                             -
                                                         </td>
@@ -723,58 +680,7 @@
                                                         <p class="font-bold mb-1">Implikasi</p>
                                                         <p id="implikasi5" class="mb-2">Nilai IKPA TW IV 2024 belum
                                                             maksi5mal</p>
-                                                        <!-- <p class="font-bold mb-1">Penjelasan capaian:</p>
-                                                <p class="mb-1 italic text-[9px] md:text-[10px]">*Data Monev PA <span
-                                                        class="not-italic">Cut
-                                                        Off</span> 23 Januari 2025</p>
-                                                <table
-                                                    class="w-full border border-black border-collapse text-[8px] md:text-[10px] bg-[#e6f0f6]">
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="border border-black px-1 py-0.5">Komponen</th>
-                                                            <th class="border border-black px-1 py-0.5">Capaian Output</th>
-                                                            <th class="border border-black px-1 py-0.5">Nilai Total</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="border border-black px-1 py-0.5 text-center">
-                                                                99,06</td>
-                                                            <td class="border border-black px-1 py-0.5 text-center">
-                                                                84,95</td>
-                                                            
-                                                            
-                                                            <td class="border border-black px-1 py-0.5 text-center"
-                                                                 id="totalCapaian3">
-                                                                95,16</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="border border-black px-1 py-0.5 text-center">10
-                                                            </td>
-                                                            <td class="border border-black px-1 py-0.5 text-center">15
-                                                            </td>
-                                                            <td class="border border-black px-1 py-0.5 text-center">20
-                                                            </td>
-                                                            
-                                                            
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="border border-black px-1 py-0.5 text-center">9,91
-                                                            </td>
-                                                            <td class="border border-black px-1 py-0.5 text-center">
-                                                                12,74</td>
-                                                            <td class="border border-black px-1 py-0.5 text-center">
-                                                                19,03</td>
-                                                           
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div class="flex-1 text-[11px] leading-tight">
-                                                    <p class="font-bold italic mb-0">Sumber Data:</p>
-                                                    <p>
-                                                      Sesuai Nota Dinas Direktur Pelaksanaan Anggaran nomor ND-383/PB.2/2025 tanggal 14 April 2025 hal Penyampaian Realisasi IKU/IKI Nilai Kinerja Pelaksanaan Anggaran K/L Periode5 Triwulan I Tahun 2025 bahwa KPPN Majene mendapatkan nilai capaian 100.
-                                                    </p>
-                                                  </div> -->
+                                                       
                                                         <div
                                                             class="flex justify-center gap-3 text-[10px] leading-tight">
                                                             <!-- Tabel Capaian -->
@@ -954,44 +860,7 @@
                                                     </div>
                                                     <div id="tindakan5"
                                                         class="bg-[#fce9d0] p-2 text-[10px] md:text-xs leading-tight">
-                                                        <!-- <ol class="list-decimal list-inside space-y-1">
-                                                            <li>
-                                                                Melaksanakan monev IKPA dan pembinaan satker bulan
-                                                                Desember:
-                                                                ST-291/KPN.2602/2024 Tgl:
-                                                                27/12/24, November: ST-253/KPN.2602/2024 Tgl:
-                                                                25/11/2024, dan
-                                                                Oktober: ST-216/KPN.2602/2024
-                                                                Tgl: 23/10/24, ST-253/KPN.2602/2024 Tgl: 22/10/2024;
-                                                            </li>
-                                                            <li>
-                                                                Melaksanakan Sosialisasi Langkah-langkah Akhir Tahun
-                                                                2024 sesuai
-                                                                Undangan No:
-                                                                UND-87/KPN.2602/2024; Tgl: 1/10/2024;
-                                                            </li>
-                                                            <li>
-                                                                Menyampaikan reminder dan monitoring Deviasi Halaman III
-                                                                DIPA
-                                                                secara rutin melalui WA Group,
-                                                                serta reminder pemutakhiran Hal III DIPA triwulanan;
-                                                            </li>
-                                                            <li>Memberikan himbauan secara rutin bagi satker yang
-                                                                memiliki IKPA
-                                                                rendah;</li>
-                                                            <li>
-                                                                Menyampaikan reminder pengajuan SPM yang telah
-                                                                ditetapkan
-                                                                RPD-nya di bulan berkenaan melalui
-                                                                WA Group setiap menjelang akhir bulan;
-                                                            </li>
-                                                            <li>
-                                                                Menyampaikan reminder dan asistensi pelaporan data
-                                                                Capaian
-                                                                Output secara rutin tiap bulan
-                                                                dan pemutakhiran target Capaian Output triwulanan.
-                                                            </li>
-                                                        </ol> -->
+                                                        
                                                     </div>
 
                                                     <table id="tabelRekomendasi5"
@@ -1013,47 +882,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody id="tbodyRekomendasi5">
-                                                            <!-- <tr>
-                                                                <td class="border border-black px-2 py-1 leading-tight">
-                                                                    <ol class="list-decimal list-inside space-y-1">
-                                                                        <li>Melakukan monev dan pembinaan yang lebih
-                                                                            intensif
-                                                                            kepada satker dengan capaian
-                                                                            IKPA rendah.</li>
-                                                                        <li>Melakukan monitoring secara rutin terhadap
-                                                                            satker
-                                                                            dengan potensi capaian IKPA
-                                                                            rendah;</li>
-                                                                    </ol>
-                                                                </td>
-                                                                <td class="border border-black px-2 py-1 text-center"
-                                                                    rowspan="3">
-                                                                    Seksi PDMS
-                                                                </td>
-                                                                <td class="border border-black px-2 py-1 leading-tight">
-                                                                    15 Januari, 12 Februari, dan 12 Maret 2025
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="border border-black px-2 py-1 leading-tight">
-                                                                    Monitoring Laporan capaian output Satker dengan
-                                                                    lebih
-                                                                    intensif.
-                                                                </td>
-                                                                <td class="border border-black px-2 py-1 leading-tight">
-                                                                    13 Januari, 3 Februari, dan 3 Maret 2025
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="border border-black px-2 py-1 leading-tight">
-                                                                    Melaksanakan sosialisasi Langkah-langkah Strategis
-                                                                    Awal
-                                                                    Tahun Anggaran 2025.
-                                                                </td>
-                                                                <td class="border border-black px-2 py-1 leading-tight">
-                                                                    3 Februari 2025
-                                                                </td>
-                                                            </tr> -->
+                                                            
                                                         </tbody>
                                                     </table>
 
@@ -1127,12 +956,12 @@
                                                                     Realisasi</td>
                                                                 <td id="Nilaislide5aa"
                                                                     class="border border-[#0069b4] px-2 py-1">-</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1"
-                                                                    id="totalCapaian4aaa">-</td>
-                                                                <td class="border border-[#0069b4] px-2 py-1"
-                                                                    id="totalCapaian5aaa">-</td>
+                                                                <td id="tw2Nilaislide5aa" class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td id="tw3Nilaislide5aa" class="border border-[#0069b4] px-2 py-1">-</td>
+                                                                <td id="tw4Nilaislide5aa" class="border border-[#0069b4] px-2 py-1"
+                                                                    >-</td>
+                                                                <td id="yearNilaislide5aa" class="border border-[#0069b4] px-2 py-1"
+                                                                    >-</td>
                                                             </tr>
                                                             <tr class="bg-[#cbd6e6] text-center font-bold">
                                                                 <td class="border border-[#0069b4] px-2 py-1 text-left">
@@ -1141,13 +970,13 @@
                                                                 <td id="nilaitotalslide5aa"
                                                                     class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td  id="tw2nilaitotalslide5aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td  id="tw3nilaitotalslide5aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td  id="tw4nilaitotalslide5aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
-                                                                <td class="border border-[#0069b4] px-2 py-1">-
+                                                                <td  id="yearnilaitotalslide5aa" class="border border-[#0069b4] px-2 py-1">-
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -1220,57 +1049,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody id="tbodyRekomendasi5a">
-                                                            <!-- <tr class="align-top border border-black">
-                                                                <td
-                                                                    class="border border-black px-2 py-2 text-[13px] leading-tight">
-                                                                    1. Melakukan monev dan pembinaan yang lebih intensif
-                                                                    kepada
-                                                                    satker dengan capaian IKPA
-                                                                    rendah.
-                                                                    <br />
-                                                                    2. Melakukan monitoring secara rutin terhadap satker
-                                                                    dengan
-                                                                    potensi capaian IKPA rendah.
-                                                                </td>
-                                                                <td
-                                                                    class="border border-black px-2 py-2 text-center align-top">
-                                                                    15 Januari, 12 Februari, dan 12 Maret 2025
-                                                                </td>
-                                                                <td class="border border-black px-2 py-2 text-center align-top"
-                                                                    rowspan="4">
-                                                                    Seksi PDMS
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="align-top border border-black">
-                                                                <td
-                                                                    class="border border-black px-2 py-2 text-[13px] leading-tight">
-                                                                    3. Monitoring Laporan capaian output Satker dengan
-                                                                    lebih
-                                                                    intensif.
-                                                                </td>
-                                                                <td
-                                                                    class="border border-black px-2 py-2 text-center align-top">
-                                                                    13 Januari, 3 Februari, dan 3 Maret 2025
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="align-top border border-black">
-                                                                <td
-                                                                    class="border border-black px-2 py-2 text-[13px] leading-tight">
-                                                                </td>
-                                                                <td class="border border-black px-2 py-2"></td>
-                                                            </tr>
-                                                            <tr class="align-top border border-black">
-                                                                <td
-                                                                    class="border border-black px-2 py-2 text-[13px] leading-tight">
-                                                                    4. Melaksanakan sosialisasi Langkah-langkah
-                                                                    Strategis Awal
-                                                                    Tahun Anggaran 2025.
-                                                                </td>
-                                                                <td
-                                                                    class="border border-black px-2 py-2 text-center align-top">
-                                                                    3 Februari 2025
-                                                                </td>
-                                                            </tr> -->
+                                                            
                                                         </tbody>
                                                     </table>
                                                 </section>
@@ -1379,39 +1158,7 @@
                                                     });
                                                 });
 
-                                                // let tbodyRekomendasi51a = document.getElementById("tbodyRekomendasi51a");
-                                                // let rows1 = tbodyRekomendasi51a.querySelectorAll("tr");
-                                                // let rekomendasiData51a = [];
-
-                                                // let lastPenanggungJawab51 = ''; // Menyimpan nilai terakhir
-
-                                                // rows1.forEach(row => {
-                                                //     let cells = row.querySelectorAll("td");
-                                                //     let aksi5 = cells[0]?.innerText || '';
-                                                //     let periode5 = '';
-                                                //     let penanggungJawab5 = '';
-
-                                                //     if (cells.length === 3) {
-                                                //         // Baris pertama, semua kolom ada
-                                                //         penanggungJawab5 = cells[1].innerText;
-                                                //         periode5 = cells[2].innerText;
-                                                //         lastPenanggungJawab51 = penanggungJawab5; // Simpan nilai terbaru
-                                                //     } else if (cells.length === 2) {
-                                                //         // Baris tanpa kolom penanggung jawab
-                                                //         penanggungJawab5 = lastPenanggungJawab51;
-                                                //         periode5 = cells[1].innerText;
-                                                //     }
-
-                                                //     rekomendasiData5.push({
-                                                //         aksi5: aksi5.replace(/<br>/g, '\n'),
-                                                //         penanggungJawab5,
-                                                //         periode5
-                                                //     });
-                                                // });
-
-
-
-
+                                            
                                                 // Cek apakah ada data lama di localStorage
                                                 let storedData = localStorage.getItem("indeks_data");
                                                 let data = storedData ? JSON.parse(storedData) : {};
@@ -1479,72 +1226,58 @@
                                                     document.getElementById("subutama5").innerText = parsedData.subutama5 || "-";
                                                     document.getElementById("tindakan5a").innerText = parsedData.tindakan5 || "-";
                                                     document.getElementById("critical5").innerText = parsedData.critical5|| "-";
-                                                    // document.getElementById("totalCapaian1").innerText = parsedData.totalCapaian1 || "-";
-                                                    // document.getElementById("nilaislide5a").innerText = parsedData.indeksIKI1  || "-";
-                                                    // document.getElementById("Nilaislide5a").innerText = parsedData.indeksIKI1 || "-";
-
-                                                    // document.getElementById("syaratValue").innerText= parsedData.syaratValue || "-";
-                                                    // document.getElementById("proyeksiValue").innerText= parsedData.proyeksiValue || "-";
-                                                    // document.getElementById("akurasiValue").innerText= parsedData.akurasiValue || "-";
-                                                    // document.getElementById("monevValue").innerText= parsedData.monevValue || "-";
-                                                    // document.getElementById("lkuakpaValue").innerText= parsedData.lkuakpaValue || "-";
-                                                    // document.getElementById("realisasiValue").innerText= parsedData.realisasiValue || "-";
-                                                    document.getElementById("Nilaislide5a").innerText = parsedData.totalIndeksCp5 || "-";
+                                                   
                                                     document.getElementById("syaratScore").innerText = parsedData.syaratScore != null ? Number(parsedData.syaratScore).toFixed(0) : "-";
-                                                        document.getElementById("proyeksiScore").innerText = parsedData.proyeksiScore != null ? Number(parsedData.proyeksiScore).toFixed(0) : "-";
-                                                        document.getElementById("akurasiScore").innerText = parsedData.akurasiScore != null ? Number(parsedData.akurasiScore).toFixed(0) : "-";
-                                                        document.getElementById("monevScore").innerText = parsedData.monevScore != null ? Number(parsedData.monevScore).toFixed(0) : "-";
-                                                        document.getElementById("lkuakpaScore").innerText = parsedData.lkuakpaScore != null ? Number(parsedData.lkuakpaScore).toFixed(0) : "-";
-                                                        document.getElementById("realisasiScore").innerText = parsedData.realisasiScore != null ? Number(parsedData.realisasiScore).toFixed(0) : "-";
-                                                        document.getElementById("totalCapaian5").innerText = parsedData.totalCapaian5 != null ? Number(parsedData.totalCapaian5).toFixed(0) : "-";
+                                                    document.getElementById("proyeksiScore").innerText = parsedData.proyeksiScore != null ? Number(parsedData.proyeksiScore).toFixed(0) : "-";
+                                                    document.getElementById("akurasiScore").innerText = parsedData.akurasiScore != null ? Number(parsedData.akurasiScore).toFixed(0) : "-";
+                                                    document.getElementById("monevScore").innerText = parsedData.monevScore != null ? Number(parsedData.monevScore).toFixed(0) : "-";
+                                                    document.getElementById("lkuakpaScore").innerText = parsedData.lkuakpaScore != null ? Number(parsedData.lkuakpaScore).toFixed(0) : "-";
+                                                    document.getElementById("realisasiScore").innerText = parsedData.realisasiScore != null ? Number(parsedData.realisasiScore).toFixed(0) : "-";
+                                                    document.getElementById("totalCapaian5").innerText = parsedData.totalCapaian5 != null ? Number(parsedData.totalCapaian5).toFixed(0) : "-";
+                                                    
+                                                    document.getElementById("Nilaislide5a").innerText = parsedData.totalIndeksCp5 || "-";
                                                         
-                                                        
-                                                        // Tetapkan target
-                                                        let target5 = 4;
-
-                                                        // Ambil nilai realisasi
-                                                        let realisasi5 = parseFloat(parsedData.totalIndeksCp5);
-
-                                                        // Hitung capaian (dalam persen)
-                                                        let capaian5 = (realisasi5 / target5) * 100;
-
-                                                        // Tampilkan capaian dengan pembulatan maksimal 120%
-                                                        let nilaitotalslide5 = (capaian5 >= 120) ? "120%" : capaian5.toFixed(2) + "%";
-                                                        document.getElementById("nilaitotalslide5").innerText = isNaN(capaian5) ? "-" : nilaitotalslide5;
-
+                                                    // Tetapkan target
+                                                    let target5 = 4;
+                                                    
+                                                    // Ambil nilai realisasi
+                                                    let realisasi5 = parseFloat(parsedData.totalIndeksCp5);
+                                                    
+                                                    // Hitung capaian (dalam persen)
+                                                    let capaian5 = (realisasi5 / target5) * 100;
+                                                    
+                                                    // Tampilkan capaian dengan pembulatan maksimal 120%
+                                                    let nilaitotalslide5 = (capaian5 >= 120) ? "120%" : capaian5.toFixed(2) + "%";
+                                                    document.getElementById("nilaitotalslide5").innerText = isNaN(capaian5) ? "-" : nilaitotalslide5;
+                                                    
+                                                    document.getElementById("Nilaislide5aa").innerText = parsedData.totalIndeksCp5 || "-";
                                                         // Tampilkan ulang nilai indeks (jika ingin)
-                                                        document.getElementById("Nilaislide5aa").innerText = parsedData.totalIndeksCp5 || "-";
 
                                                         // Tampilkan capaian di tempat kedua (jika perlu)
                                                         let nilaitotalslide5aa = (capaian5 >= 120) ? "120%" : capaian5.toFixed(2) + "%";
                                                         document.getElementById("nilaitotalslide5aa").innerText = isNaN(capaian5) ? "-" : nilaitotalslide5aa;
 
-                                                        
-                                                        //         let totalCapaian1all = parseFloat(parsedData.totalCapaian1all);
-                                                        // let totalIndeksCp5 = parseFloat(parsedData.totalCapaian5);
-                                                        // let nilaitotalslide5 = (totalCapaian5 >= 100) ? 120 : totalCapaian5.toFixed(0);
-                                                        // document.getElementById("nilaitotalslide5").innerText = isNaN(nilaitotalslide5) ? "-" : nilaitotalslide5;
+                                                        document.getElementById("tw2Nilaislide5a").innerText = parsedData.tw2totalIndeksCp5 || "-";
+                                                        document.getElementById("sm1Nilaislide5a").innerText = parsedData.tw2totalIndeksCp5 || "-";
+                                                        // Tetapkan target
+                                                        let tw2target5 = 4;
 
-                                                        // document.getElementById("Nilaislide5aa").innerText = parsedData.totalIndeksCp5 || "-";
-                                                        // let totalCapaian5a = parseFloat(parsedData.totalCapaian5);
-                                                        // let nilaitotalslide5aa = (totalCapaian5a >= 100) ? 120 : totalCapaian5a.toFixed(0);
-                                                        // document.getElementById("nilaitotalslide5aa").innerText = isNaN(nilaitotalslide5aa) ? "-" : nilaitotalslide5aa;
-                                            // let nilaitotalslide5 = (totalCapaian1all >= 100) ? 120 : totalCapaian1all.toFixed(0);
-                                            // document.getElementById("nilaitotalslide5").innerText = isNaN(nilaitotalslide5) ? "-" : nilaitotalslide5;
+                                                        // Ambil nilai realisasi
+                                                        let tw2 = parseFloat(parsedData.tw2totalIndeksCp5);
 
-                                            // document.getElementById("Nilaislide2a").innerText = parsedData.indeksIKI1 || "-";
+                                                        // Hitung capaian (dalam persen)
+                                                        let tw2capaian5 = (tw2 / tw2target5) * 100;
 
-                                            // let nilaitotalslide2 = (totalCapaian1all >= 100) ? 120 : totalCapaian1all.toFixed(0);
-                                            // document.getElementById("nilaitotalslide2").innerText = isNaN(nilaitotalslide2) ? "-" : nilaitotalslide2;
+                                                        // Tampilkan capaian dengan pembulatan maksimal 120%
+                                                        let tw2nilaitotalslide5 = (tw2capaian5 >= 120) ? "120%" : tw2capaian5.toFixed(2) + "%";
+                                                        document.getElementById("tw2nilaitotalslide5").innerText = isNaN(tw2capaian5) ? "-" : tw2nilaitotalslide5;
+                                                        document.getElementById("sm1nilaitotalslide5").innerText = isNaN(tw2capaian5) ? "-" : tw2nilaitotalslide5;
+                                                        // Tampilkan ulang nilai indeks (jika ingin)
+                                                        document.getElementById("tw2Nilaislide5aa").innerText = parsedData.tw2totalIndeksCp5 || "-";
 
-                                            // // Tambahan: Pastikan totalslide5 dan totalslide5a juga angka bulat tanpa koma
-                                            // let totalCapaian1 = parseFloat(parsedData.totalCapaian1);
-                                            // document.getElementById("totalslide5").innerText = isNaN(totalCapaian1) ? "-" : totalCapaian1.toFixed(0);
-
-                                            // let jumlahSatker1Value = parseFloat(parsedData.jumlahsatker1Value);
-                                            // document.getElementById("totalslide5a").innerText = isNaN(jumlahSatker1Value) ? "-" : jumlahSatker1Value.toFixed(0);
-
-                                                    // document.getElementById("totalrealisasi5").innerText = parsedData.totalrealisasi5 || "-";
+                                                        // Tampilkan capaian di tempat kedua (jika perlu)
+                                                        let tw2nilaitotalslide5aa = (tw2capaian5 >= 120) ? "120%" : tw2capaian5.toFixed(2) + "%";
+                                                        document.getElementById("tw2nilaitotalslide5aa").innerText = isNaN(tw2capaian5) ? "-" : tw2nilaitotalslide5aa;
                                                    
                                                     if (parsedData.rekomendasi5 && Array.isArray(parsedData.rekomendasi5)) {
                                                         let tbody = document.getElementById("tbodyRekomendasi5");

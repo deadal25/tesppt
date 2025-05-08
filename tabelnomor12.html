@@ -227,8 +227,20 @@
                                         <br>
                                         <h3><b>Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal </b></h3>
 
-                                        <label for="manajemen_risiko">Hasil Penilaian pelaksanaan tugas KI pada KPPN:</label>
-                                        <input type="number" id="manajemen_risiko" value="0" oninput="hitungNilai12()">
+                                        <!-- <label for="manajemen_risiko">Hasil Penilaian pelaksanaan tugas KI pada KPPN:</label>
+                                        <input type="number" id="manajemen_risiko" value="0" oninput="hitungNilai12()"> -->
+
+                                        <label for="totalrealisasi12a">Masukkan Realisasi 1: </label>
+                                        <input type="number" id="inputrealisasi12a" class="form-control"
+                                            placeholder="Masukkan Realisasi 1..." oninput="hitungNilaislide12()">
+
+                                        <label for="totalrealisasi12b">Masukkan Realisasi 2: </label>
+                                        <input type="number" id="inputrealisasi12b" class="form-control"
+                                            placeholder="Masukkan Realisasi 2..." oninput="hitungNilaislide12()">
+
+                                        <label for="totalrealisasi12c">Masukkan Realisasi 3: </label>
+                                        <input type="number" id="inputrealisasi12c" class="form-control"
+                                            placeholder="Masukkan Realisasi 3..." oninput="hitungNilaislide12()">
 
                                         <!-- <label for="pemantauan">Pelaksanaan Pemantauan & Pengendalian:</label>
                                         <input type="number" id="pemantauan" value="0" oninput="hitungNilai12()">
@@ -300,38 +312,35 @@
                                     
                                             <tr>
                                                 <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="totalNilai12"><b>99,48</b></td>
+                                                <td colspan="3" id="totalrealisasi12d"><b>99,48</b></td>
                                                 
                                             </tr>
                                         </table>
 
 
                                         <script>
-                                            function hitungNilai12() {
-                                                let MR = (parseFloat(document.getElementById('manajemen_risiko').value));
-                                                // let PP = (parseFloat(document.getElementById('pemantauan').value));
-                                                // let PR = (parseFloat(document.getElementById('pengaduan').value));
+                                            function hitungNilaislide12() {
+                                                let a = parseFloat(document.getElementById('inputrealisasi12a').value) || 0;
+                                                let b = parseFloat(document.getElementById('inputrealisasi12b').value) || 0;
+                                                let c = parseFloat(document.getElementById('inputrealisasi12c').value) || 0;
 
-                                                let nilaiMR = (100/100 * MR);
-                                                // let nilaiPP = 0.55 * PP;
-                                                // let nilaiPR = 0.10 * PR;
-                                                let totalNilai12 = nilaiMR;
-
-                                                document.getElementById('valuenilaiMR').innerText = MR.toFixed(2);
-                                                document.getElementById('nilaiMR').innerText = nilaiMR.toFixed(2);
-                                                // document.getElementById('nilaiPP').innerText = nilaiPP.toFixed(2);
-                                                // document.getElementById('nilaiPR').innerText = nilaiPR.toFixed(2);
-                                                document.getElementById('totalNilai12').innerText = totalNilai12.toFixed(2);
+                                                // document.getElementById('totalrealisasi12a').innerText = a;
+                                                // document.getElementById('totalrealisasi12b').innerText = b;
+                                                // document.getElementById('totalrealisasi12c').innerText = c;
+                                                let total = a + b + c;
+                                                document.getElementById('valuenilaiMR').innerText = total.toFixed(2);
+                                                document.getElementById('nilaiMR').innerText = total.toFixed(2);
+                                                document.getElementById('totalrealisasi12d').innerText = total.toFixed(2);
                                             }
-
-                                            hitungNilai12();
                                         </script>
                                         <script>
                                             function submitData12() {
                                                 let valuenilaiMR = document.getElementById("valuenilaiMR").innerText;
                                                 let nilaiMR = document.getElementById("nilaiMR").innerText;
-                                                // let nilaiPR = document.getElementById("nilaiPR").innerText;
-                                                let totalNilai12 = document.getElementById("totalNilai12").innerText;
+                                                let nilaia = document.getElementById("inputrealisasi12a").value;
+                                                let nilaib = document.getElementById("inputrealisasi12b").value;
+                                                let nilaic = document.getElementById("inputrealisasi12c").value;
+                                                let totalrealisasi12d = document.getElementById("totalrealisasi12d").innerText;
                                                 let formula12hasil = document.getElementById("formula12").innerText;
                                                 let keterangan12hasil = document.getElementById("keterangan12").innerText;
 
@@ -342,8 +351,10 @@
                                                 // Update hanya bagian halaman 15
                                                 data.valuenilaiMR = valuenilaiMR;
                                                 data.nilaiMR = nilaiMR;
-                                                // data.nilaiPR = nilaiPR;
-                                                data.totalNilai12 = totalNilai12;
+                                                data.tw1a = nilaia;
+                                                data.tw1b = nilaib;
+                                                data.tw1c = nilaic;
+                                                data.totalrealisasi12d = totalrealisasi12d;
                                                 data.formula12 = formula12hasil;
                                                 data.keterangan12 = keterangan12hasil;
                                                 // Simpan kembali ke localStorage

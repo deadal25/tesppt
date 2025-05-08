@@ -227,8 +227,22 @@
                                         <br>
                                         <h3><b>Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal </b></h3>
 
-                                        <label for="tw2manajemen_risiko">Hasil Penilaian pelaksanaan tugas KI pada KPPN:</label>
-                                        <input type="number" id="tw2manajemen_risiko" value="0" oninput="tw2hitungNilai12()">
+                                        <!-- <label for="tw2manajemen_risiko">Hasil Penilaian pelaksanaan tugas KI pada KPPN:</label>
+                                        <input type="number" id="tw2manajemen_risiko" value="0" oninput="tw2hitungNilai12()"> -->
+
+                                        <label for="tw2totalrealisasi12a">Masukkan Realisasi 1: </label>
+                                        <input type="number" id="tw2inputrealisasi12a" class="form-control"
+                                            placeholder="Masukkan Realisasi 1..." oninput="tw2hitungNilaislide12()">
+
+                                        <label for="tw2totalrealisasi12b">Masukkan Realisasi 2: </label>
+                                        <input type="number" id="tw2inputrealisasi12b" class="form-control"
+                                            placeholder="Masukkan Realisasi 2..." oninput="tw2hitungNilaislide12()">
+
+                                        <label for="tw2totalrealisasi12c">Masukkan Realisasi 3: </label>
+                                        <input type="number" id="tw2inputrealisasi12c" class="form-control"
+                                            placeholder="Masukkan Realisasi 3..." oninput="tw2hitungNilaislide12()">
+
+                                            
 
                                         <!-- <label for="tw2pemantauan">Pelaksanaan Pemantauan & Pengendalian:</label>
                                         <input type="number" id="tw2pemantauan" value="0" oninput="tw2hitungNilai12()">
@@ -300,40 +314,61 @@
                                     
                                             <tr>
                                                 <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="tw2totalNilai12"><b>99,48</b></td>
+                                                <td colspan="3" id="tw2totalrealisasi12d"><b>99,48</b></td>
                                                 
                                             </tr>
                                         </table>
 
 
                                         <script>
-                                            function tw2hitungNilai12() {
-                                                let tw2MR = (parseFloat(document.getElementById('tw2manajemen_risiko').value));
-                                                // let PP = (parseFloat(document.getElementById('pemantauan').value));
-                                                // let PR = (parseFloat(document.getElementById('pengaduan').value));
+                                            
+                                            function tw2hitungNilaislide12() {
+                                                let tw2a = parseFloat(document.getElementById('tw2inputrealisasi12a').value) || 0;
+                                                let tw2b = parseFloat(document.getElementById('tw2inputrealisasi12b').value) || 0;
+                                                let tw2c = parseFloat(document.getElementById('tw2inputrealisasi12c').value) || 0;
 
-                                                let tw2nilaiMR = (100/100 * tw2MR);
-                                                // let nilaiPP = 0.55 * PP;
-                                                // let nilaiPR = 0.10 * PR;
-                                                let tw2totalNilai12 = tw2nilaiMR;
-
-                                                document.getElementById('tw2valuenilaiMR').innerText = tw2MR.toFixed(2);
-                                                document.getElementById('tw2nilaiMR').innerText = tw2nilaiMR.toFixed(2);
-                                                // document.getElementById('nilaiPP').innerText = nilaiPP.toFixed(2);
-                                                // document.getElementById('nilaiPR').innerText = nilaiPR.toFixed(2);
-                                                document.getElementById('tw2totalNilai12').innerText = tw2totalNilai12.toFixed(2);
+                                                // document.getElementById('tw2totalrealisasi12a').innerText = a;
+                                                // document.getElementById('tw2totalrealisasi12b').innerText = b;
+                                                // document.getElementById('tw2totalrealisasi12c').innerText = c;
+                                                let tw2total = tw2a + tw2b + tw2c;
+                                                document.getElementById('tw2valuenilaiMR').innerText = tw2total.toFixed(2);
+                                                document.getElementById('tw2nilaiMR').innerText = tw2total.toFixed(2);
+                                                document.getElementById('tw2totalrealisasi12d').innerText = tw2total.toFixed(2);
                                             }
+                                        
+                                            // function tw2hitungNilai12() {
+                                            //     let tw2MR = (parseFloat(document.getElementById('tw2manajemen_risiko').value));
+                                            //     // let PP = (parseFloat(document.getElementById('pemantauan').value));
+                                            //     // let PR = (parseFloat(document.getElementById('pengaduan').value));
 
-                                            tw2hitungNilai12();
+                                            //     let tw2nilaiMR = (100/100 * tw2MR);
+                                            //     // let nilaiPP = 0.55 * PP;
+                                            //     // let nilaiPR = 0.10 * PR;
+                                            //     let tw2totalNilai12 = tw2nilaiMR;
+
+                                            //     document.getElementById('tw2valuenilaiMR').innerText = tw2MR.toFixed(2);
+                                            //     document.getElementById('tw2nilaiMR').innerText = tw2nilaiMR.toFixed(2);
+                                            //     // document.getElementById('nilaiPP').innerText = nilaiPP.toFixed(2);
+                                            //     // document.getElementById('nilaiPR').innerText = nilaiPR.toFixed(2);
+                                            //     document.getElementById('tw2totalNilai12').innerText = tw2totalNilai12.toFixed(2);
+                                            // }
+
+                                            // tw2hitungNilai12();
                                         </script>
                                         <script>
                                             function submitData12() {
                                                 let tw2valuenilaiMR = document.getElementById("tw2valuenilaiMR").innerText;
                                                 let tw2nilaiMR = document.getElementById("tw2nilaiMR").innerText;
                                                 // let nilaiPR = document.getElementById("nilaiPR").innerText;
-                                                let tw2totalNilai12 = document.getElementById("tw2totalNilai12").innerText;
+                                                // let tw2totalNilai12 = document.getElementById("tw2totalNilai12").innerText;
+                                                let nilaitw2a = document.getElementById("tw2inputrealisasi12a").value;
+                                                let nilaitw2b = document.getElementById("tw2inputrealisasi12b").value;
+                                                let nilaitw2c = document.getElementById("tw2inputrealisasi12c").value;
+                                                let tw2totalrealisasi12d = document.getElementById("tw2totalrealisasi12d").innerText;
                                                 let tw2formula12hasil = document.getElementById("tw2formula12").innerText;
                                                 let tw2keterangan12hasil = document.getElementById("tw2keterangan12").innerText;
+
+
 
                                                 // Cek apakah ada data lama di localStorage
                                                 let storedData = localStorage.getItem("indeks_data");
@@ -342,8 +377,12 @@
                                                 // Update hanya bagian halaman 15
                                                 data.tw2valuenilaiMR = tw2valuenilaiMR;
                                                 data.tw2nilaiMR = tw2nilaiMR;
+                                                data.tw2a = nilaitw2a;
+                                                data.tw2b = nilaitw2b;
+                                                data.tw2c = nilaitw2c;
+                                                data.tw2totalrealisasi12d = tw2totalrealisasi12d;
                                                 // data.nilaiPR = nilaiPR;
-                                                data.tw2totalNilai12 = tw2totalNilai12;
+                                                // data.tw2totalNilai12 = tw2totalNilai12;
                                                 data.tw2formula12 = tw2formula12hasil;
                                                 data.tw2keterangan12 = tw2keterangan12hasil;
                                                 // Simpan kembali ke localStorage
